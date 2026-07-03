@@ -1,0 +1,220 @@
+---
+// Shared chrome: head, top bar, nav (+dropdown), mobile menu, footer,
+// sticky CTAs, chrome JS. Page CSS stays page-level — each page ships the
+// full stylesheet it was approved with on Stage.
+const { title, description, activePath = '/' } = Astro.props;
+const active = activePath === '/treatments' ? 'page' : null;
+const schemaJson = "{\"@context\":\"https://schema.org\",\"@type\":\"MedicalBusiness\",\"name\":\"PureMed Aesthetics\",\"description\":\"Medically-led aesthetic clinic specialising in skin tightening and facial rejuvenation\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"34a High Street\",\"addressLocality\":\"Winslow\",\"addressRegion\":\"Buckinghamshire\",\"postalCode\":\"MK18 3HB\",\"addressCountry\":\"GB\"},\"telephone\":\"+447850087025\",\"email\":\"care@puremed.uk\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"5\",\"reviewCount\":\"90\"}}";
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description}>
+<script type="application/ld+json" set:html={schemaJson}></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- TOP BAR -->
+<div class="topbar-hide" style="background:#1a3d5c;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <a href="https://maps.google.com/?q=34a+High+Street+Winslow+MK18+3HB" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,.55);text-decoration:none;font-family:Inter,sans-serif;transition:color .2s" onmouseover="this.style.color='rgba(255,255,255,.9)'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        34a High Street, Winslow, MK18 3HB
+      </a>
+      <a href="mailto:care@puremed.uk" style="display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,.55);text-decoration:none;font-family:Inter,sans-serif;transition:color .2s" onmouseover="this.style.color='rgba(255,255,255,.9)'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 6 10-6"/></svg>
+        care@puremed.uk
+      </a>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C6A77D" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C6A77D" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C6A77D" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C6A77D" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C6A77D" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span style="font-size:11px;color:rgba(255,255,255,.55);font-family:Inter,sans-serif;margin-left:4px">90 Five-Star Reviews</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/assets/web/puremed_logo_transparent.webp" alt="PureMed Aesthetics" class="nav-logo-img">
+    </a>
+    <div class="nav-links">
+      <div class="nav-dropdown-wrap">
+        <a href="/treatments" aria-current={active}>
+          Treatments
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="/treatments#laser-lift">Laser Lift</a>
+          <a href="/treatments#liquid-facelift">Liquid Facelift</a>
+          <a href="/treatments#anti-wrinkle">Anti-Wrinkle</a>
+          <a href="/treatments#polynucleotides">Polynucleotides</a>
+          <a href="/treatments#rf-microneedling">RF Microneedling</a>
+          <a href="/treatments#skin-boosters">Skin Boosters</a>
+        </div>
+      </div>
+      <a href="/#about">About Nafisa</a>
+      <a href="/#results">Results</a>
+      <a href="/#reviews">Reviews</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://wa.me/447850087025" class="nav-whatsapp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.518 3.66 1.418 5.18L2 22l4.82-1.418A9.978 9.978 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.687 0-3.27-.467-4.63-1.28l-.332-.196-3.184.937.938-3.185-.196-.332A7.964 7.964 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185" class="nav-book" data-stage-id="cta-nav-book" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book Consultation</a>
+      <button class="nav-hamburger" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <span class="mobile-treatment-label">Treatments</span>
+  <a href="/treatments#laser-lift" class="mobile-treatment-link">Laser Lift</a>
+  <a href="/treatments#liquid-facelift" class="mobile-treatment-link">Liquid Facelift</a>
+  <a href="/treatments#anti-wrinkle" class="mobile-treatment-link">Anti-Wrinkle</a>
+  <a href="/treatments#polynucleotides" class="mobile-treatment-link">Polynucleotides</a>
+  <a href="/treatments#rf-microneedling" class="mobile-treatment-link">RF Microneedling</a>
+  <a href="/treatments#skin-boosters" class="mobile-treatment-link">Skin Boosters</a>
+  <a href="/#about" onclick="closeMenu()">About Nafisa</a>
+  <a href="/#results" onclick="closeMenu()">Results</a>
+  <a href="/#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="/#faq" onclick="closeMenu()">FAQ</a>
+  <a href="https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185" class="mobile-book" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book Consultation</a>
+</div>
+
+<slot />
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="footer-brand-name">PureMed Aesthetics</a>
+        <span class="footer-loc-tag">Winslow &middot; Buckinghamshire</span>
+        <p class="footer-bio">Medically-led aesthetic treatments for natural skin tightening and rejuvenation. Founded by Nafisa Mughal in 2011. Trusted by thousands of clients across Buckinghamshire and beyond.</p>
+        <div class="footer-contacts">
+          <a href="https://maps.google.com/?q=34a+High+Street+Winslow+MK18+3HB" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            34a High Street, Winslow, MK18 3HB
+          </a>
+          <a href="mailto:care@puremed.uk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 6 10-6"/></svg>
+            care@puremed.uk
+          </a>
+          <a href="https://wa.me/447850087025" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.518 3.66 1.418 5.18L2 22l4.82-1.418A9.978 9.978 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.687 0-3.27-.467-4.63-1.28l-.332-.196-3.184.937.938-3.185-.196-.332A7.964 7.964 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+            07850 087025
+          </a>
+        </div>
+        <div class="footer-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <a href="https://share.google/9aKFs7wEVWY1NMQ9C" target="_blank" rel="noopener" class="footer-stars-label" style="text-decoration:none;display:block">90 five-star reviews on Google</a>
+      </div>
+      <div class="footer-col">
+        <h4>Clinic</h4>
+        <ul>
+          <li><a href="#about">About Nafisa</a></li>
+          <li><a href="#results">Results Gallery</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Book</h4>
+        <ul>
+          <li><a href="https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book Consultation</a></li>
+          <li><a href="https://wa.me/447850087025" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="mailto:care@puremed.uk">Email Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PureMed Aesthetics. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
+      <span class="footer-loc-bottom">Winslow &middot; Buckinghamshire &middot; MK18 3HB</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="mobile-cta-bar">
+  <a href="https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185" class="mcta-primary" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    Book Consultation
+  </a>
+  <a href="https://wa.me/447850087025" class="mcta-whatsapp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.518 3.66 1.418 5.18L2 22l4.82-1.418A9.978 9.978 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.687 0-3.27-.467-4.63-1.28l-.332-.196-3.184.937.938-3.185-.196-.332A7.964 7.964 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- WHATSAPP STICKY (desktop) -->
+<a href="https://wa.me/447850087025" class="wa-sticky" target="_blank" rel="noopener" aria-label="WhatsApp PureMed Aesthetics">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.518 3.66 1.418 5.18L2 22l4.82-1.418A9.978 9.978 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.687 0-3.27-.467-4.63-1.28l-.332-.196-3.184.937.938-3.185-.196-.332A7.964 7.964 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+</a>
+
+<script is:inline>
+// Fade-up on scroll
+(function() {
+  var els = document.querySelectorAll('.fade-up');
+  if (!els.length) return;
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.09 });
+  els.forEach(function(el) { obs.observe(el); });
+})();
+
+// Nav scroll shadow
+window.addEventListener('scroll', function() {
+  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// Mobile menu
+var menuBtn = document.getElementById('menu-btn');
+var mobileMenu = document.getElementById('mobile-menu');
+var mainNav = document.getElementById('main-nav');
+menuBtn.addEventListener('click', function() {
+  var open = mobileMenu.classList.toggle('open');
+  mainNav.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+});
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  mainNav.classList.remove('menu-open');
+  menuBtn.setAttribute('aria-expanded', false);
+}
+document.addEventListener('click', function(e) {
+  if (!mainNav.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
+});
+
+// Smooth scroll (72px nav offset) for dropdown links targeting the current page
+document.querySelectorAll('.nav-dropdown a, .mobile-menu a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var url = new URL(link.href, window.location.origin);
+    if (url.pathname !== window.location.pathname || !url.hash) return;
+    var target = document.getElementById(url.hash.slice(1));
+    if (!target) return;
+    e.preventDefault();
+    closeMenu();
+    var top = target.getBoundingClientRect().top + window.scrollY - 72;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
