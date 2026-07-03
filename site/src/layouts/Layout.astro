@@ -3,7 +3,10 @@
 // sticky CTAs, chrome JS. Page CSS stays page-level — each page ships the
 // full stylesheet it was approved with on Stage.
 const { title, description, activePath = '/' } = Astro.props;
-const active = activePath === '/treatments' ? 'page' : null;
+// Nav variants are deliberate per the approved prototypes: home has a plain
+// Treatments link (simplified in the 27 Jun session); the treatments page has
+// the anchor dropdown. Do not unify without a new sign-off.
+const onTreatments = activePath === '/treatments';
 const schemaJson = "{\"@context\":\"https://schema.org\",\"@type\":\"MedicalBusiness\",\"name\":\"PureMed Aesthetics\",\"description\":\"Medically-led aesthetic clinic specialising in skin tightening and facial rejuvenation\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"34a High Street\",\"addressLocality\":\"Winslow\",\"addressRegion\":\"Buckinghamshire\",\"postalCode\":\"MK18 3HB\",\"addressCountry\":\"GB\"},\"telephone\":\"+447850087025\",\"email\":\"care@puremed.uk\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"5\",\"reviewCount\":\"90\"}}";
 ---
 <!DOCTYPE html>
@@ -50,20 +53,24 @@ const schemaJson = "{\"@context\":\"https://schema.org\",\"@type\":\"MedicalBusi
       <img src="/assets/web/puremed_logo_transparent.webp" alt="PureMed Aesthetics" class="nav-logo-img">
     </a>
     <div class="nav-links">
-      <div class="nav-dropdown-wrap">
-        <a href="/treatments" aria-current={active}>
-          Treatments
-          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="nav-dropdown">
-          <a href="/treatments#laser-lift">Laser Lift</a>
-          <a href="/treatments#liquid-facelift">Liquid Facelift</a>
-          <a href="/treatments#anti-wrinkle">Anti-Wrinkle</a>
-          <a href="/treatments#polynucleotides">Polynucleotides</a>
-          <a href="/treatments#rf-microneedling">RF Microneedling</a>
-          <a href="/treatments#skin-boosters">Skin Boosters</a>
+      {onTreatments ? (
+        <div class="nav-dropdown-wrap">
+          <a href="/treatments" aria-current="page">
+            Treatments
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="/treatments#laser-lift">Laser Lift</a>
+            <a href="/treatments#liquid-facelift">Liquid Facelift</a>
+            <a href="/treatments#anti-wrinkle">Anti-Wrinkle</a>
+            <a href="/treatments#polynucleotides">Polynucleotides</a>
+            <a href="/treatments#rf-microneedling">RF Microneedling</a>
+            <a href="/treatments#skin-boosters">Skin Boosters</a>
+          </div>
         </div>
-      </div>
+      ) : (
+        <a href="/treatments">Treatments</a>
+      )}
       <a href="/#about">About Nafisa</a>
       <a href="/#results">Results</a>
       <a href="/#reviews">Reviews</a>
@@ -84,13 +91,19 @@ const schemaJson = "{\"@context\":\"https://schema.org\",\"@type\":\"MedicalBusi
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <span class="mobile-treatment-label">Treatments</span>
-  <a href="/treatments#laser-lift" class="mobile-treatment-link">Laser Lift</a>
-  <a href="/treatments#liquid-facelift" class="mobile-treatment-link">Liquid Facelift</a>
-  <a href="/treatments#anti-wrinkle" class="mobile-treatment-link">Anti-Wrinkle</a>
-  <a href="/treatments#polynucleotides" class="mobile-treatment-link">Polynucleotides</a>
-  <a href="/treatments#rf-microneedling" class="mobile-treatment-link">RF Microneedling</a>
-  <a href="/treatments#skin-boosters" class="mobile-treatment-link">Skin Boosters</a>
+  {onTreatments ? (
+    <>
+      <span class="mobile-treatment-label">Treatments</span>
+      <a href="/treatments#laser-lift" class="mobile-treatment-link">Laser Lift</a>
+      <a href="/treatments#liquid-facelift" class="mobile-treatment-link">Liquid Facelift</a>
+      <a href="/treatments#anti-wrinkle" class="mobile-treatment-link">Anti-Wrinkle</a>
+      <a href="/treatments#polynucleotides" class="mobile-treatment-link">Polynucleotides</a>
+      <a href="/treatments#rf-microneedling" class="mobile-treatment-link">RF Microneedling</a>
+      <a href="/treatments#skin-boosters" class="mobile-treatment-link">Skin Boosters</a>
+    </>
+  ) : (
+    <a href="/treatments" onclick="closeMenu()">Treatments</a>
+  )}
   <a href="/#about" onclick="closeMenu()">About Nafisa</a>
   <a href="/#results" onclick="closeMenu()">Results</a>
   <a href="/#reviews" onclick="closeMenu()">Reviews</a>
