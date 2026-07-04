@@ -1,0 +1,58 @@
+{
+  "client": "puremed",
+  "page": "puremed-anti-wrinkle.html",
+  "generated_at": "2026-06-22",
+  "placements": [
+    {
+      "id": "hero",
+      "type": "hero-image",
+      "aspect_ratio": "9:16",
+      "section_selector": ".tx-hero-image img",
+      "copy_context": "Anti-Wrinkle Injections — targeted muscle-relaxing injections that smooth dynamic lines and prevent new ones forming",
+      "assets": [
+        {
+          "model": "flux-2-pro",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260622_152359_d838098c-e376-4cfe-ae1f-86aaa04cc155.png",
+          "filename": "puremed-anti-wrinkle-hero-flux2-v1.png",
+          "format": "png",
+          "local_path": "../assets/generated/puremed-anti-wrinkle-hero-flux2-v1.png",
+          "compressed_path": "../assets/generated/compressed/puremed-anti-wrinkle-hero-flux2-v1.webp",
+          "preferred": true,
+          "notes": "SELECTED. Warm natural light, woman in interior, candid composure."
+        },
+        {
+          "model": "kling-omni-image",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260622_152401_3e4679a6-8e38-43b7-839e-310c298d4871.png",
+          "filename": "puremed-anti-wrinkle-hero-kling-v1.png",
+          "format": "png",
+          "local_path": "../assets/generated/puremed-anti-wrinkle-hero-kling-v1.png",
+          "compressed_path": "../assets/generated/compressed/puremed-anti-wrinkle-hero-kling-v1.webp",
+          "preferred": false,
+          "notes": "NOT SELECTED. Cross-section variant — keep for reference."
+        }
+      ]
+    },
+    {
+      "id": "what-is",
+      "type": "editorial-image",
+      "aspect_ratio": "3:4",
+      "section_selector": ".what-is-image img",
+      "copy_context": "What Are Anti-Wrinkle Injections? — the result is a smoother, more rested appearance that still moves naturally",
+      "assets": [
+        {
+          "model": "flux-2-pro",
+          "variant": "v2",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260622_160557_b58299e3-698e-4ec6-b86e-60354265a65a.png",
+          "filename": "puremed-anti-wrinkle-what-is-flux2-v2.png",
+          "format": "png",
+          "local_path": "../assets/generated/puremed-anti-wrinkle-what-is-flux2-v2.png",
+          "compressed_path": "../assets/generated/compressed/puremed-anti-wrinkle-what-is-flux2-v2.webp",
+          "preferred": true,
+          "notes": "v2 — candid window-light framing, shoulders and face, domestic interior."
+        }
+      ]
+    }
+  ]
+}

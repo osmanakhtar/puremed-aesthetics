@@ -1,0 +1,29 @@
+{
+  "id": "2026-08-07-anti-wrinkle",
+  "slotId": "2026-08-07-slot",
+  "date": "2026-08-07",
+  "time": "18:00",
+  "timezone": "Europe/London",
+  "pillar": "education",
+  "treatmentId": "anti-wrinkle",
+  "pomSensitive": true,
+  "platforms": [
+    "instagram",
+    "facebook"
+  ],
+  "state": "review",
+  "assets": [
+    {
+      "source": "assets/web/puremed-face-assessment-hf-v1.webp",
+      "alt": "Facial assessment at PureMed Aesthetics",
+      "status": "placeholder — from site imagery; Nafisa to confirm or supply real photo",
+      "type": "image"
+    }
+  ],
+  "reviewNote": null,
+  "platformPostIds": {},
+  "created": "2026-07-03T17:11:11.817Z",
+  "updated": "2026-07-03T19:37:47.793Z",
+  "format": "static",
+  "brandOverlay": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "2026-08-03-liquid-facelift",
+  "slotId": "2026-08-03-slot",
+  "date": "2026-08-03",
+  "time": "18:00",
+  "timezone": "Europe/London",
+  "pillar": "myth-busting",
+  "treatmentId": "liquid-facelift",
+  "pomSensitive": false,
+  "platforms": [
+    "instagram",
+    "facebook"
+  ],
+  "state": "review",
+  "assets": [
+    {
+      "type": "text",
+      "bg": "assets/web/nafisa-library-f-seedream45-v1.webp",
+      "kicker": "MYTH",
+      "headline": "“Fillers always look fake.”",
+      "body": "Swipe →"
+    },
+    {
+      "type": "text",
+      "kicker": "TRUTH",
+      "headline": "You only notice the bad ones.",
+      "body": "Done well, a liquid facelift restores structure your face has lost. Nobody should be able to tell you have had anything done.",
+      "img": "assets/generated/scenes/compressed/puremed-scene-liquid-facelift-nanobananapro-v1.webp",
+      "split": "right"
+    },
+    {
+      "type": "image",
+      "source": "assets/web/nafisa-library-f-flux2pro-v1.webp",
+      "alt": "Liquid Facelift at PureMed Aesthetics",
+      "status": "placeholder — from site imagery; Nafisa to confirm or supply real photo"
+    },
+    {
+      "type": "text",
+      "kicker": "The PureMed way",
+      "headline": "Assessment first, always.",
+      "body": "A detailed facial assessment maps volume loss, sagging and asymmetry, so filler only goes where your face actually needs it.",
+      "img": "assets/generated/scenes/compressed/puremed-scene-liquid-facelift-seedream45-v1.webp",
+      "split": "left"
+    },
+    {
+      "type": "text",
+      "style": "blue",
+      "kicker": "Changed your mind later?",
+      "headline": "Adjustable. Even reversible.",
+      "body": "We use hyaluronic acid fillers, so results can be adjusted, or even reversed, over time. Book a consultation via the link in bio."
+    }
+  ],
+  "reviewNote": null,
+  "platformPostIds": {},
+  "created": "2026-07-03T17:11:11.817Z",
+  "updated": "2026-07-04T02:05:18.905Z",
+  "format": "carousel",
+  "brandOverlay": true
+}

@@ -1,0 +1,566 @@
+{
+  "client": "puremed",
+  "page": "nafisa-asset-library",
+  "generated_at": "2026-06-23",
+  "notes": "Central Nafisa image bank. Not a page session. All assets named nafisa-library-[scenario]-[model]-v1.webp. Character: Naf-pure-med soul_id af674b49 / element 0bf4546e. Models with element support (seedream_v4_5, seedream_v5_lite) use <<<element>>> injection. soul_2 uses soul_id for solo shots (Scenario E). All others use descriptive prompts.",
+  "placements": [
+    {
+      "id": "scenario-e",
+      "type": "editorial-image",
+      "aspect_ratio": "4:3",
+      "section_selector": null,
+      "copy_context": "Clinical portrait — Nafisa only. Hero portrait for the site.",
+      "assets": [
+        {
+          "model": "soul_2",
+          "variant": "v1",
+          "job_id": "66268af8-610e-4b64-858c-55730293ef7a",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162531_66268af8-610e-4b64-858c-55730293ef7a.png",
+          "filename": "nafisa-library-e-soul2-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-e-soul2-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-e-soul2-v1.webp",
+          "preferred": false,
+          "notes": "Soul V2 with soul_id — highest character fidelity"
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "8c70e72a-381c-4588-b107-02c16b35505d",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162536_8c70e72a-381c-4588-b107-02c16b35505d.png",
+          "filename": "nafisa-library-e-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-e-seedream45-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-e-seedream45-v1.webp",
+          "preferred": false,
+          "notes": "Element injection via Naf-pure-med"
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "job_id": "1cbba850-51b7-4cab-aa60-f632e14461ae",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162538_1cbba850-51b7-4cab-aa60-f632e14461ae.png",
+          "filename": "nafisa-library-e-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-e-seedream50lite-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-e-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": "Element injection via Naf-pure-med"
+        },
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "ac6e7907-6e38-436b-8d4d-d43d0d998ad5",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162542_ac6e7907-6e38-436b-8d4d-d43d0d998ad5.png",
+          "filename": "nafisa-library-e-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-e-flux2pro-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-e-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": "Descriptive prompt only"
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "job_id": "68f2cea5-5cf6-4111-b1cd-0b158cd29caf",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162544_68f2cea5-5cf6-4111-b1cd-0b158cd29caf.png",
+          "filename": "nafisa-library-e-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-e-klingo1-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-e-klingo1-v1.webp",
+          "preferred": false,
+          "notes": "Descriptive prompt only"
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "job_id": "e4971c7b-c840-4a09-9aa8-12c8100d7bd3",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162547_e4971c7b-c840-4a09-9aa8-12c8100d7bd3.png",
+          "filename": "nafisa-library-e-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-e-nanobanana-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-e-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": "Descriptive prompt only"
+        },
+        {
+          "model": "gpt_image",
+          "variant": "v1",
+          "job_id": "f6ff41f3-6e45-472f-8de3-03ae0b76b834",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162656_f6ff41f3-6e45-472f-8de3-03ae0b76b834.png",
+          "filename": "nafisa-library-e-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-e-gptimage-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-e-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "Descriptive prompt, 3:2 aspect (gpt_image limitation)"
+        }
+      ]
+    },
+    {
+      "id": "scenario-f",
+      "type": "editorial-image",
+      "aspect_ratio": "4:3",
+      "section_selector": null,
+      "copy_context": "Skin close-up — no character, environmental. Cheek/jawline. Editorial quality.",
+      "assets": [
+        {
+          "model": "soul_2",
+          "variant": "v1",
+          "job_id": "9bbc5b64-3696-4a39-ac2a-ac43b9bc4441",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162602_9bbc5b64-3696-4a39-ac2a-ac43b9bc4441.png",
+          "filename": "nafisa-library-f-soul2-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-f-soul2-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-f-soul2-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "92ca9f36-d0d3-4fde-9bb3-633f3794f158",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162604_92ca9f36-d0d3-4fde-9bb3-633f3794f158.png",
+          "filename": "nafisa-library-f-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-f-seedream45-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-f-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "job_id": "f0dd6923-fddd-4da9-8d29-74f697e3b18b",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162606_f0dd6923-fddd-4da9-8d29-74f697e3b18b.png",
+          "filename": "nafisa-library-f-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-f-seedream50lite-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-f-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "f4b38701-0604-4df7-9ae1-d174be91d026",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162620_f4b38701-0604-4df7-9ae1-d174be91d026.png",
+          "filename": "nafisa-library-f-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-f-flux2pro-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-f-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "job_id": "c8865ae0-7b2d-4ec1-b576-9658da52eae4",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162623_c8865ae0-7b2d-4ec1-b576-9658da52eae4.png",
+          "filename": "nafisa-library-f-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-f-klingo1-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-f-klingo1-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "job_id": "d0f12828-de5e-4d2a-ac08-ebfa5795b204",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162625_d0f12828-de5e-4d2a-ac08-ebfa5795b204.png",
+          "filename": "nafisa-library-f-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-f-nanobanana-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-f-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "gpt_image",
+          "variant": "v1",
+          "job_id": "987c8ed9-5cef-4b2f-bd15-689d1e2b3691",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162659_987c8ed9-5cef-4b2f-bd15-689d1e2b3691.png",
+          "filename": "nafisa-library-f-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-f-gptimage-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-f-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "1:1 aspect (gpt_image limitation)"
+        }
+      ]
+    },
+    {
+      "id": "scenario-a",
+      "type": "editorial-image",
+      "aspect_ratio": "16:9",
+      "section_selector": null,
+      "copy_context": "Consultation — Nafisa and female patient at desk, reviewing tablet together.",
+      "assets": [
+        {
+          "model": "soul_2",
+          "variant": "v1",
+          "job_id": "b4c48649-8c3a-487f-86c1-20baf11bca7e",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162702_b4c48649-8c3a-487f-86c1-20baf11bca7e.png",
+          "filename": "nafisa-library-a-soul2-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-a-soul2-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-a-soul2-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "9d8569ba-d8e1-4625-a452-d2cbfa255aa5",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162705_9d8569ba-d8e1-4625-a452-d2cbfa255aa5.png",
+          "filename": "nafisa-library-a-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-a-seedream45-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-a-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "ce68bcbc-a041-47c6-a7db-791a240f0dbe",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162708_ce68bcbc-a041-47c6-a7db-791a240f0dbe.png",
+          "filename": "nafisa-library-a-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-a-flux2pro-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-a-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "job_id": "43c8a3d9-2272-4d34-96aa-ebced76db1e5",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162710_43c8a3d9-2272-4d34-96aa-ebced76db1e5.png",
+          "filename": "nafisa-library-a-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-a-klingo1-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-a-klingo1-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "job_id": "eb396444-6e67-4abe-9b6b-2f05521321d1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162727_eb396444-6e67-4abe-9b6b-2f05521321d1.png",
+          "filename": "nafisa-library-a-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-a-nanobanana-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-a-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "job_id": "3b732d41-3d38-41c3-89bf-1916b6980ea5",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162731_3b732d41-3d38-41c3-89bf-1916b6980ea5.png",
+          "filename": "nafisa-library-a-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-a-seedream50lite-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-a-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "gpt_image",
+          "variant": "v1",
+          "job_id": "ca69b5b9-04e4-4aee-961b-a473b3ac07f8",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162734_ca69b5b9-04e4-4aee-961b-a473b3ac07f8.png",
+          "filename": "nafisa-library-a-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-a-gptimage-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-a-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "3:2 aspect (gpt_image limitation)"
+        }
+      ]
+    },
+    {
+      "id": "scenario-b",
+      "type": "editorial-image",
+      "aspect_ratio": "16:9",
+      "section_selector": null,
+      "copy_context": "Pre-treatment assessment — Nafisa with gloved hands examining patient in treatment chair.",
+      "assets": [
+        {
+          "model": "soul_2",
+          "variant": "v1",
+          "job_id": "d73e91f6-ece2-41dc-b55f-09597b0bd857",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162736_d73e91f6-ece2-41dc-b55f-09597b0bd857.png",
+          "filename": "nafisa-library-b-soul2-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-b-soul2-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-b-soul2-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "3ec062df-4764-4a28-a50c-bd4274c0d119",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162738_3ec062df-4764-4a28-a50c-bd4274c0d119.png",
+          "filename": "nafisa-library-b-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-b-seedream45-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-b-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "822b8cc4-a843-4d8a-a59f-ad54ad69aec1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162749_822b8cc4-a843-4d8a-a59f-ad54ad69aec1.png",
+          "filename": "nafisa-library-b-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-b-flux2pro-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-b-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "job_id": "d899e51c-9031-4eac-b3a4-d84898b6623b",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162806_d899e51c-9031-4eac-b3a4-d84898b6623b.png",
+          "filename": "nafisa-library-b-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-b-klingo1-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-b-klingo1-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "job_id": "ddc498c0-9a4e-4520-a530-fc54e87f0076",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162808_ddc498c0-9a4e-4520-a530-fc54e87f0076.png",
+          "filename": "nafisa-library-b-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-b-nanobanana-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-b-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "job_id": "5720f48a-b2bc-41eb-a3e0-71fb5d4d16a3",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162810_5720f48a-b2bc-41eb-a3e0-71fb5d4d16a3.png",
+          "filename": "nafisa-library-b-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-b-seedream50lite-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-b-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "gpt_image",
+          "variant": "v1",
+          "job_id": "a207d587-dcea-4daf-91c4-491eea96664c",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162812_a207d587-dcea-4daf-91c4-491eea96664c.png",
+          "filename": "nafisa-library-b-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-b-gptimage-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-b-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "3:2 aspect (gpt_image limitation)"
+        }
+      ]
+    },
+    {
+      "id": "scenario-c",
+      "type": "editorial-image",
+      "aspect_ratio": "16:9",
+      "section_selector": null,
+      "copy_context": "Treatment in progress — Nafisa performing injectable, clinical precision, framed tight.",
+      "assets": [
+        {
+          "model": "soul_2",
+          "variant": "v1",
+          "job_id": "ec7bd56e-a86f-4d4c-a0db-38d93c044244",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162851_ec7bd56e-a86f-4d4c-a0db-38d93c044244.png",
+          "filename": "nafisa-library-c-soul2-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-c-soul2-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-c-soul2-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "90ca478a-87a6-48f5-b8cf-e035df8ea1bb",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162853_90ca478a-87a6-48f5-b8cf-e035df8ea1bb.png",
+          "filename": "nafisa-library-c-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-c-seedream45-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-c-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "31bf4def-ddba-400f-b742-c325caf9ea7d",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162855_31bf4def-ddba-400f-b742-c325caf9ea7d.png",
+          "filename": "nafisa-library-c-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-c-flux2pro-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-c-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "job_id": "2d86b5c3-3f9a-400a-bef2-f3408c996e05",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162925_2d86b5c3-3f9a-400a-bef2-f3408c996e05.png",
+          "filename": "nafisa-library-c-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-c-klingo1-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-c-klingo1-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "job_id": "05a96013-9311-4757-a0e8-e30746eec773",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162928_05a96013-9311-4757-a0e8-e30746eec773.png",
+          "filename": "nafisa-library-c-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-c-nanobanana-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-c-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "job_id": "85a1e230-c838-4b07-b61b-80ac733931b0",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162931_85a1e230-c838-4b07-b61b-80ac733931b0.png",
+          "filename": "nafisa-library-c-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-c-seedream50lite-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-c-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "gpt_image",
+          "variant": "v1",
+          "job_id": "79732de3-0c0f-47db-93d5-cc48048ab5b3",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162933_79732de3-0c0f-47db-93d5-cc48048ab5b3.png",
+          "filename": "nafisa-library-c-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-c-gptimage-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-c-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "3:2 aspect (gpt_image limitation)"
+        }
+      ]
+    },
+    {
+      "id": "scenario-d",
+      "type": "editorial-image",
+      "aspect_ratio": "16:9",
+      "section_selector": null,
+      "copy_context": "Results review — Nafisa and patient reviewing results in hand mirror, both pleased.",
+      "assets": [
+        {
+          "model": "soul_2",
+          "variant": "v1",
+          "job_id": "e6738557-dbbe-4e19-b978-1b7c61eccbf8",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162900_e6738557-dbbe-4e19-b978-1b7c61eccbf8.png",
+          "filename": "nafisa-library-d-soul2-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-d-soul2-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-d-soul2-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "4836069d-959b-415d-908f-ae79cf6c8aab",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162903_4836069d-959b-415d-908f-ae79cf6c8aab.png",
+          "filename": "nafisa-library-d-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-d-seedream45-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-d-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "0f52a05c-f500-4f72-90e4-596524dc8903",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162905_0f52a05c-f500-4f72-90e4-596524dc8903.png",
+          "filename": "nafisa-library-d-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-d-flux2pro-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-d-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "job_id": "af4d2998-e907-47aa-81d2-de53d6b899e2",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162935_af4d2998-e907-47aa-81d2-de53d6b899e2.png",
+          "filename": "nafisa-library-d-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-d-klingo1-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-d-klingo1-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "job_id": "69a6f9a1-26f3-4c84-af3b-808e2056027d",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162938_69a6f9a1-26f3-4c84-af3b-808e2056027d.png",
+          "filename": "nafisa-library-d-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-d-nanobanana-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-d-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "job_id": "322b0941-3436-4bd0-bf12-69b1115666ca",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162940_322b0941-3436-4bd0-bf12-69b1115666ca.png",
+          "filename": "nafisa-library-d-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-d-seedream50lite-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-d-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "gpt_image",
+          "variant": "v1",
+          "job_id": "1e58a4fd-e185-4476-9654-db605d2fa418",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_162943_1e58a4fd-e185-4476-9654-db605d2fa418.png",
+          "filename": "nafisa-library-d-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/nafisa-library-d-gptimage-v1.webp",
+          "compressed_path": "assets/web/nafisa-library-d-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "3:2 aspect (gpt_image limitation)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "client": "PureMed Aesthetics",
+  "page": "puremed-polynucleotides.html",
+  "generated_at": "2026-06-23",
+  "placements": [
+    {
+      "id": "hero",
+      "type": "hero-image",
+      "aspect_ratio": "9:16",
+      "section_selector": ".tx-hero-image img",
+      "copy_context": "Polynucleotides Skin Regeneration — repairs and regenerates skin from within using purified DNA fragments",
+      "assets": [
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_151807_7ad5cb94-3a10-423a-a0a0-25f37d024f09.png",
+          "filename": "puremed-pnct-hero-kling-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-pnct-hero-kling-v1.png",
+          "compressed_path": "assets/web/puremed-pnct-hero-kling-v1.webp",
+          "preferred": false,
+          "notes": "Close-up portrait, 9:16, soft morning light, luminous skin, three-quarter angle"
+        },
+        {
+          "model": "flux_2",
+          "variant": "v2",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_151811_eac05bdd-a7f7-4cdb-9af7-ba273b1b62aa.png",
+          "filename": "puremed-pnct-hero-flux2-v2.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-pnct-hero-flux2-v2.png",
+          "compressed_path": "assets/web/puremed-pnct-hero-flux2-v2.webp",
+          "preferred": true,
+          "notes": "Editorial portrait, 9:16, warm-white background, three-quarter profile, Flux 2.0 Pro"
+        }
+      ]
+    },
+    {
+      "id": "what-is",
+      "type": "editorial-image",
+      "aspect_ratio": "4:5",
+      "section_selector": ".what-is-image img",
+      "copy_context": "What Are Polynucleotides? — stimulating the skin's own repair and regeneration process",
+      "assets": [
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_151816_a1c9cdd4-a0fb-4601-a080-2516040597ea.png",
+          "filename": "puremed-pnct-what-is-nbb-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-pnct-what-is-nbb-v1.png",
+          "compressed_path": "assets/web/puremed-pnct-what-is-nbb-v1.webp",
+          "preferred": true,
+          "notes": "Extreme skin close-up, 4:5, morning light, cellular renewal atmosphere"
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "type": "editorial-image",
+      "aspect_ratio": "3:4",
+      "section_selector": ".who .what-is-image img",
+      "copy_context": "Who Is It Right For? — dull, tired or dehydrated skin; early to moderate skin laxity",
+      "assets": [
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_151818_201ffd29-5e0b-4af0-80cf-545d44113f00.png",
+          "filename": "puremed-pnct-who-kling-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-pnct-who-kling-v1.png",
+          "compressed_path": "assets/web/puremed-pnct-who-kling-v1.webp",
+          "preferred": true,
+          "notes": "Editorial portrait, 3:4, bright airy interior, warm champagne light, confident expression"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "client": "puremed",
+  "month": "2026-08",
+  "generated": "2026-07-03T17:08:49.203Z",
+  "approval": {
+    "state": "draft",
+    "by": null,
+    "on": null
+  },
+  "slots": [
+    {
+      "id": "2026-08-01-slot",
+      "date": "2026-08-01",
+      "time": "18:00",
+      "pillar": "education",
+      "treatmentId": "laser-lift",
+      "hook": "Skin starting to feel less firm along the jaw? You don't need surgery to lift it.",
+      "brief": "Introduce Laser Lift as the hero treatment: non-surgical skin tightening that stimulates the skin's own collagen. Who it suits — women 35+ noticing early laxity at the jawline and lower face. What a session involves and how it feels, grounded strictly in the treatments page copy. CTA: book a consultation.",
+      "status": "ready",
+      "format": "carousel"
+    },
+    {
+      "id": "2026-08-03-slot",
+      "date": "2026-08-03",
+      "time": "18:00",
+      "pillar": "myth-busting",
+      "treatmentId": "liquid-facelift",
+      "hook": "\"Fillers always look fake.\" Only the bad ones you can spot.",
+      "brief": "Bust the overfilled-face myth. A medically-led liquid facelift restores lost structure subtly — the best work is invisible. Emphasise assessment-first approach and natural outcomes; never mock the reader for the belief. CTA: consultation for an honest opinion.",
+      "status": "ready",
+      "format": "carousel"
+    },
+    {
+      "id": "2026-08-05-slot",
+      "date": "2026-08-05",
+      "time": "18:00",
+      "pillar": "trust",
+      "treatmentId": null,
+      "hook": "The most important part of any treatment happens before it: the consultation.",
+      "brief": "Why medically-led matters. Nafisa's consultation-first ethos: assessment, honest suitability advice, safety standards, no treatment sold on the day it isn't right for. Position the consultation as the product. CTA: book a consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-07-slot",
+      "date": "2026-08-07",
+      "time": "18:00",
+      "pillar": "education",
+      "treatmentId": "anti-wrinkle",
+      "hook": "Noticing lines settling in around your forehead or eyes? Start with a conversation, not a treatment.",
+      "brief": "POM-SENSITIVE — consultation-led only. Explain what causes dynamic expression lines and why a proper medical consultation is the right starting point for treating them. No drug or brand names, no prices, no offers. CTA: book a consultation to discuss lines and wrinkles.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-09-slot",
+      "date": "2026-08-09",
+      "time": "18:00",
+      "pillar": "journey",
+      "treatmentId": null,
+      "hook": "Never been to an aesthetics clinic? Here's exactly what your first visit looks like.",
+      "brief": "Walk through the first visit step by step: welcome, skin assessment, honest discussion of options, no-pressure next steps. Aimed at first-timers who are nervous or sceptical. Reduce fear of the unknown. CTA: book that first consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-11-slot",
+      "date": "2026-08-11",
+      "time": "18:00",
+      "pillar": "seasonal",
+      "treatmentId": null,
+      "hook": "One product protects every result we ever achieve together: SPF.",
+      "brief": "August sun edition. Why daily SPF is the single non-negotiable for skin quality and for protecting treatment results — holiday sun, UK sun, all of it. Practical, no product-pushing. CTA: ask about skin advice at your next visit.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-13-slot",
+      "date": "2026-08-13",
+      "time": "18:00",
+      "pillar": "education",
+      "treatmentId": "polynucleotides",
+      "hook": "Not filler. Not a laser. Polynucleotides work on your skin quality itself.",
+      "brief": "Explain polynucleotides: skin regeneration and quality rather than volume — what they are, who they suit (crepey skin, under-eyes, overall skin health), typical course structure. Ground in treatments page copy. CTA: consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-15-slot",
+      "date": "2026-08-15",
+      "time": "18:00",
+      "pillar": "myth-busting",
+      "treatmentId": "rf-microneedling",
+      "hook": "\"Microneedling is just needles rolled over your face.\" RF microneedling is a different treatment entirely.",
+      "brief": "Bust the derma-roller confusion. RF microneedling pairs microneedling with radiofrequency energy for tightening and texture — controlled depth, numbing for comfort, realistic downtime. Correct the 'it's agony' and 'only for scarring' assumptions. CTA: consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-17-slot",
+      "date": "2026-08-17",
+      "time": "18:00",
+      "pillar": "trust",
+      "treatmentId": null,
+      "hook": "Sometimes the best advice I can give is \"not yet\".",
+      "brief": "Honest suitability. Nafisa's first-person account of turning treatments down when they're not right — wrong treatment, wrong time, or skincare first. This is what medically-led means in practice. Builds trust through restraint. CTA: come for an honest assessment.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-19-slot",
+      "date": "2026-08-19",
+      "time": "18:00",
+      "pillar": "education",
+      "treatmentId": "skin-boosters",
+      "hook": "Moisturiser works on the surface. Skin boosters hydrate from within it.",
+      "brief": "Explain skin boosters: deep hydration and glow rather than volume — how they differ from filler, who they suit (dull, dehydrated, tired-looking skin), what a course looks like. Ground in treatments page copy. CTA: consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-21-slot",
+      "date": "2026-08-21",
+      "time": "18:00",
+      "pillar": "journey",
+      "treatmentId": null,
+      "hook": "The treatment is half the result. What you do in the two weeks after is the other half.",
+      "brief": "Aftercare matters. What good aftercare looks like (SPF, gentle skincare, following the plan) and how PureMed supports clients between appointments. Realistic results timelines — good outcomes are a partnership. CTA: soft, ask-a-question style.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-23-slot",
+      "date": "2026-08-23",
+      "time": "18:00",
+      "pillar": "education",
+      "treatmentId": "laser-lift",
+      "hook": "Laser Lift results don't appear overnight — and that's exactly why they look natural.",
+      "brief": "Second Laser Lift angle: the results timeline. Collagen remodelling takes weeks — set expectations for what changes and when, in ranges consistent with the treatments page. Realistic framing is the trust play; results vary by individual. CTA: consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-25-slot",
+      "date": "2026-08-25",
+      "time": "18:00",
+      "pillar": "seasonal",
+      "treatmentId": null,
+      "hook": "Thinking about feeling your best for autumn events? The time to start is now — here's why.",
+      "brief": "Planning-ahead post (NOT urgency): skin treatments take weeks to show full results, so September/October occasions mean starting conversations in August. Factual timeline framing, zero pressure language, no offers. CTA: book a consultation to plan.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-27-slot",
+      "date": "2026-08-27",
+      "time": "18:00",
+      "pillar": "myth-busting",
+      "treatmentId": "liquid-facelift",
+      "hook": "\"You'd always know if someone had work done.\" You've almost certainly complimented someone who has.",
+      "brief": "Second liquid facelift myth: detectability. Subtle, medically-led work reads as 'well-rested', not 'done' — that's the goal, not the exception. Reinforce bespoke, staged approach. Distinct angle from Aug 3 (fake looks vs detectability). CTA: consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-29-slot",
+      "date": "2026-08-29",
+      "time": "18:00",
+      "pillar": "trust",
+      "treatmentId": null,
+      "hook": "One clinic. One practitioner. The same face at every appointment — on purpose.",
+      "brief": "Meet Nafisa / continuity of care. The deliberate choice of a small medically-led clinic: the person who assesses you treats you, every time, and carries your full history. Warm, personal, first-person where natural. CTA: book a consultation.",
+      "status": "ready",
+      "format": "static"
+    },
+    {
+      "id": "2026-08-31-slot",
+      "date": "2026-08-31",
+      "time": "18:00",
+      "pillar": "education",
+      "treatmentId": "anti-wrinkle",
+      "hook": "Prevention or correction? With expression lines, the honest answer depends on your face — not your age.",
+      "brief": "POM-SENSITIVE — consultation-led only. Second anti-wrinkle angle, distinct from Aug 7: the prevention-vs-correction conversation and why it's individual (skin, expression patterns, goals — not a birthday number). No drug or brand names, no prices, no offers. CTA: consultation to talk it through.",
+      "status": "ready",
+      "format": "static"
+    }
+  ]
+}

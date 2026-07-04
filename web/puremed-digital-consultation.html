@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Digital Skin Consultation | PureMed Aesthetics</title>
+<meta name="description" content="A short, guided skin consultation. Answer six questions and discover which PureMed treatment is most likely to suit you. Medically led, personalised, natural-looking options only.">
+
+<!--
+============================================================================
+PUREMED DIGITAL CONSULTATION  —  notes for the build
+============================================================================
+This is an INTERACTIVE component, not a marketing page. Unlike the homepage and
+treatment templates, it does not map to Bricks elements section by section. In
+Bricks it goes in as ONE dedicated landing page with the whole thing in a single
+code element (or a standalone WP page template). It is Tier 3 by nature: state,
+logic and motion. Surface it from the homepage via a CTA linking to this page.
+
+Brand: PureMed palette + Cormorant Garamond / Inter. Framed as a consultation,
+never a quiz. Logic implemented exactly per the supplied spec (priority order,
+fallback to combination_consult). Q6 only changes the CTA label, not the result.
+
+INTEGRATION (currently stubbed, search for INTEGRATION below):
+  - The email gate captures name + email in memory only. Wire the submit to your
+    email/CRM (the result key maps 1:1 to the six result emails you wrote).
+  - On reveal, send {name, email, result, answers} to your handler and trigger
+    the matching "Your personalised PureMed treatment guide" email.
+============================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#23476A; --navy-deep:#1B3A57; --navy-hover:#2D5B88; --navy-light:#E8EFF5;
+  --gold:#C6A77D; --gold-soft:#D8BE98; --gold-line:rgba(198,167,125,.35);
+  --white:#FFFFFF; --warm-white:#F8F8F6; --light:#F3F4F6;
+  --ink:#1A1A2E; --mid:#6B7280; --border:#E5E7EB;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--warm-white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font-family:inherit;cursor:pointer}
+.serif{font-family:'Cormorant Garamond',serif}
+
+/* ---------- Shell: asymmetric split (anti-center) ---------- */
+.shell{display:flex;flex-direction:column;min-height:100dvh}
+@media(min-width:900px){.shell{flex-direction:row}}
+
+/* ---------- Left rail: the consultation presence ---------- */
+.rail{position:relative;background:var(--navy);color:#fff;overflow:hidden;flex-shrink:0}
+.rail::after{content:'';position:absolute;right:-30%;top:-20%;width:80%;height:80%;background:radial-gradient(circle,rgba(198,167,125,.10),transparent 70%);pointer-events:none}
+@media(min-width:900px){.rail{width:40%;max-width:520px;min-height:100dvh;display:flex;flex-direction:column;padding:56px 48px}}
+.rail-inner{position:relative;z-index:1;padding:28px 24px;display:flex;flex-direction:column;gap:20px;height:100%}
+@media(min-width:900px){.rail-inner{padding:0;justify-content:space-between;gap:0}}
+
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;letter-spacing:.01em}
+.brand-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+/* progress block (desktop centre of rail) */
+.rail-mid{display:none}
+@media(min-width:900px){.rail-mid{display:block}}
+.step-count{display:flex;align-items:baseline;gap:6px;margin-bottom:28px}
+.step-count .now{font-family:'Cormorant Garamond',serif;font-size:72px;line-height:.8;color:var(--gold)}
+.step-count .of{font-family:'Cormorant Garamond',serif;font-size:26px;color:rgba(255,255,255,.4)}
+.progress{height:2px;background:rgba(255,255,255,.12);border-radius:2px;overflow:hidden;margin-bottom:36px}
+.progress-fill{height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.steplist{list-style:none;display:flex;flex-direction:column;gap:2px}
+.steplist li{display:flex;align-items:center;gap:14px;padding:9px 0;font-size:13px;color:rgba(255,255,255,.4);transition:color .4s var(--ease)}
+.steplist li .dot{width:18px;height:18px;border-radius:50%;border:1px solid rgba(255,255,255,.2);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease)}
+.steplist li .dot svg{width:9px;height:9px;stroke:var(--navy);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;opacity:0;transform:scale(.5);transition:all .3s var(--ease)}
+.steplist li.done{color:rgba(255,255,255,.65)}
+.steplist li.done .dot{background:var(--gold);border-color:var(--gold)}
+.steplist li.done .dot svg{opacity:1;transform:scale(1)}
+.steplist li.active{color:#fff}
+.steplist li.active .dot{border-color:var(--gold);box-shadow:0 0 0 4px rgba(198,167,125,.15)}
+
+.rail-foot{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.5);max-width:34ch}
+.rail-foot strong{color:rgba(255,255,255,.8);font-weight:500}
+
+/* compact mobile rail: brand + thin progress */
+.rail-mobile{display:flex;flex-direction:column;gap:14px}
+@media(min-width:900px){.rail-mobile{display:none}}
+.rail-mobile .progress{margin:0}
+
+/* ---------- Right stage ---------- */
+.stage{flex:1;display:flex;align-items:center;justify-content:flex-start;padding:40px 24px 56px;position:relative}
+@media(min-width:900px){.stage{padding:80px 7vw}}
+.panel{width:100%;max-width:600px}
+
+/* enter / leave motion (transform + opacity only) */
+.view{opacity:0;transform:translateY(14px)}
+.view.in{opacity:1;transform:translateY(0);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.view.out{opacity:0;transform:translateY(-12px);transition:opacity .28s var(--ease-soft),transform .28s var(--ease-soft)}
+/* staggered children */
+.view.in .stagger{animation:rise .55s var(--ease) both;animation-delay:calc(var(--i,0) * 70ms + 80ms)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.kicker .ln{width:24px;height:1px;background:var(--gold)}
+.q-title{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--navy);font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.01em;margin-bottom:8px}
+.q-sub{font-size:15px;color:var(--mid);line-height:1.7;max-width:46ch;margin-bottom:30px}
+
+/* ---------- Options (anti-card: hairline rows that gain weight on select) ---------- */
+.options{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.opt{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:17px 20px;color:var(--ink);font-size:15px;line-height:1.4;transition:transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease)}
+.opt:hover{transform:translateY(-2px);border-color:var(--gold-soft);box-shadow:0 8px 24px -12px rgba(35,71,106,.22)}
+.opt:active{transform:translateY(0) scale(.99)}
+.opt:focus-visible{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(198,167,125,.18)}
+.opt .mark{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;position:relative;transition:all .25s var(--ease)}
+.opt .mark::after{content:'';position:absolute;inset:0;margin:auto;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:scale(0);transition:transform .25s var(--ease)}
+.opt:hover .mark{border-color:var(--gold-soft)}
+.opt.sel{border-color:var(--gold);background:#fffdf9;box-shadow:0 10px 30px -14px rgba(198,167,125,.5)}
+.opt.sel .mark{border-color:var(--gold)}
+.opt.sel .mark::after{transform:scale(1)}
+.opt .lbl{flex:1}
+
+/* nav row */
+.nav-row{display:flex;align-items:center;gap:16px;margin-top:30px}
+.back{display:inline-flex;align-items:center;gap:8px;background:none;border:none;color:var(--mid);font-size:13px;font-weight:500;padding:6px 0;transition:color .2s}
+.back:hover{color:var(--navy)}
+.back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hint{font-size:12px;color:#9CA3AF;margin-left:auto}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:500;letter-spacing:.02em;padding:16px 32px;border-radius:8px;border:none;text-decoration:none;transition:transform .18s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease)}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 6px 22px -8px rgba(198,167,125,.7)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(198,167,125,.85)}
+.btn-gold:active{transform:translateY(0) scale(.98)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 6px 22px -8px rgba(35,71,106,.5)}
+.btn-navy:hover{transform:translateY(-2px);background:var(--navy-hover)}
+.btn-navy:active{transform:translateY(0) scale(.98)}
+.btn svg{width:16px;height:16px}
+.btn[disabled]{opacity:.45;pointer-events:none}
+
+/* intro */
+.ticks{list-style:none;display:flex;flex-direction:column;gap:12px;margin:28px 0 34px}
+.ticks li{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--ink)}
+.tk{width:22px;height:22px;border-radius:50%;background:var(--navy-light);flex-shrink:0;display:inline-flex;align-items:center;justify-content:center}
+.tk svg{width:11px;height:11px;stroke:var(--navy);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.intro-foot{font-size:12.5px;color:#9CA3AF;margin-top:22px}
+
+/* form */
+.field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.field label{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--navy)}
+.field input{font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 16px;transition:border-color .2s,box-shadow .2s}
+.field input::placeholder{color:#aab1bb}
+.field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(198,167,125,.16)}
+.field.err input{border-color:#C0584A;box-shadow:0 0 0 4px rgba(192,88,74,.12)}
+.field .errmsg{font-size:12px;color:#C0584A;min-height:14px;opacity:0;transition:opacity .2s}
+.field.err .errmsg{opacity:1}
+.gate-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin:22px 0 30px}
+.gate-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--mid);line-height:1.55}
+.gate-list .tk{margin-top:1px}
+.gate-note{font-size:12px;color:#9CA3AF;margin-top:16px}
+
+/* result */
+.seal{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative}
+.seal::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold-line)}
+.seal svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.result-name{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--navy);font-size:clamp(34px,5vw,54px);line-height:1.04;margin:6px 0 18px}
+.result-intro{font-size:15.5px;color:var(--mid);line-height:1.75;max-width:50ch;margin-bottom:28px}
+.result-block{margin-bottom:26px}
+.result-block h4{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.result-block h4 .ln{width:20px;height:1px;background:var(--gold)}
+.shows{list-style:none;display:flex;flex-direction:column;gap:9px}
+.shows li{display:flex;align-items:flex-start;gap:11px;font-size:14.5px;color:var(--ink);line-height:1.55}
+.shows .bullet{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px}
+.helps{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.helps li{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;color:var(--navy);background:var(--navy-light);border-radius:30px;padding:8px 16px 8px 12px}
+.helps .tk{width:18px;height:18px;background:var(--white)}
+.helps .tk svg{width:9px;height:9px}
+.result-note{font-size:14px;color:var(--mid);line-height:1.7;border-left:2px solid var(--gold);padding-left:18px;margin:24px 0 30px;max-width:48ch}
+.result-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.restart{background:none;border:none;color:var(--mid);font-size:13px;font-weight:500;text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.restart:hover{color:var(--navy)}
+
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .view,.view .stagger{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <!-- ================= LEFT RAIL ================= -->
+  <aside class="rail">
+    <div class="rail-inner">
+      <div class="brand">
+        <span class="brand-name">PureMed</span>
+        <span class="brand-tag">Winslow &middot; Bucks</span>
+      </div>
+
+      <!-- desktop progress -->
+      <div class="rail-mid">
+        <div class="step-count"><span class="now serif" id="stepNow">01</span><span class="of serif">/ 06</span></div>
+        <div class="progress"><div class="progress-fill" id="railFill"></div></div>
+        <ul class="steplist" id="stepList"></ul>
+      </div>
+
+      <!-- mobile progress -->
+      <div class="rail-mobile">
+        <div class="progress"><div class="progress-fill" id="railFillM"></div></div>
+        <div class="rail-foot" id="railFootM" style="color:rgba(255,255,255,.6)"></div>
+      </div>
+
+      <p class="rail-foot" id="railFoot"><strong>A guided consultation.</strong> These are the same questions Nafisa works through in the clinic. It takes about sixty seconds.</p>
+    </div>
+  </aside>
+
+  <!-- ================= RIGHT STAGE ================= -->
+  <main class="stage">
+    <div class="panel" id="panel" aria-live="polite"></div>
+  </main>
+</div>
+
+<script>
+/* ============================ DATA ============================ */
+const BOOKING = "https://facesconsent.com/bookings/puremedaesthetics";
+
+const STEP_LABELS = ["Your main concern","Your goal","Your skin today","Your history","Your investment","Your timing"];
+
+const QUESTIONS = [
+  { id:"q1", kicker:"Step 01", title:"What bothers you most right now?", sub:"Choose the concern that feels most true for you today.",
+    options:[
+      ["My skin feels looser or less firm","sagging_skin"],
+      ["My jawline or neck doesn't feel as defined","jawline_neck"],
+      ["Fine lines or wrinkles","fine_lines_wrinkles"],
+      ["My face looks tired or less lifted","tired_less_lifted"],
+      ["My skin texture or glow has changed","skin_quality_texture"],
+      ["I'm not sure. I just don't look quite like myself lately","not_sure_mix"],
+    ]},
+  { id:"q2", kicker:"Step 02", title:"What are you hoping to achieve?", sub:"What would feel like the right result for you?",
+    options:[
+      ["Firmer, tighter skin","firmer_tighter_skin"],
+      ["More lift and definition","lift_definition"],
+      ["Smoother lines","smoother_lines"],
+      ["Better skin quality and glow","better_skin_quality"],
+      ["Restore volume naturally","restore_volume_naturally"],
+      ["An overall refresh","overall_refresh"],
+    ]},
+  { id:"q3", kicker:"Step 03", title:"Which best describes your skin?", sub:"A sense of where your skin is right now.",
+    options:[
+      ["Just starting to notice changes","starting_changes"],
+      ["Mild signs of ageing","mild_ageing"],
+      ["More noticeable sagging or heaviness","noticeable_sagging"],
+      ["Dull or uneven","dull_uneven"],
+      ["Hollowing or volume loss","hollowing_volume_loss"],
+      ["A mix of several things","mix_several_things"],
+    ]},
+  { id:"q4", kicker:"Step 04", title:"Have you had treatment before?", sub:"There's no right answer. It simply helps us guide you well.",
+    options:[
+      ["No, this would be my first","no_treatment_before"],
+      ["Anti-wrinkle injections","anti_wrinkle_before"],
+      ["Fillers","fillers_before"],
+      ["Skin treatments","skin_treatments_before"],
+      ["I've had treatments but I'm not sure what I need now","had_treatment_unsure_next"],
+    ]},
+  { id:"q5", kicker:"Step 05", title:"What investment feels comfortable?", sub:"This helps us recommend something realistic for you.",
+    options:[
+      ["Under £300","under_300"],
+      ["£300 to £700","300_700"],
+      ["£700 to £1,500","700_1500"],
+      ["£1,500 or more","1500_plus"],
+    ]},
+  { id:"q6", kicker:"Step 06", title:"When would you like to start?", sub:"Last one. This shapes how we follow up with you.",
+    options:[
+      ["Just researching for now","just_researching"],
+      ["In the next 1 to 3 months","1_3_months"],
+      ["In the next few weeks","next_few_weeks"],
+      ["As soon as possible","asap"],
+    ]},
+];
+
+const RESULTS = {
+  laser_lift:{
+    name:"Laser Lift",
+    intro:"It looks like skin laxity and collagen support may be the main focus for you right now. As we age, collagen naturally reduces and the deeper support within the skin changes too.",
+    shows:["A softer, less defined jawline","Heaviness around the lower face","Looser skin around the neck","Skin feeling less firm than it used to"],
+    desc:"Laser Lift is one of PureMed's most advanced collagen-stimulating treatments. It works beneath the skin to support tightening and stimulate your own collagen, with the goal of natural-looking rejuvenation while you still look like you.",
+    helps:["Firmness","Lift","Jawline definition","Lower face and neck contour"],
+  },
+  sculptra:{
+    name:"Sculptra",
+    intro:"Your skin may benefit most from collagen stimulation, restoring support gradually and naturally over time.",
+    shows:["Looking more tired than usual","Softer facial contours","Mild hollowing","Reduced skin firmness"],
+    desc:"Sculptra works by stimulating your body's own collagen, so results build gradually and naturally. Many clients love that it improves firmness and freshness without looking sudden or overdone.",
+    helps:["Skin firmness","Facial support","Overall freshness","Natural volume restoration"],
+  },
+  skin_regeneration:{
+    name:"Skin Regeneration",
+    intro:"Your answers suggest that skin quality, texture and collagen support may be the biggest opportunity for you right now.",
+    shows:["Dullness","Uneven texture","Skin looking tired","Reduced glow","Skin not feeling as healthy or hydrated"],
+    desc:"This focuses on improving skin health and collagen production. Depending on your skin, it may include microneedling, polynucleotides, skin boosters or personalised medical-grade skincare.",
+    helps:["Texture","Hydration","Glow","Collagen support","Skin confidence"],
+  },
+  anti_wrinkle:{
+    name:"Anti-Wrinkle Treatment",
+    intro:"Based on your answers, expression lines and muscle movement may be the main concern for you right now.",
+    shows:["Forehead lines","Frown lines","Crow's feet","Lines becoming more noticeable with movement"],
+    desc:"Anti-wrinkle treatment softens targeted lines while keeping results natural, for a fresher, more rested appearance. Every treatment is tailored carefully to your facial movement and goals.",
+    helps:["Forehead lines","Frown lines","Crow's feet","Overall refresh"],
+  },
+  fillers:{
+    name:"Dermal Fillers &amp; Facial Balancing",
+    intro:"Based on your answers, restoring support or volume may be the biggest opportunity for you right now.",
+    shows:["Deeper folds","Hollowing","Facial structure feeling less defined","Features looking more tired"],
+    desc:"Filler can be used carefully to restore support and rebalance facial structure while keeping results natural. Depending on your needs this may include cheeks, chin and profile balancing, or support areas.",
+    helps:["Restore shape","Improve balance","Support natural contours","Subtle, refreshed results"],
+  },
+  combination_consult:{
+    name:"Combination Consultation",
+    intro:"It looks like your concerns may be caused by a combination of factors rather than just one thing. That's very common, and often the most natural, balanced results come from treating the right areas together.",
+    shows:["A mix of firmness, volume and skin quality","More than one area you'd like to address","A sense of looking less like yourself overall"],
+    desc:"Your answers suggest a personalised plan combining treatments. This might bring together Sculptra for collagen, Laser Lift for lifting and tightening, skin regeneration for texture, or facial balancing where support is needed.",
+    helps:["Skin quality","Facial structure","Collagen support","A clear order of priority"],
+  },
+};
+
+function ctaLabel(q6){
+  if(q6==="asap") return "Book a Priority Consultation";
+  if(q6==="next_few_weeks") return "Book Your Consultation";
+  return "Plan Your Treatment Journey"; // just_researching + 1_3_months
+}
+
+/* ====================== RESULT LOGIC (exact spec, priority order) ====================== */
+function computeResult(a){
+  const inc=(v,arr)=>arr.includes(v);
+  const {q1,q2,q3,q4,q5}=a;
+
+  // 1. COMBINATION CONSULT
+  if(q1==="not_sure_mix" || q2==="overall_refresh" || q3==="mix_several_things" || q4==="had_treatment_unsure_next") return "combination_consult";
+  if(inc(q1,["sagging_skin","jawline_neck"]) && q3==="hollowing_volume_loss" && q5==="1500_plus") return "combination_consult";
+  if(q1==="skin_quality_texture" && q2==="smoother_lines") return "combination_consult";
+  if(q4==="fillers_before" && inc(q1,["sagging_skin","jawline_neck","tired_less_lifted"])) return "combination_consult";
+
+  // 2. LASER LIFT
+  if(inc(q1,["sagging_skin","jawline_neck"]) && inc(q2,["firmer_tighter_skin","lift_definition"])
+     && inc(q3,["starting_changes","mild_ageing","noticeable_sagging"]) && q5==="1500_plus") return "laser_lift";
+
+  // 3. SCULPTRA
+  if(inc(q1,["tired_less_lifted","sagging_skin"]) && q2==="restore_volume_naturally"
+     && inc(q3,["hollowing_volume_loss","mild_ageing","starting_changes"]) && inc(q5,["700_1500","1500_plus"])) return "sculptra";
+  if(q1==="tired_less_lifted" && q2==="overall_refresh" && inc(q5,["700_1500","1500_plus"])) return "sculptra";
+
+  // 4. FILLERS
+  if(q1==="tired_less_lifted" && q2==="restore_volume_naturally" && q3==="hollowing_volume_loss" && q5==="700_1500") return "fillers";
+  if(q3==="hollowing_volume_loss" && q2==="lift_definition" && q5==="700_1500") return "fillers";
+
+  // 5. SKIN REGENERATION
+  if(q1==="skin_quality_texture" && q2==="better_skin_quality"
+     && inc(q3,["dull_uneven","starting_changes","mild_ageing"]) && inc(q5,["under_300","300_700","700_1500"])) return "skin_regeneration";
+
+  // 6. ANTI-WRINKLE
+  if(q1==="fine_lines_wrinkles" && q2==="smoother_lines" && inc(q5,["under_300","300_700"])) return "anti_wrinkle";
+  if(q4==="anti_wrinkle_before" && q1==="fine_lines_wrinkles" && q5!=="1500_plus") return "anti_wrinkle";
+
+  // FALLBACK
+  return "combination_consult";
+}
+
+/* ============================ ICONS ============================ */
+const I={
+  check:'<svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
+  back:'<svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
+  seal:'<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+};
+
+/* ============================ STATE + RENDER ============================ */
+const state={ screen:"intro", q:0, answers:{}, lead:{} };
+const panel=document.getElementById("panel");
+
+function buildStepList(){
+  const ul=document.getElementById("stepList");
+  ul.innerHTML=STEP_LABELS.map((l,i)=>`<li data-step="${i}"><span class="dot">${I.check}</span><span>${l}</span></li>`).join("");
+}
+buildStepList();
+
+function updateRail(){
+  const onQ = state.screen==="q";
+  const idx = state.screen==="intro" ? -1 : (state.screen==="q" ? state.q : (state.screen==="gate"||state.screen==="result" ? 6 : -1));
+  // numerals
+  document.getElementById("stepNow").textContent = onQ ? String(state.q+1).padStart(2,"0") : (idx>=6 ? "06" : "—");
+  // fill
+  const pct = idx<0 ? 0 : Math.min(idx/6, 1);
+  const sc = "scaleX("+pct+")";
+  document.getElementById("railFill").style.transform=sc;
+  document.getElementById("railFillM").style.transform=sc;
+  // step list states
+  document.querySelectorAll("#stepList li").forEach((li,i)=>{
+    li.classList.toggle("active", onQ && i===state.q);
+    li.classList.toggle("done", i < idx || (idx>=6));
+  });
+  // mobile foot label
+  const fm=document.getElementById("railFootM");
+  if(onQ) fm.textContent = STEP_LABELS[state.q]+" · "+(state.q+1)+" of 6";
+  else if(state.screen==="gate") fm.textContent="Almost there";
+  else if(state.screen==="result") fm.textContent="Consultation complete";
+  else fm.textContent="";
+}
+
+function mount(html){
+  // leave current
+  const cur=panel.firstElementChild;
+  const swap=()=>{
+    panel.innerHTML='<div class="view">'+html+'</div>';
+    const v=panel.firstElementChild;
+    // set stagger indices
+    v.querySelectorAll(".stagger").forEach((el,i)=>el.style.setProperty("--i",i));
+    requestAnimationFrame(()=>requestAnimationFrame(()=>v.classList.add("in")));
+    bindStage();
+    updateRail();
+    window.scrollTo({top:0,behavior:"instant"in window?"instant":"auto"});
+  };
+  if(cur){ cur.classList.remove("in"); cur.classList.add("out"); setTimeout(swap,240); }
+  else swap();
+}
+
+/* ---------- screen templates ---------- */
+function introHTML(){
+  return `
+    <span class="kicker stagger"><span class="ln"></span>PureMed Digital Consultation</span>
+    <h1 class="q-title stagger">What's the best treatment for your skin right now?</h1>
+    <p class="q-sub stagger">Answer six short questions and we'll point you toward the treatments most likely to suit you. It's the same thinking Nafisa uses in the clinic, in about sixty seconds.</p>
+    <ul class="ticks stagger">
+      <li><span class="tk">${I.check}</span>Medically led, by a practitioner with a dental background</li>
+      <li><span class="tk">${I.check}</span>Personalised to your answers, not generic advice</li>
+      <li><span class="tk">${I.check}</span>Natural-looking options only</li>
+    </ul>
+    <div class="stagger"><button class="btn btn-navy" id="begin">Begin Consultation ${I.arrow}</button></div>
+    <p class="intro-foot stagger">No obligation. Free to complete. Your answers stay private.</p>`;
+}
+
+function questionHTML(){
+  const q=QUESTIONS[state.q];
+  const chosen=state.answers[q.id];
+  const opts=q.options.map(([label,val])=>
+    `<button class="opt stagger${chosen===val?' sel':''}" data-val="${val}"><span class="mark"></span><span class="lbl">${label}</span></button>`
+  ).join("");
+  const back = state.q>0 || true; // allow back to intro from q1
+  return `
+    <span class="kicker stagger"><span class="ln"></span>${q.kicker} of 06 &middot; ${STEP_LABELS[state.q]}</span>
+    <h2 class="q-title stagger">${q.title}</h2>
+    <p class="q-sub stagger">${q.sub}</p>
+    <div class="options">${opts}</div>
+    <div class="nav-row stagger">
+      <button class="back" id="back">${I.back} Back</button>
+      <span class="hint">Select an option to continue</span>
+    </div>`;
+}
+
+function gateHTML(){
+  return `
+    <span class="kicker stagger"><span class="ln"></span>Almost there</span>
+    <h2 class="q-title stagger">Your personalised recommendation is almost ready</h2>
+    <p class="q-sub stagger">Based on your answers, we've identified your likely ageing pattern, the treatments most likely to suit you, and whether tightening, restoring volume or improving skin quality should come first.</p>
+    <ul class="gate-list stagger">
+      <li><span class="tk">${I.check}</span>Your likely ageing pattern</li>
+      <li><span class="tk">${I.check}</span>Which treatments may suit you best</li>
+      <li><span class="tk">${I.check}</span>Where collagen support could help</li>
+      <li><span class="tk">${I.check}</span>What to prioritise first</li>
+    </ul>
+    <div class="field stagger" id="f-name">
+      <label for="name">Your name</label>
+      <input id="name" type="text" autocomplete="given-name" placeholder="First name">
+      <span class="errmsg">Please add your name</span>
+    </div>
+    <div class="field stagger" id="f-email">
+      <label for="email">Email address</label>
+      <input id="email" type="email" autocomplete="email" placeholder="you@email.com">
+      <span class="errmsg">Please add a valid email</span>
+    </div>
+    <div class="stagger"><button class="btn btn-gold" id="reveal">Reveal My Recommendation ${I.arrow}</button></div>
+    <p class="gate-note stagger">We'll also email your full PureMed treatment guide. No spam, ever.</p>`;
+}
+
+function resultHTML(){
+  const key=computeResult(state.answers);
+  state.result=key;
+  const r=RESULTS[key];
+  const name=state.lead.name?(", "+state.lead.name):"";
+  const shows=r.shows.map(s=>`<li><span class="bullet"></span>${s}</li>`).join("");
+  const helps=r.helps.map(h=>`<li><span class="tk">${I.check}</span>${h}</li>`).join("");
+  const label=ctaLabel(state.answers.q6);
+  return `
+    <div class="seal stagger">${I.seal}</div>
+    <span class="kicker stagger"><span class="ln"></span>Your personalised recommendation</span>
+    <h2 class="result-name stagger">${r.name}</h2>
+    <p class="result-intro stagger">Thank you${name}. ${r.intro}</p>
+    <div class="result-block stagger">
+      <h4><span class="ln"></span>This often shows up as</h4>
+      <ul class="shows">${shows}</ul>
+    </div>
+    <div class="result-block stagger">
+      <h4><span class="ln"></span>How ${r.name} can help</h4>
+      <ul class="helps">${helps}</ul>
+    </div>
+    <p class="result-note stagger">${r.desc}</p>
+    <p class="result-note stagger" style="border:none;padding:0;color:var(--ink)">Every face is different, so your consultation includes a personalised assessment with Nafisa to confirm what suits you and which areas to focus on first.</p>
+    <div class="result-cta stagger">
+      <a class="btn btn-gold" href="${BOOKING}" target="_blank" rel="noopener">${label} ${I.arrow}</a>
+      <button class="restart" id="restart">Start the consultation again</button>
+    </div>`;
+}
+
+/* ---------- bind events per screen ---------- */
+function bindStage(){
+  if(state.screen==="intro"){
+    panel.querySelector("#begin").onclick=()=>{ state.screen="q"; state.q=0; mount(questionHTML()); };
+  }
+  else if(state.screen==="q"){
+    panel.querySelectorAll(".opt").forEach(btn=>{
+      btn.onclick=()=>{
+        const q=QUESTIONS[state.q];
+        state.answers[q.id]=btn.dataset.val;
+        panel.querySelectorAll(".opt").forEach(b=>b.classList.remove("sel"));
+        btn.classList.add("sel");
+        setTimeout(()=>{
+          if(state.q < QUESTIONS.length-1){ state.q++; mount(questionHTML()); }
+          else { state.screen="gate"; mount(gateHTML()); }
+        }, 340);
+      };
+    });
+    panel.querySelector("#back").onclick=()=>{
+      if(state.q===0){ state.screen="intro"; mount(introHTML()); }
+      else { state.q--; mount(questionHTML()); }
+    };
+  }
+  else if(state.screen==="gate"){
+    const nameEl=panel.querySelector("#name"), emailEl=panel.querySelector("#email");
+    const fName=panel.querySelector("#f-name"), fEmail=panel.querySelector("#f-email");
+    const clear=el=>el.classList.remove("err");
+    nameEl.oninput=()=>clear(fName); emailEl.oninput=()=>clear(fEmail);
+    panel.querySelector("#reveal").onclick=()=>{
+      const nameOk=nameEl.value.trim().length>0;
+      const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim());
+      fName.classList.toggle("err",!nameOk); fEmail.classList.toggle("err",!emailOk);
+      if(!nameOk){nameEl.focus();return;} if(!emailOk){emailEl.focus();return;}
+      state.lead={ name:nameEl.value.trim(), email:emailEl.value.trim() };
+      // INTEGRATION: send {name,email,result,answers} to your handler + trigger the matching result email here.
+      // e.g. fetch('/api/consultation', {method:'POST', body: JSON.stringify({...state.lead, result: computeResult(state.answers), answers: state.answers})});
+      state.screen="result"; mount(resultHTML());
+    };
+  }
+  else if(state.screen==="result"){
+    panel.querySelector("#restart").onclick=()=>{
+      state.screen="intro"; state.q=0; state.answers={}; state.lead={}; mount(introHTML());
+    };
+  }
+}
+
+/* ============================ INIT ============================ */
+mount(introHTML());
+</script>
+</body>
+</html>

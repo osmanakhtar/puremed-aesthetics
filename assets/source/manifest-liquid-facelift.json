@@ -1,0 +1,122 @@
+{
+  "client": "puremed",
+  "page": "puremed-liquid-facelift.html",
+  "generated_at": "2026-06-23",
+  "placements": [
+    {
+      "id": "hero",
+      "type": "hero-image",
+      "aspect_ratio": "9:16",
+      "section_selector": ".tx-hero-image img",
+      "copy_context": "Liquid Facelift with Dermal Fillers — hyaluronic acid dermal fillers to restore lost volume, lift and define your features naturally",
+      "assets": [
+        {
+          "model": "soul_2",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260622_162506_ffdde376-26f5-4cda-b06c-0d399fdcd620.png",
+          "filename": "puremed-liquid-facelift-hero-soul2-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-hero-soul2-v1.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-hero-soul2-v1.webp",
+          "preferred": false,
+          "notes": "Run 1 (2026-06-22). Soul 2.0. Woman in window light, three-quarter profile. Previously preferred — review against v2/v3."
+        },
+        {
+          "model": "recraft-v4-1",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260622_162508_6fc21621-401e-40ea-82c2-23434cfeb1ce.png",
+          "filename": "puremed-liquid-facelift-hero-recraft-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-hero-recraft-v1.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-hero-recraft-v1.webp",
+          "preferred": false,
+          "notes": "Run 1 (2026-06-22). Recraft 4.1 2k. Premium magazine portrait feel, three-quarter profile."
+        },
+        {
+          "model": "flux_2",
+          "variant": "v2",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_112441_307f3b80-e10e-461e-a5cf-61495e804709.png",
+          "filename": "puremed-liquid-facelift-hero-flux2-v2.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-hero-flux2-v2.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-hero-flux2-v2.webp",
+          "preferred": false,
+          "notes": "Run 2 (2026-06-23). Flux 2.0 Pro 2k. 9:16 portrait, warm window light."
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v3",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_112400_5a03103e-e179-45a0-89ad-2699dae91c05.png",
+          "filename": "puremed-liquid-facelift-hero-kling01-v3.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-hero-kling01-v3.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-hero-kling01-v3.webp",
+          "preferred": false,
+          "notes": "Run 2 (2026-06-23). Kling O1 Image 2k. 9:16 portrait, warm window light."
+        }
+      ]
+    },
+    {
+      "id": "what-is",
+      "type": "editorial-image",
+      "aspect_ratio": "4:5",
+      "section_selector": ".what-is .what-is-image img",
+      "copy_context": "What Is a Liquid Facelift? — hyaluronic acid dermal fillers restore lost volume, smooth lines, and redefine facial contours with a lifted, balanced result that looks entirely natural",
+      "assets": [
+        {
+          "model": "recraft-v4-1",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260622_162514_25772b1f-b7b7-4e1f-8d4a-104ff0eb7863.png",
+          "filename": "puremed-liquid-facelift-what-is-recraft-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-what-is-recraft-v1.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-what-is-recraft-v1.webp",
+          "preferred": true,
+          "notes": "Run 1 (2026-06-22). Recraft 4.1 2k. Close three-quarter portrait, warm directional light tracing cheekbone."
+        },
+        {
+          "model": "nano_banana_flash",
+          "variant": "v2",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_112404_ed70969b-05b3-487a-9a66-9d027d5ad121.png",
+          "filename": "puremed-liquid-facelift-what-is-nbb-v2.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-what-is-nbb-v2.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-what-is-nbb-v2.webp",
+          "preferred": false,
+          "notes": "Run 2 (2026-06-23). Nano Banana Flash 2k. Three-quarter face, warm afternoon light."
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "type": "editorial-image",
+      "aspect_ratio": "4:5",
+      "section_selector": ".who .what-is-image img",
+      "copy_context": "Who Is It Right For? — Women aged 35–65 noticing loss of volume in cheeks, temples or under-eyes",
+      "assets": [
+        {
+          "model": "recraft-v4-1",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260622_162518_a7e6407b-0ac9-4b1e-a0b3-36e821de9afa.png",
+          "filename": "puremed-liquid-facelift-who-recraft-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-who-recraft-v1.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-who-recraft-v1.webp",
+          "preferred": true,
+          "notes": "Run 1 (2026-06-22). Recraft 4.1 2k. Soft side profile, woman in early fifties, settled ease near window."
+        },
+        {
+          "model": "nano_banana_flash",
+          "variant": "v2",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_112407_5396aee2-8ab5-4f0d-ae3a-25e6e26b5823.png",
+          "filename": "puremed-liquid-facelift-who-nbb-v2.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-liquid-facelift-who-nbb-v2.png",
+          "compressed_path": "assets/generated/compressed/puremed-liquid-facelift-who-nbb-v2.webp",
+          "preferred": false,
+          "notes": "Run 2 (2026-06-23). Nano Banana Flash 2k. Side profile, early fifties, warm window light."
+        }
+      ]
+    }
+  ]
+}

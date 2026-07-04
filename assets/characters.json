@@ -1,0 +1,24 @@
+{
+  "client": "puremed",
+  "characters": [
+    {
+      "name": "nafisa",
+      "label": "Naf-pure-med",
+      "soul_id": "af674b49-b70e-4715-8edf-87b0c4fc6771",
+      "soul_model_constraint": ["soul_2", "soul_cinema_studio"],
+      "element_id": "0bf4546e-92cd-4d17-bb0f-c70fdaadab54",
+      "element_model_support": [
+        "nano_banana_2", "nano_banana_flash", "gpt_image_2",
+        "seedream_v4_5", "seedream_v5_lite", "cinematic_studio_2_5",
+        "cinematic_studio_video_v2", "cinematic_studio_3_0",
+        "seedance_2_0", "kling3_0"
+      ],
+      "created_at": "2026-06-23",
+      "source": "assets/generated/manifest.md",
+      "status": "resolved",
+      "default_injection_method": "element (image-reference via nano_banana_2)",
+      "reference_photo": "assets/web/nafisa-hero-v2.webp",
+      "notes": "Soul vs Element comparison run 2026-07-01 (see assets/tests/soul-vs-element/): 3 matched scenes each. Soul V2 (text2image_soul_v2, custom_reference_id) showed clear identity drift — different hair, face shape, and features across scenes. Element approach (nano_banana_2 image-reference, CLI has no direct element_id support) held facial identity consistently across all 3 scenes — first pass used an AI-generated portrait as reference (assets/web/nafisa-library-e-soul2-v1.webp), re-run used the real photo nafisa-hero-v2.webp (assets/tests/soul-vs-element/element-v2-hero-ref/) and confirmed the same result with a clean identity source: nose ring, hair color/texture, and face held across all 3 scenes. Default to image-reference/nano_banana_2 with nafisa-hero-v2.webp as the canonical reference photo for this character; avoid Soul V2 for multi-scene consistency needs."
+    }
+  ]
+}

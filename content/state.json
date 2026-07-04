@@ -1,0 +1,33 @@
+{
+  "reindexed": "2026-07-03T19:37:47.793Z",
+  "posts": [
+    {
+      "id": "2026-08-01-laser-lift",
+      "state": "review",
+      "date": "2026-08-01",
+      "pillar": "education",
+      "updated": "2026-07-03T19:37:47.792Z"
+    },
+    {
+      "id": "2026-08-03-liquid-facelift",
+      "state": "review",
+      "date": "2026-08-03",
+      "pillar": "myth-busting",
+      "updated": "2026-07-03T19:37:47.792Z"
+    },
+    {
+      "id": "2026-08-05-trust",
+      "state": "review",
+      "date": "2026-08-05",
+      "pillar": "trust",
+      "updated": "2026-07-03T19:37:47.793Z"
+    },
+    {
+      "id": "2026-08-07-anti-wrinkle",
+      "state": "review",
+      "date": "2026-08-07",
+      "pillar": "education",
+      "updated": "2026-07-03T19:37:47.793Z"
+    }
+  ]
+}

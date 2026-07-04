@@ -1,0 +1,34 @@
+{
+  "client": "puremed",
+  "name": "PureMed Aesthetics",
+  "location": "Winslow, Buckinghamshire",
+  "timezone": "Europe/London",
+  "cadenceDays": 2,
+  "postTimeLocal": "18:00",
+  "postTimeStatus": "provisional — confirm with Nafisa",
+  "platforms": ["instagram", "facebook"],
+  "bookingUrl": "https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185",
+  "reviewEngagement": "puremed-content",
+  "meta": {
+    "pageId": null,
+    "igUserId": null,
+    "note": "Phase 2 — pending Business Manager partner access + system user token"
+  },
+  "assetBaseUrl": null,
+  "branding": {
+    "logo": "assets/web/puremed_logo_cropped.webp",
+    "position": "bottom-right",
+    "widthPct": 20,
+    "opacity": 0.95,
+    "defaultOn": true,
+    "note": "Overlaid on photo slides and static images only — text slides are already brand cards. Phase 2 publisher must bake this into the exported image files."
+  },
+  "treatments": [
+    { "id": "laser-lift", "name": "Laser Lift", "hero": true, "pomSensitive": false },
+    { "id": "liquid-facelift", "name": "Liquid Facelift", "hero": false, "pomSensitive": false },
+    { "id": "anti-wrinkle", "name": "Anti-Wrinkle Treatments", "hero": false, "pomSensitive": true },
+    { "id": "polynucleotides", "name": "Polynucleotides", "hero": false, "pomSensitive": false },
+    { "id": "rf-microneedling", "name": "RF Microneedling", "hero": false, "pomSensitive": false },
+    { "id": "skin-boosters", "name": "Skin Boosters", "hero": false, "pomSensitive": false }
+  ]
+}

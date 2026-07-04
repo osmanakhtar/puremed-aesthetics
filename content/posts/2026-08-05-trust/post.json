@@ -1,0 +1,29 @@
+{
+  "id": "2026-08-05-trust",
+  "slotId": "2026-08-05-slot",
+  "date": "2026-08-05",
+  "time": "18:00",
+  "timezone": "Europe/London",
+  "pillar": "trust",
+  "treatmentId": null,
+  "pomSensitive": false,
+  "platforms": [
+    "instagram",
+    "facebook"
+  ],
+  "state": "review",
+  "assets": [
+    {
+      "source": "assets/web/puremed-hero-consultation.webp",
+      "alt": "Nafisa Mughal consulting with a client",
+      "status": "placeholder — from site imagery; Nafisa to confirm or supply real photo",
+      "type": "image"
+    }
+  ],
+  "reviewNote": null,
+  "platformPostIds": {},
+  "created": "2026-07-03T17:11:11.817Z",
+  "updated": "2026-07-03T19:37:47.793Z",
+  "format": "static",
+  "brandOverlay": true
+}

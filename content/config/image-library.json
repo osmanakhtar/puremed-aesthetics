@@ -1,0 +1,3329 @@
+{
+  "description": "Curated image library for social content. Compliance: before/after files are deliberately excluded (manual-approval-only). Most images are AI-generated — flag as placeholder until Nafisa supplies/approves real photography.",
+  "updated": "2026-07-04",
+  "images": [
+    {
+      "file": "Nafisa-hero.webp",
+      "label": "Nafisa hero",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/Nafisa-hero.webp"
+    },
+    {
+      "file": "anti-wrinkle-hero.webp",
+      "label": "anti wrinkle hero",
+      "tags": [
+        "anti-wrinkle",
+        "treatment"
+      ],
+      "context": "Anti-wrinkle (POM-sensitive captions)",
+      "source": "assets/web/anti-wrinkle-hero.webp"
+    },
+    {
+      "file": "anti-wrinkle-treatment.webp",
+      "label": "anti wrinkle treatment",
+      "tags": [
+        "anti-wrinkle",
+        "treatment"
+      ],
+      "context": "Anti-wrinkle (POM-sensitive captions)",
+      "source": "assets/web/anti-wrinkle-treatment.webp"
+    },
+    {
+      "file": "ba-polynucleotides-3.webp",
+      "label": "ba polynucleotides 3",
+      "tags": [
+        "polynucleotides",
+        "treatment"
+      ],
+      "context": "Polynucleotides",
+      "source": "assets/web/ba-polynucleotides-3.webp"
+    },
+    {
+      "file": "ba-rf-microneedling-1.webp",
+      "label": "ba rf microneedling 1",
+      "tags": [
+        "rf-microneedling",
+        "treatment"
+      ],
+      "context": "RF Microneedling",
+      "source": "assets/web/ba-rf-microneedling-1.webp"
+    },
+    {
+      "file": "ba-rf-microneedling-2.webp",
+      "label": "ba rf microneedling 2",
+      "tags": [
+        "rf-microneedling",
+        "treatment"
+      ],
+      "context": "RF Microneedling",
+      "source": "assets/web/ba-rf-microneedling-2.webp"
+    },
+    {
+      "file": "ba-skin-boosters-1.webp",
+      "label": "ba skin boosters 1",
+      "tags": [
+        "skin-boosters",
+        "treatment"
+      ],
+      "context": "Skin Boosters",
+      "source": "assets/web/ba-skin-boosters-1.webp"
+    },
+    {
+      "file": "ba-skin-boosters-2.webp",
+      "label": "ba skin boosters 2",
+      "tags": [
+        "skin-boosters",
+        "treatment"
+      ],
+      "context": "Skin Boosters",
+      "source": "assets/web/ba-skin-boosters-2.webp"
+    },
+    {
+      "file": "endolift-poster.webp",
+      "label": "endolift poster",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/endolift-poster.webp"
+    },
+    {
+      "file": "hero-micro-needling.webp",
+      "label": "hero micro needling",
+      "tags": [
+        "rf-microneedling",
+        "treatment"
+      ],
+      "context": "RF Microneedling",
+      "source": "assets/web/hero-micro-needling.webp"
+    },
+    {
+      "file": "laser-lift-ba-1.webp",
+      "label": "laser lift ba 1",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/laser-lift-ba-1.webp"
+    },
+    {
+      "file": "laser-lift-ba-3.webp",
+      "label": "laser lift ba 3",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/laser-lift-ba-3.webp"
+    },
+    {
+      "file": "laser-lift-ba-4.webp",
+      "label": "laser lift ba 4",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/laser-lift-ba-4.webp"
+    },
+    {
+      "file": "laser-lift-ba-5.webp",
+      "label": "laser lift ba 5",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/laser-lift-ba-5.webp"
+    },
+    {
+      "file": "liquid-facelift-hero.webp",
+      "label": "liquid facelift hero",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/liquid-facelift-hero.webp"
+    },
+    {
+      "file": "nafisa-01-flux2pro-v1.webp",
+      "label": "nafisa 01 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-01-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-01-gptimage-v1.webp",
+      "label": "nafisa 01 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-01-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-01-kling01-v1.webp",
+      "label": "nafisa 01 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-01-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-01-nanobanana-v1.webp",
+      "label": "nafisa 01 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-01-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-01-seedream45-v1.webp",
+      "label": "nafisa 01 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-01-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-01-seedream5lite-v1.webp",
+      "label": "nafisa 01 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-01-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-02-flux2pro-v1.webp",
+      "label": "nafisa 02 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-02-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-02-gptimage-v1.webp",
+      "label": "nafisa 02 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-02-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-02-kling01-v1.webp",
+      "label": "nafisa 02 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-02-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-02-nanobanana-v1.webp",
+      "label": "nafisa 02 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-02-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-02-seedream45-v1.webp",
+      "label": "nafisa 02 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-02-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-02-seedream5lite-v1.webp",
+      "label": "nafisa 02 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-02-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-03-flux2pro-v1.webp",
+      "label": "nafisa 03 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-03-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-03-gptimage-v1.webp",
+      "label": "nafisa 03 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-03-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-03-kling01-v1.webp",
+      "label": "nafisa 03 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-03-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-03-nanobanana-v1.webp",
+      "label": "nafisa 03 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-03-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-03-seedream45-v1.webp",
+      "label": "nafisa 03 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-03-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-03-seedream5lite-v1.webp",
+      "label": "nafisa 03 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-03-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-04-flux2pro-v1.webp",
+      "label": "nafisa 04 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-04-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-04-gptimage-v1.webp",
+      "label": "nafisa 04 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-04-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-04-kling01-v1.webp",
+      "label": "nafisa 04 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-04-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-04-nanobanana-v1.webp",
+      "label": "nafisa 04 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-04-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-04-seedream45-v1.webp",
+      "label": "nafisa 04 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-04-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-04-seedream5lite-v1.webp",
+      "label": "nafisa 04 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-04-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-05-flux2pro-v1.webp",
+      "label": "nafisa 05 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-05-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-05-gptimage-v1.webp",
+      "label": "nafisa 05 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-05-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-05-kling01-v1.webp",
+      "label": "nafisa 05 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-05-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-05-nanobanana-v1.webp",
+      "label": "nafisa 05 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-05-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-05-seedream45-v1.webp",
+      "label": "nafisa 05 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-05-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-05-seedream5lite-v1.webp",
+      "label": "nafisa 05 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-05-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-06-flux2pro-v1.webp",
+      "label": "nafisa 06 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-06-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-06-gptimage-v1.webp",
+      "label": "nafisa 06 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-06-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-06-kling01-v1.webp",
+      "label": "nafisa 06 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-06-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-06-nanobanana-v1.webp",
+      "label": "nafisa 06 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-06-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-06-seedream45-v1.webp",
+      "label": "nafisa 06 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-06-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-06-seedream5lite-v1.webp",
+      "label": "nafisa 06 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-06-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-07-flux2pro-v1.webp",
+      "label": "nafisa 07 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-07-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-07-gptimage-v1.webp",
+      "label": "nafisa 07 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-07-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-07-kling01-v1.webp",
+      "label": "nafisa 07 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-07-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-07-seedream45-v1.webp",
+      "label": "nafisa 07 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-07-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-07-seedream5lite-v1.webp",
+      "label": "nafisa 07 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-07-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-08-flux2pro-v1.webp",
+      "label": "nafisa 08 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-08-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-08-gptimage-v1.webp",
+      "label": "nafisa 08 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-08-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-08-kling01-v1.webp",
+      "label": "nafisa 08 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-08-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-08-nanobanana-v1.webp",
+      "label": "nafisa 08 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-08-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-08-seedream45-v1.webp",
+      "label": "nafisa 08 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-08-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-08-seedream5lite-v1.webp",
+      "label": "nafisa 08 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-08-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-09-flux2pro-v1.webp",
+      "label": "nafisa 09 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-09-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-09-gptimage-v1.webp",
+      "label": "nafisa 09 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-09-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-09-kling01-v1.webp",
+      "label": "nafisa 09 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-09-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-09-nanobanana-v1.webp",
+      "label": "nafisa 09 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-09-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-09-seedream45-v1.webp",
+      "label": "nafisa 09 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-09-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-09-seedream5lite-v1.webp",
+      "label": "nafisa 09 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-09-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-10-flux2pro-v1.webp",
+      "label": "nafisa 10 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-10-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-10-gptimage-v1.webp",
+      "label": "nafisa 10 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-10-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-10-kling01-v1.webp",
+      "label": "nafisa 10 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-10-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-10-nanobanana-v1.webp",
+      "label": "nafisa 10 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-10-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-10-seedream45-v1.webp",
+      "label": "nafisa 10 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-10-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-10-seedream5lite-v1.webp",
+      "label": "nafisa 10 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-10-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-11-flux2pro-v1.webp",
+      "label": "nafisa 11 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-11-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-11-gptimage-v1.webp",
+      "label": "nafisa 11 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-11-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-11-kling01-v1.webp",
+      "label": "nafisa 11 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-11-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-11-nanobanana-v1.webp",
+      "label": "nafisa 11 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-11-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-11-seedream45-v1.webp",
+      "label": "nafisa 11 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-11-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-11-seedream5lite-v1.webp",
+      "label": "nafisa 11 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-11-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-12-flux2pro-v1.webp",
+      "label": "nafisa 12 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-12-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-12-gptimage-v1.webp",
+      "label": "nafisa 12 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-12-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-12-kling01-v1.webp",
+      "label": "nafisa 12 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-12-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-12-nanobanana-v1.webp",
+      "label": "nafisa 12 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-12-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-12-seedream45-v1.webp",
+      "label": "nafisa 12 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-12-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-12-seedream5lite-v1.webp",
+      "label": "nafisa 12 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-12-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-13-flux2pro-v1.webp",
+      "label": "nafisa 13 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-13-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-13-gptimage-v1.webp",
+      "label": "nafisa 13 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-13-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-13-kling01-v1.webp",
+      "label": "nafisa 13 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-13-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-13-nanobanana-v1.webp",
+      "label": "nafisa 13 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-13-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-13-seedream45-v1.webp",
+      "label": "nafisa 13 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-13-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-13-seedream5lite-v1.webp",
+      "label": "nafisa 13 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-13-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-14-flux2pro-v1.webp",
+      "label": "nafisa 14 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-14-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-14-gptimage-v1.webp",
+      "label": "nafisa 14 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-14-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-14-kling01-v1.webp",
+      "label": "nafisa 14 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-14-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-14-nanobanana-v1.webp",
+      "label": "nafisa 14 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-14-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-14-seedream45-v1.webp",
+      "label": "nafisa 14 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-14-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-14-seedream5lite-v1.webp",
+      "label": "nafisa 14 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-14-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-15-flux2pro-v1.webp",
+      "label": "nafisa 15 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-15-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-15-gptimage-v1.webp",
+      "label": "nafisa 15 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-15-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-15-kling01-v1.webp",
+      "label": "nafisa 15 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-15-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-15-nanobanana-v1.webp",
+      "label": "nafisa 15 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-15-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-15-seedream45-v1.webp",
+      "label": "nafisa 15 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-15-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-15-seedream5lite-v1.webp",
+      "label": "nafisa 15 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-15-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-16-flux2pro-v1.webp",
+      "label": "nafisa 16 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-16-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-16-gptimage-v1.webp",
+      "label": "nafisa 16 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-16-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-16-kling01-v1.webp",
+      "label": "nafisa 16 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-16-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-16-nanobanana-v1.webp",
+      "label": "nafisa 16 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-16-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-16-seedream45-v1.webp",
+      "label": "nafisa 16 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-16-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-16-seedream5lite-v1.webp",
+      "label": "nafisa 16 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-16-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-17-flux2pro-v1.webp",
+      "label": "nafisa 17 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-17-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-17-gptimage-v1.webp",
+      "label": "nafisa 17 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-17-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-17-kling01-v1.webp",
+      "label": "nafisa 17 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-17-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-17-nanobanana-v1.webp",
+      "label": "nafisa 17 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-17-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-17-seedream45-v1.webp",
+      "label": "nafisa 17 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-17-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-17-seedream5lite-v1.webp",
+      "label": "nafisa 17 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-17-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-18-flux2pro-v1.webp",
+      "label": "nafisa 18 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-18-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-18-gptimage-v1.webp",
+      "label": "nafisa 18 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-18-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-18-kling01-v1.webp",
+      "label": "nafisa 18 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-18-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-18-nanobanana-v1.webp",
+      "label": "nafisa 18 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-18-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-18-seedream45-v1.webp",
+      "label": "nafisa 18 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-18-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-18-seedream5lite-v1.webp",
+      "label": "nafisa 18 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-18-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-19-flux2pro-v1.webp",
+      "label": "nafisa 19 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-19-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-19-gptimage-v1.webp",
+      "label": "nafisa 19 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-19-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-19-kling01-v1.webp",
+      "label": "nafisa 19 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-19-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-19-nanobanana-v1.webp",
+      "label": "nafisa 19 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-19-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-19-seedream45-v1.webp",
+      "label": "nafisa 19 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-19-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-19-seedream5lite-v1.webp",
+      "label": "nafisa 19 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-19-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-20-flux2pro-v1.webp",
+      "label": "nafisa 20 flux2pro v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-20-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-20-gptimage-v1.webp",
+      "label": "nafisa 20 gptimage v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-20-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-20-kling01-v1.webp",
+      "label": "nafisa 20 kling01 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-20-kling01-v1.webp"
+    },
+    {
+      "file": "nafisa-20-nanobanana-v1.webp",
+      "label": "nafisa 20 nanobanana v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-20-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-20-seedream45-v1.webp",
+      "label": "nafisa 20 seedream45 v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-20-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-20-seedream5lite-v1.webp",
+      "label": "nafisa 20 seedream5lite v1",
+      "tags": [
+        "nafisa",
+        "scene-bank"
+      ],
+      "context": "Nafisa scene bank",
+      "source": "assets/web/nafisa-20-seedream5lite-v1.webp"
+    },
+    {
+      "file": "nafisa-hero-v2.webp",
+      "label": "nafisa hero v2",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/nafisa-hero-v2.webp"
+    },
+    {
+      "file": "nafisa-library-a-flux2pro-v1.webp",
+      "label": "a flux2pro v1",
+      "tags": [
+        "nafisa",
+        "consultation"
+      ],
+      "context": "Consultation — Nafisa and patient at desk, reviewing tablet",
+      "source": "assets/web/nafisa-library-a-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-library-a-gptimage-v1.webp",
+      "label": "a gptimage v1",
+      "tags": [
+        "nafisa",
+        "consultation"
+      ],
+      "context": "Consultation — Nafisa and patient at desk, reviewing tablet",
+      "source": "assets/web/nafisa-library-a-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-library-a-klingo1-v1.webp",
+      "label": "a klingo1 v1",
+      "tags": [
+        "nafisa",
+        "consultation"
+      ],
+      "context": "Consultation — Nafisa and patient at desk, reviewing tablet",
+      "source": "assets/web/nafisa-library-a-klingo1-v1.webp"
+    },
+    {
+      "file": "nafisa-library-a-nanobanana-v1.webp",
+      "label": "a nanobanana v1",
+      "tags": [
+        "nafisa",
+        "consultation"
+      ],
+      "context": "Consultation — Nafisa and patient at desk, reviewing tablet",
+      "source": "assets/web/nafisa-library-a-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-library-a-seedream45-v1.webp",
+      "label": "a seedream45 v1",
+      "tags": [
+        "nafisa",
+        "consultation"
+      ],
+      "context": "Consultation — Nafisa and patient at desk, reviewing tablet",
+      "source": "assets/web/nafisa-library-a-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-library-a-seedream50lite-v1.webp",
+      "label": "a seedream50lite v1",
+      "tags": [
+        "nafisa",
+        "consultation"
+      ],
+      "context": "Consultation — Nafisa and patient at desk, reviewing tablet",
+      "source": "assets/web/nafisa-library-a-seedream50lite-v1.webp"
+    },
+    {
+      "file": "nafisa-library-a-soul2-v1.webp",
+      "label": "a soul2 v1",
+      "tags": [
+        "nafisa",
+        "consultation"
+      ],
+      "context": "Consultation — Nafisa and patient at desk, reviewing tablet",
+      "source": "assets/web/nafisa-library-a-soul2-v1.webp"
+    },
+    {
+      "file": "nafisa-library-b-flux2pro-v1.webp",
+      "label": "b flux2pro v1",
+      "tags": [
+        "nafisa",
+        "assessment"
+      ],
+      "context": "Pre-treatment assessment — gloved examination in treatment chair",
+      "source": "assets/web/nafisa-library-b-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-library-b-gptimage-v1.webp",
+      "label": "b gptimage v1",
+      "tags": [
+        "nafisa",
+        "assessment"
+      ],
+      "context": "Pre-treatment assessment — gloved examination in treatment chair",
+      "source": "assets/web/nafisa-library-b-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-library-b-klingo1-v1.webp",
+      "label": "b klingo1 v1",
+      "tags": [
+        "nafisa",
+        "assessment"
+      ],
+      "context": "Pre-treatment assessment — gloved examination in treatment chair",
+      "source": "assets/web/nafisa-library-b-klingo1-v1.webp"
+    },
+    {
+      "file": "nafisa-library-b-nanobanana-v1.webp",
+      "label": "b nanobanana v1",
+      "tags": [
+        "nafisa",
+        "assessment"
+      ],
+      "context": "Pre-treatment assessment — gloved examination in treatment chair",
+      "source": "assets/web/nafisa-library-b-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-library-b-seedream45-v1.webp",
+      "label": "b seedream45 v1",
+      "tags": [
+        "nafisa",
+        "assessment"
+      ],
+      "context": "Pre-treatment assessment — gloved examination in treatment chair",
+      "source": "assets/web/nafisa-library-b-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-library-b-seedream50lite-v1.webp",
+      "label": "b seedream50lite v1",
+      "tags": [
+        "nafisa",
+        "assessment"
+      ],
+      "context": "Pre-treatment assessment — gloved examination in treatment chair",
+      "source": "assets/web/nafisa-library-b-seedream50lite-v1.webp"
+    },
+    {
+      "file": "nafisa-library-b-soul2-v1.webp",
+      "label": "b soul2 v1",
+      "tags": [
+        "nafisa",
+        "assessment"
+      ],
+      "context": "Pre-treatment assessment — gloved examination in treatment chair",
+      "source": "assets/web/nafisa-library-b-soul2-v1.webp"
+    },
+    {
+      "file": "nafisa-library-c-flux2pro-v1.webp",
+      "label": "c flux2pro v1",
+      "tags": [
+        "nafisa",
+        "treatment"
+      ],
+      "context": "Treatment in progress — clinical precision, framed tight",
+      "source": "assets/web/nafisa-library-c-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-library-c-gptimage-v1.webp",
+      "label": "c gptimage v1",
+      "tags": [
+        "nafisa",
+        "treatment"
+      ],
+      "context": "Treatment in progress — clinical precision, framed tight",
+      "source": "assets/web/nafisa-library-c-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-library-c-klingo1-v1.webp",
+      "label": "c klingo1 v1",
+      "tags": [
+        "nafisa",
+        "treatment"
+      ],
+      "context": "Treatment in progress — clinical precision, framed tight",
+      "source": "assets/web/nafisa-library-c-klingo1-v1.webp"
+    },
+    {
+      "file": "nafisa-library-c-nanobanana-v1.webp",
+      "label": "c nanobanana v1",
+      "tags": [
+        "nafisa",
+        "treatment"
+      ],
+      "context": "Treatment in progress — clinical precision, framed tight",
+      "source": "assets/web/nafisa-library-c-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-library-c-seedream45-v1.webp",
+      "label": "c seedream45 v1",
+      "tags": [
+        "nafisa",
+        "treatment"
+      ],
+      "context": "Treatment in progress — clinical precision, framed tight",
+      "source": "assets/web/nafisa-library-c-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-library-c-seedream50lite-v1.webp",
+      "label": "c seedream50lite v1",
+      "tags": [
+        "nafisa",
+        "treatment"
+      ],
+      "context": "Treatment in progress — clinical precision, framed tight",
+      "source": "assets/web/nafisa-library-c-seedream50lite-v1.webp"
+    },
+    {
+      "file": "nafisa-library-c-soul2-v1.webp",
+      "label": "c soul2 v1",
+      "tags": [
+        "nafisa",
+        "treatment"
+      ],
+      "context": "Treatment in progress — clinical precision, framed tight",
+      "source": "assets/web/nafisa-library-c-soul2-v1.webp"
+    },
+    {
+      "file": "nafisa-library-d-flux2pro-v1.webp",
+      "label": "d flux2pro v1",
+      "tags": [
+        "nafisa",
+        "results"
+      ],
+      "context": "Results review — patient with hand mirror",
+      "source": "assets/web/nafisa-library-d-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-library-d-gptimage-v1.webp",
+      "label": "d gptimage v1",
+      "tags": [
+        "nafisa",
+        "results"
+      ],
+      "context": "Results review — patient with hand mirror",
+      "source": "assets/web/nafisa-library-d-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-library-d-klingo1-v1.webp",
+      "label": "d klingo1 v1",
+      "tags": [
+        "nafisa",
+        "results"
+      ],
+      "context": "Results review — patient with hand mirror",
+      "source": "assets/web/nafisa-library-d-klingo1-v1.webp"
+    },
+    {
+      "file": "nafisa-library-d-nanobanana-v1.webp",
+      "label": "d nanobanana v1",
+      "tags": [
+        "nafisa",
+        "results"
+      ],
+      "context": "Results review — patient with hand mirror",
+      "source": "assets/web/nafisa-library-d-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-library-d-seedream45-v1.webp",
+      "label": "d seedream45 v1",
+      "tags": [
+        "nafisa",
+        "results"
+      ],
+      "context": "Results review — patient with hand mirror",
+      "source": "assets/web/nafisa-library-d-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-library-d-seedream50lite-v1.webp",
+      "label": "d seedream50lite v1",
+      "tags": [
+        "nafisa",
+        "results"
+      ],
+      "context": "Results review — patient with hand mirror",
+      "source": "assets/web/nafisa-library-d-seedream50lite-v1.webp"
+    },
+    {
+      "file": "nafisa-library-d-soul2-v1.webp",
+      "label": "d soul2 v1",
+      "tags": [
+        "nafisa",
+        "results"
+      ],
+      "context": "Results review — patient with hand mirror",
+      "source": "assets/web/nafisa-library-d-soul2-v1.webp"
+    },
+    {
+      "file": "nafisa-library-e-flux2pro-v1.webp",
+      "label": "e flux2pro v1",
+      "tags": [
+        "nafisa",
+        "portrait"
+      ],
+      "context": "Clinical portrait — Nafisa only",
+      "source": "assets/web/nafisa-library-e-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-library-e-gptimage-v1.webp",
+      "label": "e gptimage v1",
+      "tags": [
+        "nafisa",
+        "portrait"
+      ],
+      "context": "Clinical portrait — Nafisa only",
+      "source": "assets/web/nafisa-library-e-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-library-e-klingo1-v1.webp",
+      "label": "e klingo1 v1",
+      "tags": [
+        "nafisa",
+        "portrait"
+      ],
+      "context": "Clinical portrait — Nafisa only",
+      "source": "assets/web/nafisa-library-e-klingo1-v1.webp"
+    },
+    {
+      "file": "nafisa-library-e-nanobanana-v1.webp",
+      "label": "e nanobanana v1",
+      "tags": [
+        "nafisa",
+        "portrait"
+      ],
+      "context": "Clinical portrait — Nafisa only",
+      "source": "assets/web/nafisa-library-e-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-library-e-seedream45-v1.webp",
+      "label": "e seedream45 v1",
+      "tags": [
+        "nafisa",
+        "portrait"
+      ],
+      "context": "Clinical portrait — Nafisa only",
+      "source": "assets/web/nafisa-library-e-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-library-e-seedream50lite-v1.webp",
+      "label": "e seedream50lite v1",
+      "tags": [
+        "nafisa",
+        "portrait"
+      ],
+      "context": "Clinical portrait — Nafisa only",
+      "source": "assets/web/nafisa-library-e-seedream50lite-v1.webp"
+    },
+    {
+      "file": "nafisa-library-e-soul2-v1.webp",
+      "label": "e soul2 v1",
+      "tags": [
+        "nafisa",
+        "portrait"
+      ],
+      "context": "Clinical portrait — Nafisa only",
+      "source": "assets/web/nafisa-library-e-soul2-v1.webp"
+    },
+    {
+      "file": "nafisa-library-f-flux2pro-v1.webp",
+      "label": "f flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up — cheek/jawline, editorial quality",
+      "source": "assets/web/nafisa-library-f-flux2pro-v1.webp"
+    },
+    {
+      "file": "nafisa-library-f-gptimage-v1.webp",
+      "label": "f gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up — cheek/jawline, editorial quality",
+      "source": "assets/web/nafisa-library-f-gptimage-v1.webp"
+    },
+    {
+      "file": "nafisa-library-f-klingo1-v1.webp",
+      "label": "f klingo1 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up — cheek/jawline, editorial quality",
+      "source": "assets/web/nafisa-library-f-klingo1-v1.webp"
+    },
+    {
+      "file": "nafisa-library-f-nanobanana-v1.webp",
+      "label": "f nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up — cheek/jawline, editorial quality",
+      "source": "assets/web/nafisa-library-f-nanobanana-v1.webp"
+    },
+    {
+      "file": "nafisa-library-f-seedream45-v1.webp",
+      "label": "f seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up — cheek/jawline, editorial quality",
+      "source": "assets/web/nafisa-library-f-seedream45-v1.webp"
+    },
+    {
+      "file": "nafisa-library-f-seedream50lite-v1.webp",
+      "label": "f seedream50lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up — cheek/jawline, editorial quality",
+      "source": "assets/web/nafisa-library-f-seedream50lite-v1.webp"
+    },
+    {
+      "file": "nafisa-library-f-soul2-v1.webp",
+      "label": "f soul2 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up — cheek/jawline, editorial quality",
+      "source": "assets/web/nafisa-library-f-soul2-v1.webp"
+    },
+    {
+      "file": "pnct-treatment.webp",
+      "label": "pnct treatment",
+      "tags": [
+        "polynucleotides",
+        "treatment"
+      ],
+      "context": "Polynucleotides",
+      "source": "assets/web/pnct-treatment.webp"
+    },
+    {
+      "file": "puremed-Microneedling.webp",
+      "label": "Microneedling",
+      "tags": [
+        "rf-microneedling",
+        "treatment"
+      ],
+      "context": "RF Microneedling",
+      "source": "assets/web/puremed-Microneedling.webp"
+    },
+    {
+      "file": "puremed-Naf with PM sign.webp",
+      "label": "Naf with PM sign",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-Naf with PM sign.webp"
+    },
+    {
+      "file": "puremed-anti-wrinkle-hero-flux2-v1.webp",
+      "label": "anti wrinkle hero flux2 v1",
+      "tags": [
+        "anti-wrinkle",
+        "treatment"
+      ],
+      "context": "Anti-wrinkle (POM-sensitive captions)",
+      "source": "assets/web/puremed-anti-wrinkle-hero-flux2-v1.webp"
+    },
+    {
+      "file": "puremed-anti-wrinkle-hero-kling-v1.webp",
+      "label": "anti wrinkle hero kling v1",
+      "tags": [
+        "anti-wrinkle",
+        "treatment"
+      ],
+      "context": "Anti-wrinkle (POM-sensitive captions)",
+      "source": "assets/web/puremed-anti-wrinkle-hero-kling-v1.webp"
+    },
+    {
+      "file": "puremed-anti-wrinkle-what-is-flux2-v2.webp",
+      "label": "anti wrinkle what is flux2 v2",
+      "tags": [
+        "anti-wrinkle",
+        "treatment"
+      ],
+      "context": "Anti-wrinkle (POM-sensitive captions)",
+      "source": "assets/web/puremed-anti-wrinkle-what-is-flux2-v2.webp"
+    },
+    {
+      "file": "puremed-face-assessment-hf-v1.webp",
+      "label": "face assessment hf v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-face-assessment-hf-v1.webp"
+    },
+    {
+      "file": "puremed-filler-cheek-injection-hf-v1.webp",
+      "label": "filler cheek injection hf v1",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Filler treatment detail",
+      "source": "assets/web/puremed-filler-cheek-injection-hf-v1.webp"
+    },
+    {
+      "file": "puremed-filler-jaw-treatment-hf-v1.webp",
+      "label": "filler jaw treatment hf v1",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Filler treatment detail",
+      "source": "assets/web/puremed-filler-jaw-treatment-hf-v1.webp"
+    },
+    {
+      "file": "puremed-filler-lower-face-hf-v1.webp",
+      "label": "filler lower face hf v1",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Filler treatment detail",
+      "source": "assets/web/puremed-filler-lower-face-hf-v1.webp"
+    },
+    {
+      "file": "puremed-hero-consultation.webp",
+      "label": "hero consultation",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-hero-consultation.webp"
+    },
+    {
+      "file": "puremed-homepage-hero-flux2pro-v1.webp",
+      "label": "homepage hero flux2pro v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-homepage-hero-flux2pro-v1.webp"
+    },
+    {
+      "file": "puremed-homepage-hero-gptimage-v1.webp",
+      "label": "homepage hero gptimage v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-homepage-hero-gptimage-v1.webp"
+    },
+    {
+      "file": "puremed-homepage-hero-klingo1-v1.webp",
+      "label": "homepage hero klingo1 v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-homepage-hero-klingo1-v1.webp"
+    },
+    {
+      "file": "puremed-homepage-hero-nanobanana-v1.webp",
+      "label": "homepage hero nanobanana v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-homepage-hero-nanobanana-v1.webp"
+    },
+    {
+      "file": "puremed-homepage-hero-seedream45-v1.webp",
+      "label": "homepage hero seedream45 v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-homepage-hero-seedream45-v1.webp"
+    },
+    {
+      "file": "puremed-homepage-hero-seedream50lite-v1.webp",
+      "label": "homepage hero seedream50lite v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-homepage-hero-seedream50lite-v1.webp"
+    },
+    {
+      "file": "puremed-laser-lift-hero-1.webp",
+      "label": "laser lift hero 1",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/puremed-laser-lift-hero-1.webp"
+    },
+    {
+      "file": "puremed-laser-lift-hero-2.webp",
+      "label": "laser lift hero 2",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/puremed-laser-lift-hero-2.webp"
+    },
+    {
+      "file": "puremed-laser-lift-hero-3.webp",
+      "label": "laser lift hero 3",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/puremed-laser-lift-hero-3.webp"
+    },
+    {
+      "file": "puremed-laser-lift-hero-4.webp",
+      "label": "laser lift hero 4",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/puremed-laser-lift-hero-4.webp"
+    },
+    {
+      "file": "puremed-laser-lift-hero-5.webp",
+      "label": "laser lift hero 5",
+      "tags": [
+        "laser-lift",
+        "treatment"
+      ],
+      "context": "Laser Lift",
+      "source": "assets/web/puremed-laser-lift-hero-5.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-hero-flux2-v2.webp",
+      "label": "liquid facelift hero flux2 v2",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-hero-flux2-v2.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-hero-kling01-v3.webp",
+      "label": "liquid facelift hero kling01 v3",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-hero-kling01-v3.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-hero-recraft-v1.webp",
+      "label": "liquid facelift hero recraft v1",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-hero-recraft-v1.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-hero-soul2-v1.webp",
+      "label": "liquid facelift hero soul2 v1",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-hero-soul2-v1.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-what-is-nbb-v2.webp",
+      "label": "liquid facelift what is nbb v2",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-what-is-nbb-v2.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-what-is-recraft-v1.webp",
+      "label": "liquid facelift what is recraft v1",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-what-is-recraft-v1.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-who-nbb-v2.webp",
+      "label": "liquid facelift who nbb v2",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-who-nbb-v2.webp"
+    },
+    {
+      "file": "puremed-liquid-facelift-who-recraft-v1.webp",
+      "label": "liquid facelift who recraft v1",
+      "tags": [
+        "liquid-facelift",
+        "treatment"
+      ],
+      "context": "Liquid Facelift",
+      "source": "assets/web/puremed-liquid-facelift-who-recraft-v1.webp"
+    },
+    {
+      "file": "puremed-naf doing treatment 1.webp",
+      "label": "naf doing treatment 1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-naf doing treatment 1.webp"
+    },
+    {
+      "file": "puremed-nafisa-blazer-desk-hf-v1.webp",
+      "label": "nafisa blazer desk hf v1",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-blazer-desk-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-blazer-desk-hf-v2.webp",
+      "label": "nafisa blazer desk hf v2",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-blazer-desk-hf-v2.webp"
+    },
+    {
+      "file": "puremed-nafisa-blazer-desk-hf-v3.webp",
+      "label": "nafisa blazer desk hf v3",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-blazer-desk-hf-v3.webp"
+    },
+    {
+      "file": "puremed-nafisa-blazer-desk-hf-v4.webp",
+      "label": "nafisa blazer desk hf v4",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-blazer-desk-hf-v4.webp"
+    },
+    {
+      "file": "puremed-nafisa-blazer-desk-hf-v5.webp",
+      "label": "nafisa blazer desk hf v5",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-blazer-desk-hf-v5.webp"
+    },
+    {
+      "file": "puremed-nafisa-blazer-laptop-hf-v1.webp",
+      "label": "nafisa blazer laptop hf v1",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-blazer-laptop-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-blazer-sideon-hf-v1.webp",
+      "label": "nafisa blazer sideon hf v1",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-blazer-sideon-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-casual-outdoor-hf-v1.webp",
+      "label": "nafisa casual outdoor hf v1",
+      "tags": [
+        "nafisa"
+      ],
+      "context": "Nafisa lifestyle/social",
+      "source": "assets/web/puremed-nafisa-casual-outdoor-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-desk-social-frame-hf-v1.webp",
+      "label": "nafisa desk social frame hf v1",
+      "tags": [
+        "nafisa"
+      ],
+      "context": "Nafisa lifestyle/social",
+      "source": "assets/web/puremed-nafisa-desk-social-frame-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-doing-treatment.webp",
+      "label": "nafisa doing treatment",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-nafisa-doing-treatment.webp"
+    },
+    {
+      "file": "puremed-nafisa-headshot-angled-hf-v1.webp",
+      "label": "nafisa headshot angled hf v1",
+      "tags": [
+        "nafisa",
+        "headshot"
+      ],
+      "context": "Nafisa headshot",
+      "source": "assets/web/puremed-nafisa-headshot-angled-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-headshot-angled-hf-v2.webp",
+      "label": "nafisa headshot angled hf v2",
+      "tags": [
+        "nafisa",
+        "headshot"
+      ],
+      "context": "Nafisa headshot",
+      "source": "assets/web/puremed-nafisa-headshot-angled-hf-v2.webp"
+    },
+    {
+      "file": "puremed-nafisa-headshot-neutral-hf-v1.webp",
+      "label": "nafisa headshot neutral hf v1",
+      "tags": [
+        "nafisa",
+        "headshot"
+      ],
+      "context": "Nafisa headshot",
+      "source": "assets/web/puremed-nafisa-headshot-neutral-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-headshot-smile-hf-v1.webp",
+      "label": "nafisa headshot smile hf v1",
+      "tags": [
+        "nafisa",
+        "headshot"
+      ],
+      "context": "Nafisa headshot",
+      "source": "assets/web/puremed-nafisa-headshot-smile-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-headshot-smile-hf-v2.webp",
+      "label": "nafisa headshot smile hf v2",
+      "tags": [
+        "nafisa",
+        "headshot"
+      ],
+      "context": "Nafisa headshot",
+      "source": "assets/web/puremed-nafisa-headshot-smile-hf-v2.webp"
+    },
+    {
+      "file": "puremed-nafisa-headshot-smile-hf-v3.webp",
+      "label": "nafisa headshot smile hf v3",
+      "tags": [
+        "nafisa",
+        "headshot"
+      ],
+      "context": "Nafisa headshot",
+      "source": "assets/web/puremed-nafisa-headshot-smile-hf-v3.webp"
+    },
+    {
+      "file": "puremed-nafisa-navy-suit-reception-hf-v1.webp",
+      "label": "nafisa navy suit reception hf v1",
+      "tags": [
+        "nafisa",
+        "professional"
+      ],
+      "context": "Nafisa professional wear",
+      "source": "assets/web/puremed-nafisa-navy-suit-reception-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-art-wall-hf-v1.webp",
+      "label": "nafisa scrubs art wall hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-art-wall-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-blue-wall-hf-v1.webp",
+      "label": "nafisa scrubs blue wall hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-blue-wall-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-blue-wall-hf-v2.webp",
+      "label": "nafisa scrubs blue wall hf v2",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-blue-wall-hf-v2.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-closeup-blue-hf-v1.webp",
+      "label": "nafisa scrubs closeup blue hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-closeup-blue-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-doorway-hf-v1.webp",
+      "label": "nafisa scrubs doorway hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-doorway-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-fullbody-hf-v1.webp",
+      "label": "nafisa scrubs fullbody hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-fullbody-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v1.webp",
+      "label": "nafisa scrubs reception hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v10.webp",
+      "label": "nafisa scrubs reception hf v10",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v10.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v2.webp",
+      "label": "nafisa scrubs reception hf v2",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v2.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v3.webp",
+      "label": "nafisa scrubs reception hf v3",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v3.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v4.webp",
+      "label": "nafisa scrubs reception hf v4",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v4.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v5.webp",
+      "label": "nafisa scrubs reception hf v5",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v5.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v6.webp",
+      "label": "nafisa scrubs reception hf v6",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v6.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v7.webp",
+      "label": "nafisa scrubs reception hf v7",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v7.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v8.webp",
+      "label": "nafisa scrubs reception hf v8",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v8.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-reception-hf-v9.webp",
+      "label": "nafisa scrubs reception hf v9",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-reception-hf-v9.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-seated-desk-hf-v1.webp",
+      "label": "nafisa scrubs seated desk hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-seated-desk-hf-v1.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-seated-desk-hf-v2.webp",
+      "label": "nafisa scrubs seated desk hf v2",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-seated-desk-hf-v2.webp"
+    },
+    {
+      "file": "puremed-nafisa-scrubs-thumbsup-hf-v1.webp",
+      "label": "nafisa scrubs thumbsup hf v1",
+      "tags": [
+        "nafisa",
+        "clinic"
+      ],
+      "context": "Nafisa in scrubs, clinic setting",
+      "source": "assets/web/puremed-nafisa-scrubs-thumbsup-hf-v1.webp"
+    },
+    {
+      "file": "puremed-numbing-cream-prep-hf-v1.webp",
+      "label": "numbing cream prep hf v1",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-numbing-cream-prep-hf-v1.webp"
+    },
+    {
+      "file": "puremed-older lady smiling.webp",
+      "label": "older lady smiling",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-older lady smiling.webp"
+    },
+    {
+      "file": "puremed-patient-clinic-relaxed-hf-v1.webp",
+      "label": "patient clinic relaxed hf v1",
+      "tags": [
+        "patient",
+        "clinic"
+      ],
+      "context": "Patient in clinic",
+      "source": "assets/web/puremed-patient-clinic-relaxed-hf-v1.webp"
+    },
+    {
+      "file": "puremed-patient-consultation-hf-v1.webp",
+      "label": "patient consultation hf v1",
+      "tags": [
+        "patient",
+        "clinic"
+      ],
+      "context": "Patient in clinic",
+      "source": "assets/web/puremed-patient-consultation-hf-v1.webp"
+    },
+    {
+      "file": "puremed-patient-forehead-treatment-hf-v1.webp",
+      "label": "patient forehead treatment hf v1",
+      "tags": [
+        "patient",
+        "clinic"
+      ],
+      "context": "Patient in clinic",
+      "source": "assets/web/puremed-patient-forehead-treatment-hf-v1.webp"
+    },
+    {
+      "file": "puremed-pnct-hero-flux2-v2.webp",
+      "label": "pnct hero flux2 v2",
+      "tags": [
+        "polynucleotides",
+        "treatment"
+      ],
+      "context": "Polynucleotides",
+      "source": "assets/web/puremed-pnct-hero-flux2-v2.webp"
+    },
+    {
+      "file": "puremed-pnct-hero-kling-v1.webp",
+      "label": "pnct hero kling v1",
+      "tags": [
+        "polynucleotides",
+        "treatment"
+      ],
+      "context": "Polynucleotides",
+      "source": "assets/web/puremed-pnct-hero-kling-v1.webp"
+    },
+    {
+      "file": "puremed-pnct-what-is-nbb-v1.webp",
+      "label": "pnct what is nbb v1",
+      "tags": [
+        "polynucleotides",
+        "treatment"
+      ],
+      "context": "Polynucleotides",
+      "source": "assets/web/puremed-pnct-what-is-nbb-v1.webp"
+    },
+    {
+      "file": "puremed-pnct-who-kling-v1.webp",
+      "label": "pnct who kling v1",
+      "tags": [
+        "polynucleotides",
+        "treatment"
+      ],
+      "context": "Polynucleotides",
+      "source": "assets/web/puremed-pnct-who-kling-v1.webp"
+    },
+    {
+      "file": "puremed-rfm-hero-flux2-v1.webp",
+      "label": "rfm hero flux2 v1",
+      "tags": [
+        "rf-microneedling",
+        "treatment"
+      ],
+      "context": "RF Microneedling",
+      "source": "assets/web/puremed-rfm-hero-flux2-v1.webp"
+    },
+    {
+      "file": "puremed-rfm-hero-kling-v1.webp",
+      "label": "rfm hero kling v1",
+      "tags": [
+        "rf-microneedling",
+        "treatment"
+      ],
+      "context": "RF Microneedling",
+      "source": "assets/web/puremed-rfm-hero-kling-v1.webp"
+    },
+    {
+      "file": "puremed-rfm-hero-nbb-v1.webp",
+      "label": "rfm hero nbb v1",
+      "tags": [
+        "rf-microneedling",
+        "treatment"
+      ],
+      "context": "RF Microneedling",
+      "source": "assets/web/puremed-rfm-hero-nbb-v1.webp"
+    },
+    {
+      "file": "puremed-skin rejuvination.webp",
+      "label": "skin rejuvination",
+      "tags": [
+        "skin",
+        "glow"
+      ],
+      "context": "Skin glow",
+      "source": "assets/web/puremed-skin rejuvination.webp"
+    },
+    {
+      "file": "puremed-skin-glow-closeup-hf-v1.webp",
+      "label": "skin glow closeup hf v1",
+      "tags": [
+        "skin",
+        "glow"
+      ],
+      "context": "Skin glow",
+      "source": "assets/web/puremed-skin-glow-closeup-hf-v1.webp"
+    },
+    {
+      "file": "puremed-skin-glow-lying-hf-v1.webp",
+      "label": "skin glow lying hf v1",
+      "tags": [
+        "skin",
+        "glow"
+      ],
+      "context": "Skin glow",
+      "source": "assets/web/puremed-skin-glow-lying-hf-v1.webp"
+    },
+    {
+      "file": "puremed-skin-glow.webp",
+      "label": "skin glow",
+      "tags": [
+        "skin",
+        "glow"
+      ],
+      "context": "Skin glow",
+      "source": "assets/web/puremed-skin-glow.webp"
+    },
+    {
+      "file": "puremed-treatment pic.webp",
+      "label": "treatment pic",
+      "tags": [
+        "clinic"
+      ],
+      "context": "Clinic/treatment scene",
+      "source": "assets/web/puremed-treatment pic.webp"
+    },
+    {
+      "file": "skin-01-flux2pro-v1.webp",
+      "label": "skin 01 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-01-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-01-gptimage-v1.webp",
+      "label": "skin 01 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-01-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-01-kling01-v1.webp",
+      "label": "skin 01 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-01-kling01-v1.webp"
+    },
+    {
+      "file": "skin-01-nanobanana-v1.webp",
+      "label": "skin 01 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-01-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-01-seedream45-v1.webp",
+      "label": "skin 01 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-01-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-01-seedream5lite-v1.webp",
+      "label": "skin 01 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-01-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-02-flux2pro-v1.webp",
+      "label": "skin 02 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-02-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-02-gptimage-v1.webp",
+      "label": "skin 02 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-02-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-02-kling01-v1.webp",
+      "label": "skin 02 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-02-kling01-v1.webp"
+    },
+    {
+      "file": "skin-02-nanobanana-v1.webp",
+      "label": "skin 02 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-02-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-02-seedream45-v1.webp",
+      "label": "skin 02 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-02-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-02-seedream5lite-v1.webp",
+      "label": "skin 02 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-02-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-03-flux2pro-v1.webp",
+      "label": "skin 03 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-03-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-03-gptimage-v1.webp",
+      "label": "skin 03 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-03-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-03-kling01-v1.webp",
+      "label": "skin 03 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-03-kling01-v1.webp"
+    },
+    {
+      "file": "skin-03-nanobanana-v1.webp",
+      "label": "skin 03 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-03-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-03-seedream45-v1.webp",
+      "label": "skin 03 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-03-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-03-seedream5lite-v1.webp",
+      "label": "skin 03 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-03-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-04-flux2pro-v1.webp",
+      "label": "skin 04 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-04-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-04-gptimage-v1.webp",
+      "label": "skin 04 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-04-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-04-kling01-v1.webp",
+      "label": "skin 04 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-04-kling01-v1.webp"
+    },
+    {
+      "file": "skin-04-nanobanana-v1.webp",
+      "label": "skin 04 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-04-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-04-seedream45-v1.webp",
+      "label": "skin 04 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-04-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-04-seedream5lite-v1.webp",
+      "label": "skin 04 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-04-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-05-flux2pro-v1.webp",
+      "label": "skin 05 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-05-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-05-gptimage-v1.webp",
+      "label": "skin 05 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-05-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-05-kling01-v1.webp",
+      "label": "skin 05 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-05-kling01-v1.webp"
+    },
+    {
+      "file": "skin-05-nanobanana-v1.webp",
+      "label": "skin 05 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-05-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-05-seedream45-v1.webp",
+      "label": "skin 05 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-05-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-05-seedream5lite-v1.webp",
+      "label": "skin 05 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-05-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-06-flux2pro-v1.webp",
+      "label": "skin 06 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-06-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-06-gptimage-v1.webp",
+      "label": "skin 06 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-06-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-06-kling01-v1.webp",
+      "label": "skin 06 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-06-kling01-v1.webp"
+    },
+    {
+      "file": "skin-06-nanobanana-v1.webp",
+      "label": "skin 06 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-06-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-06-seedream45-v1.webp",
+      "label": "skin 06 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-06-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-06-seedream5lite-v1.webp",
+      "label": "skin 06 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-06-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-07-flux2pro-v1.webp",
+      "label": "skin 07 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-07-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-07-gptimage-v1.webp",
+      "label": "skin 07 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-07-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-07-kling01-v1.webp",
+      "label": "skin 07 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-07-kling01-v1.webp"
+    },
+    {
+      "file": "skin-07-nanobanana-v1.webp",
+      "label": "skin 07 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-07-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-07-seedream45-v1.webp",
+      "label": "skin 07 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-07-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-07-seedream5lite-v1.webp",
+      "label": "skin 07 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-07-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-08-flux2pro-v1.webp",
+      "label": "skin 08 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-08-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-08-gptimage-v1.webp",
+      "label": "skin 08 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-08-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-08-kling01-v1.webp",
+      "label": "skin 08 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-08-kling01-v1.webp"
+    },
+    {
+      "file": "skin-08-nanobanana-v1.webp",
+      "label": "skin 08 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-08-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-08-seedream45-v1.webp",
+      "label": "skin 08 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-08-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-08-seedream5lite-v1.webp",
+      "label": "skin 08 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-08-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-09-flux2pro-v1.webp",
+      "label": "skin 09 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-09-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-09-gptimage-v1.webp",
+      "label": "skin 09 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-09-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-09-kling01-v1.webp",
+      "label": "skin 09 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-09-kling01-v1.webp"
+    },
+    {
+      "file": "skin-09-nanobanana-v1.webp",
+      "label": "skin 09 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-09-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-09-seedream45-v1.webp",
+      "label": "skin 09 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-09-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-09-seedream5lite-v1.webp",
+      "label": "skin 09 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-09-seedream5lite-v1.webp"
+    },
+    {
+      "file": "skin-10-flux2pro-v1.webp",
+      "label": "skin 10 flux2pro v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-10-flux2pro-v1.webp"
+    },
+    {
+      "file": "skin-10-gptimage-v1.webp",
+      "label": "skin 10 gptimage v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-10-gptimage-v1.webp"
+    },
+    {
+      "file": "skin-10-kling01-v1.webp",
+      "label": "skin 10 kling01 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-10-kling01-v1.webp"
+    },
+    {
+      "file": "skin-10-nanobanana-v1.webp",
+      "label": "skin 10 nanobanana v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-10-nanobanana-v1.webp"
+    },
+    {
+      "file": "skin-10-seedream45-v1.webp",
+      "label": "skin 10 seedream45 v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-10-seedream45-v1.webp"
+    },
+    {
+      "file": "skin-10-seedream5lite-v1.webp",
+      "label": "skin 10 seedream5lite v1",
+      "tags": [
+        "skin",
+        "editorial"
+      ],
+      "context": "Skin close-up bank",
+      "source": "assets/web/skin-10-seedream5lite-v1.webp"
+    },
+    {
+      "file": "puremed-scene-laser-lift-nanobananapro-v1.webp",
+      "label": "scene laser-lift (nano_banana_2, 4 Jul)",
+      "tags": [
+        "laser-lift",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Endolift device on white trolley beside treatment chair, navy accent wall, gold trim — no people, no text",
+      "source": "assets/generated/scenes/compressed/puremed-scene-laser-lift-nanobananapro-v1.webp"
+    },
+    {
+      "file": "puremed-scene-laser-lift-seedream45-v1.webp",
+      "label": "scene laser-lift (seedream_v4_5, 4 Jul)",
+      "tags": [
+        "laser-lift",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Endolift device on white trolley beside treatment chair, navy accent wall, gold trim — no people, no text",
+      "source": "assets/generated/scenes/compressed/puremed-scene-laser-lift-seedream45-v1.webp"
+    },
+    {
+      "file": "puremed-scene-liquid-facelift-nanobananapro-v1.webp",
+      "label": "scene liquid-facelift (nano_banana_2, 4 Jul)",
+      "tags": [
+        "liquid-facelift",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Gloved hands marking guide dots on cheekbone with white cosmetic pencil — assessment scene, no needles",
+      "source": "assets/generated/scenes/compressed/puremed-scene-liquid-facelift-nanobananapro-v1.webp"
+    },
+    {
+      "file": "puremed-scene-liquid-facelift-seedream45-v1.webp",
+      "label": "scene liquid-facelift (seedream_v4_5, 4 Jul)",
+      "tags": [
+        "liquid-facelift",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Gloved hands marking guide dots on cheekbone with white cosmetic pencil — assessment scene, no needles",
+      "source": "assets/generated/scenes/compressed/puremed-scene-liquid-facelift-seedream45-v1.webp"
+    },
+    {
+      "file": "puremed-scene-anti-wrinkle-nanobananapro-v1.webp",
+      "label": "scene anti-wrinkle (nano_banana_2, 4 Jul)",
+      "tags": [
+        "anti-wrinkle",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Consultation: practitioner + patient reviewing facial diagram on tablet — product-free (POM-safe)",
+      "source": "assets/generated/scenes/compressed/puremed-scene-anti-wrinkle-nanobananapro-v1.webp"
+    },
+    {
+      "file": "puremed-scene-anti-wrinkle-seedream45-v1.webp",
+      "label": "scene anti-wrinkle (seedream_v4_5, 4 Jul)",
+      "tags": [
+        "anti-wrinkle",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Consultation: practitioner + patient reviewing facial diagram on tablet — product-free (POM-safe)",
+      "source": "assets/generated/scenes/compressed/puremed-scene-anti-wrinkle-seedream45-v1.webp"
+    },
+    {
+      "file": "puremed-scene-polynucleotides-nanobananapro-v1.webp",
+      "label": "scene polynucleotides (nano_banana_2, 4 Jul)",
+      "tags": [
+        "polynucleotides",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Editorial macro of luminous healthy skin, cheekbone/jawline, soft window light",
+      "source": "assets/generated/scenes/compressed/puremed-scene-polynucleotides-nanobananapro-v1.webp"
+    },
+    {
+      "file": "puremed-scene-polynucleotides-seedream45-v1.webp",
+      "label": "scene polynucleotides (seedream_v4_5, 4 Jul)",
+      "tags": [
+        "polynucleotides",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Editorial macro of luminous healthy skin, cheekbone/jawline, soft window light",
+      "source": "assets/generated/scenes/compressed/puremed-scene-polynucleotides-seedream45-v1.webp"
+    },
+    {
+      "file": "puremed-scene-rf-microneedling-nanobananapro-v1.webp",
+      "label": "scene rf-microneedling (nano_banana_2, 4 Jul)",
+      "tags": [
+        "rf-microneedling",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Gloved hand holding RF handpiece near jawline, device not touching skin",
+      "source": "assets/generated/scenes/compressed/puremed-scene-rf-microneedling-nanobananapro-v1.webp"
+    },
+    {
+      "file": "puremed-scene-rf-microneedling-seedream45-v1.webp",
+      "label": "scene rf-microneedling (seedream_v4_5, 4 Jul)",
+      "tags": [
+        "rf-microneedling",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Gloved hand holding RF handpiece near jawline, device not touching skin",
+      "source": "assets/generated/scenes/compressed/puremed-scene-rf-microneedling-seedream45-v1.webp"
+    },
+    {
+      "file": "puremed-scene-skin-boosters-nanobananapro-v1.webp",
+      "label": "scene skin-boosters (nano_banana_2, 4 Jul)",
+      "tags": [
+        "skin-boosters",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Hydrated glowing skin close-up, lower face and neck, champagne gold blur background",
+      "source": "assets/generated/scenes/compressed/puremed-scene-skin-boosters-nanobananapro-v1.webp"
+    },
+    {
+      "file": "puremed-scene-skin-boosters-seedream45-v1.webp",
+      "label": "scene skin-boosters (seedream_v4_5, 4 Jul)",
+      "tags": [
+        "skin-boosters",
+        "treatment-scene",
+        "generated-2026-07-04"
+      ],
+      "context": "Hydrated glowing skin close-up, lower face and neck, champagne gold blur background",
+      "source": "assets/generated/scenes/compressed/puremed-scene-skin-boosters-seedream45-v1.webp"
+    }
+  ]
+}

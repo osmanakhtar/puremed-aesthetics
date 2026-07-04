@@ -1,0 +1,63 @@
+{
+  "id": "2026-08-01-laser-lift",
+  "slotId": "2026-08-01-slot",
+  "date": "2026-08-01",
+  "time": "18:00",
+  "timezone": "Europe/London",
+  "pillar": "education",
+  "treatmentId": "laser-lift",
+  "pomSensitive": false,
+  "platforms": [
+    "instagram",
+    "facebook"
+  ],
+  "state": "review",
+  "assets": [
+    {
+      "type": "image",
+      "source": "assets/web/puremed-hf-20260617-11.webp",
+      "alt": "Laser Lift Skin Tightening at PureMed Aesthetics",
+      "status": "placeholder — from site imagery; Nafisa to confirm or supply real photo"
+    },
+    {
+      "type": "text",
+      "numeral": "01",
+      "kicker": "How it works",
+      "headline": "A pinpoint entry",
+      "body": "An ultrafine Endolift fibre is guided under the skin. No incisions, no stitches.",
+      "img": "assets/generated/scenes/compressed/puremed-scene-laser-lift-seedream45-v1.webp",
+      "split": "left"
+    },
+    {
+      "type": "text",
+      "numeral": "02",
+      "kicker": "How it works",
+      "headline": "An immediate lift",
+      "body": "Laser energy heats the tissue beneath the skin, creating an immediate contraction and lift effect.",
+      "img": "assets/web/skin-01-seedream45-v1.webp",
+      "split": "right"
+    },
+    {
+      "type": "text",
+      "numeral": "03",
+      "kicker": "How it works",
+      "headline": "Results that keep building",
+      "body": "New collagen forms over 3–6 months, progressively improving firmness and definition.",
+      "img": "assets/web/puremed-skin-glow-closeup-hf-v1.webp",
+      "split": "left"
+    },
+    {
+      "type": "text",
+      "style": "blue",
+      "kicker": "Laser Lift",
+      "headline": "No scalpel. No general anaesthetic.",
+      "body": "1–2 sessions, minimal downtime, results typically lasting 18–24 months. Book a consultation via the link in bio."
+    }
+  ],
+  "reviewNote": null,
+  "platformPostIds": {},
+  "created": "2026-07-03T17:11:11.816Z",
+  "updated": "2026-07-04T02:05:18.904Z",
+  "format": "carousel",
+  "brandOverlay": true
+}

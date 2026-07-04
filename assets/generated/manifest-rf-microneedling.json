@@ -1,0 +1,49 @@
+{
+  "client": "puremed",
+  "page": "puremed-rf-microneedling.html",
+  "generated_at": "2026-06-23",
+  "placements": [
+    {
+      "id": "hero",
+      "type": "hero-image",
+      "aspect_ratio": "9:16",
+      "section_selector": ".tx-hero-image img",
+      "copy_context": "RF Microneedling \u2014 Skin Tightening & Resurfacing. A dual-action skin treatment combining microneedling with radiofrequency energy to stimulate deep collagen production \u2014 improving texture, firmness and tone with minimal downtime.",
+      "assets": [
+        {
+          "model": "flux-2-pro",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_151732_87be1049-54b6-4c3f-b3ff-967654ed94b6.png",
+          "filename": "puremed-rfm-hero-flux2-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-rfm-hero-flux2-v1.png",
+          "compressed_path": "assets/web/puremed-rfm-hero-flux2-v1.webp",
+          "preferred": true,
+          "notes": "SELECTED. Flux 2.0 Pro. Seed 877488. Warm window light, clean minimal interior."
+        },
+        {
+          "model": "kling-omni-image",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_151737_26be64f7-002e-4447-9e3b-5428c742e507.png",
+          "filename": "puremed-rfm-hero-kling-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-rfm-hero-kling-v1.png",
+          "compressed_path": "assets/web/puremed-rfm-hero-kling-v1.webp",
+          "preferred": false,
+          "notes": "Kling O1 Image. Cinematic framing variant."
+        },
+        {
+          "model": "nano-banana-2",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260623_151740_f32cc46a-6280-4591-a552-7e5dcbae26a7.png",
+          "filename": "puremed-rfm-hero-nbb-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/puremed-rfm-hero-nbb-v1.png",
+          "compressed_path": "assets/web/puremed-rfm-hero-nbb-v1.webp",
+          "preferred": false,
+          "notes": "Nano Banana 2. Third cross-section variant."
+        }
+      ]
+    }
+  ]
+}

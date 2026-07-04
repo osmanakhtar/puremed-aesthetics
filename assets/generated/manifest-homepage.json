@@ -1,0 +1,158 @@
+{
+  "client": "puremed",
+  "page": "index.html",
+  "generated_at": "2026-07-01",
+  "notes": "Homepage hero cross-section — previously never generated (0 of 6 planned models). Filled per puremed-asset-generation-prompts.md 'Homepage hero' brief. Character reference: assets/web/nafisa-hero-v2.webp passed as --image to all 6 models for identity consistency.",
+  "placements": [
+    {
+      "id": "hero",
+      "type": "hero-image",
+      "aspect_ratio": "16:9",
+      "section_selector": ".hero-image img",
+      "copy_context": "Natural Skin Tightening & Rejuvenation — Medically-led aesthetic treatments designed to tighten, refresh and restore your confidence, without looking overdone.",
+      "assets": [
+        {
+          "model": "flux_2",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260701_194941_a79f8559-d026-4742-af68-6d2a8972a189.png",
+          "filename": "puremed-homepage-hero-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-hero-flux2pro-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-hero-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": "1280x720, seed 488965, image-reference nafisa-hero-v2.webp"
+        },
+        {
+          "model": "gpt_image_2",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260701_195000_9e6de777-f404-47d0-b2a0-63e0c762af7a.png",
+          "filename": "puremed-homepage-hero-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-hero-gptimage-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-hero-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "2688x1520, correct 16:9 (explicit --aspect_ratio 16:9 on gpt_image_2 — earlier nafisa-library gpt_image mismatches do not recur here), image-reference nafisa-hero-v2.webp"
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260701_195240_77fc219c-17a3-405e-a128-cad466165713.png",
+          "filename": "puremed-homepage-hero-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-hero-seedream45-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-hero-seedream45-v1.webp",
+          "preferred": false,
+          "notes": "2560x1440, seed 845237, image-reference nafisa-hero-v2.webp"
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260701_195306_06f8f43c-267c-403b-9402-7b85eba79c67.png",
+          "filename": "puremed-homepage-hero-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-hero-klingo1-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-hero-klingo1-v1.webp",
+          "preferred": false,
+          "notes": "1360x768, image-reference nafisa-hero-v2.webp"
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260701_195338_fc0e3698-188d-4d5f-bd0e-65c3256851c7.png",
+          "filename": "puremed-homepage-hero-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-hero-nanobanana-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-hero-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": "1344x768, image-reference nafisa-hero-v2.webp"
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "source_url": null,
+          "filename": "puremed-homepage-hero-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-hero-seedream50lite-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-hero-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": "2848x1600, seed 853486, image-reference nafisa-hero-v2.webp"
+        }
+      ]
+    },
+    {
+      "id": "skin",
+      "type": "editorial-image",
+      "aspect_ratio": "4:3",
+      "section_selector": null,
+      "copy_context": "Hero accent — skin close-up, no character",
+      "assets": [
+        {
+          "model": "flux_2",
+          "variant": "v1",
+          "source_url": null,
+          "filename": "puremed-homepage-skin-flux2pro-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-skin-flux2pro-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-skin-flux2pro-v1.webp",
+          "preferred": false,
+          "notes": "1024x768, seed 486381, no character reference"
+        },
+        {
+          "model": "gpt_image_2",
+          "variant": "v1",
+          "source_url": null,
+          "filename": "puremed-homepage-skin-gptimage-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-skin-gptimage-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-skin-gptimage-v1.webp",
+          "preferred": false,
+          "notes": "2336x1744, correct 4:3, no character reference"
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "source_url": null,
+          "filename": "puremed-homepage-skin-seedream45-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-skin-seedream45-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-skin-seedream45-v1.webp",
+          "preferred": false,
+          "notes": "2304x1728, seed 784321, no character reference"
+        },
+        {
+          "model": "kling_omni_image",
+          "variant": "v1",
+          "source_url": null,
+          "filename": "puremed-homepage-skin-klingo1-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-skin-klingo1-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-skin-klingo1-v1.webp",
+          "preferred": false,
+          "notes": "1168x880, no character reference"
+        },
+        {
+          "model": "nano_banana",
+          "variant": "v1",
+          "source_url": null,
+          "filename": "puremed-homepage-skin-nanobanana-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-skin-nanobanana-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-skin-nanobanana-v1.webp",
+          "preferred": false,
+          "notes": "1184x864, no character reference"
+        },
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "source_url": null,
+          "filename": "puremed-homepage-skin-seedream50lite-v1.webp",
+          "format": "webp",
+          "local_path": "assets/generated/puremed-homepage-skin-seedream50lite-v1.png",
+          "compressed_path": "assets/web/puremed-homepage-skin-seedream50lite-v1.webp",
+          "preferred": false,
+          "notes": "2304x1728, seed 561886, no character reference"
+        }
+      ]
+    }
+  ]
+}

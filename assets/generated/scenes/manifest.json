@@ -1,0 +1,211 @@
+{
+  "client": "puremed",
+  "type": "scene-collection",
+  "generated_at": "2026-07-04",
+  "placements": [
+    {
+      "id": "scene-laser-lift",
+      "type": "scene",
+      "aspect_ratio": "4:5",
+      "section_selector": null,
+      "copy_context": "Endolift device on white trolley beside treatment chair, navy accent wall, gold trim — no people, no text",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "20cab90c-46a3-4585-b69d-110bc63bba04",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013849_20cab90c-46a3-4585-b69d-110bc63bba04.png",
+          "filename": "puremed-scene-laser-lift-nanobananapro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-laser-lift-nanobananapro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-laser-lift-nanobananapro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "9cfabc81-cd79-4dc0-9b03-ee3347ab6e68",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013926_9cfabc81-cd79-4dc0-9b03-ee3347ab6e68.png",
+          "filename": "puremed-scene-laser-lift-seedream45-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-laser-lift-seedream45-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-laser-lift-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "scene-liquid-facelift",
+      "type": "scene",
+      "aspect_ratio": "4:5",
+      "section_selector": null,
+      "copy_context": "Gloved hands marking guide dots on cheekbone with white cosmetic pencil — assessment scene, no needles",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "d63f7567-d035-4b36-8de1-245a19b8624c",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013926_d63f7567-d035-4b36-8de1-245a19b8624c.png",
+          "filename": "puremed-scene-liquid-facelift-nanobananapro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-liquid-facelift-nanobananapro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-liquid-facelift-nanobananapro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "caabf477-4bc1-40b8-95d7-a2df73e01ab2",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013927_caabf477-4bc1-40b8-95d7-a2df73e01ab2.png",
+          "filename": "puremed-scene-liquid-facelift-seedream45-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-liquid-facelift-seedream45-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-liquid-facelift-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "scene-anti-wrinkle",
+      "type": "scene",
+      "aspect_ratio": "4:5",
+      "section_selector": null,
+      "copy_context": "Consultation: practitioner + patient reviewing facial diagram on tablet — product-free (POM-safe)",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "b4614365-3f3d-4597-92e4-b85e865c5d15",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013927_b4614365-3f3d-4597-92e4-b85e865c5d15.png",
+          "filename": "puremed-scene-anti-wrinkle-nanobananapro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-anti-wrinkle-nanobananapro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-anti-wrinkle-nanobananapro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "bca04e0b-8a9c-4362-a96f-b747f60c8931",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013928_bca04e0b-8a9c-4362-a96f-b747f60c8931.png",
+          "filename": "puremed-scene-anti-wrinkle-seedream45-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-anti-wrinkle-seedream45-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-anti-wrinkle-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "scene-polynucleotides",
+      "type": "scene",
+      "aspect_ratio": "4:5",
+      "section_selector": null,
+      "copy_context": "Editorial macro of luminous healthy skin, cheekbone/jawline, soft window light",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "2820970f-31f5-49e2-86e7-2fad03e1c53f",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013929_2820970f-31f5-49e2-86e7-2fad03e1c53f.png",
+          "filename": "puremed-scene-polynucleotides-nanobananapro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-polynucleotides-nanobananapro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-polynucleotides-nanobananapro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "b2125054-0ba5-411e-85a7-2e550ad02982",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013930_b2125054-0ba5-411e-85a7-2e550ad02982.png",
+          "filename": "puremed-scene-polynucleotides-seedream45-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-polynucleotides-seedream45-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-polynucleotides-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "scene-rf-microneedling",
+      "type": "scene",
+      "aspect_ratio": "4:5",
+      "section_selector": null,
+      "copy_context": "Gloved hand holding RF handpiece near jawline, device not touching skin",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "3111ae93-bfc9-40a0-9e6a-2f697e3bdd0f",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_013931_3111ae93-bfc9-40a0-9e6a-2f697e3bdd0f.png",
+          "filename": "puremed-scene-rf-microneedling-nanobananapro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-rf-microneedling-nanobananapro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-rf-microneedling-nanobananapro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "45f688f2-0b6e-4dac-88a4-38678210bdb6",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_014027_45f688f2-0b6e-4dac-88a4-38678210bdb6.png",
+          "filename": "puremed-scene-rf-microneedling-seedream45-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-rf-microneedling-seedream45-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-rf-microneedling-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "scene-skin-boosters",
+      "type": "scene",
+      "aspect_ratio": "4:5",
+      "section_selector": null,
+      "copy_context": "Hydrated glowing skin close-up, lower face and neck, champagne gold blur background",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "d26b9d33-2e5c-4075-b1d4-284dbbf8de21",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_014028_d26b9d33-2e5c-4075-b1d4-284dbbf8de21.png",
+          "filename": "puremed-scene-skin-boosters-nanobananapro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-skin-boosters-nanobananapro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-skin-boosters-nanobananapro-v1.webp",
+          "preferred": false,
+          "notes": ""
+        },
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "17423897-21b9-422d-974e-239ab2b37f97",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260704_014028_17423897-21b9-422d-974e-239ab2b37f97.png",
+          "filename": "puremed-scene-skin-boosters-seedream45-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-skin-boosters-seedream45-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-skin-boosters-seedream45-v1.webp",
+          "preferred": false,
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}
