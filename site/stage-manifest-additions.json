@@ -1,0 +1,1868 @@
+{
+  "generatedAt": "2026-07-14T09:24:15.824Z",
+  "note": "Auto-tagged sections/fields to merge into the Pi engagement manifest. copy entries follow manifest.copy.sections shape (+location added at merge time); img entries are the new images.fields list.",
+  "copySections": [
+    {
+      "id": "34a-high-street-winslow-mk18",
+      "label": "34a High Street, Winslow, MK18 3HB",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"34a-high-street-winslow-mk18\"",
+      "autoTagged": true
+    },
+    {
+      "id": "care-puremed-uk",
+      "label": "care@puremed.uk",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"care-puremed-uk\"",
+      "autoTagged": true
+    },
+    {
+      "id": "90-five-star-reviews",
+      "label": "90 Five-Star Reviews",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"90-five-star-reviews\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ontreatments",
+      "label": "{onTreatments ? ( ) : ( )}",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"ontreatments\"",
+      "autoTagged": true
+    },
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"whatsapp\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ontreatments-2",
+      "label": "{onTreatments ? ( <> </> ) : ( )}",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"ontreatments-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "puremed-aesthetics",
+      "label": "PureMed Aesthetics",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"puremed-aesthetics\"",
+      "autoTagged": true
+    },
+    {
+      "id": "winslow-buckinghamshire",
+      "label": "Winslow &middot; Buckinghamshire",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"winslow-buckinghamshire\"",
+      "autoTagged": true
+    },
+    {
+      "id": "medically-led-aesthetic-treatments-for-natural",
+      "label": "Medically-led aesthetic treatments for natural skin tighteni",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"medically-led-aesthetic-treatments-for-natural\"",
+      "autoTagged": true
+    },
+    {
+      "id": "34a-high-street-winslow-mk18-2",
+      "label": "34a High Street, Winslow, MK18 3HB",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"34a-high-street-winslow-mk18-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "care-puremed-uk-2",
+      "label": "care@puremed.uk",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"care-puremed-uk-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "07850-087025",
+      "label": "07850 087025",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"07850-087025\"",
+      "autoTagged": true
+    },
+    {
+      "id": "90-five-star-reviews-on-google",
+      "label": "90 five-star reviews on Google",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"90-five-star-reviews-on-google\"",
+      "autoTagged": true
+    },
+    {
+      "id": "clinic",
+      "label": "Clinic",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"clinic\"",
+      "autoTagged": true
+    },
+    {
+      "id": "about-nafisa",
+      "label": "About Nafisa",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"about-nafisa\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-gallery",
+      "label": "Results Gallery",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"results-gallery\"",
+      "autoTagged": true
+    },
+    {
+      "id": "client-reviews",
+      "label": "Client Reviews",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"client-reviews\"",
+      "autoTagged": true
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"faq\"",
+      "autoTagged": true
+    },
+    {
+      "id": "book",
+      "label": "Book",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"book\"",
+      "autoTagged": true
+    },
+    {
+      "id": "book-consultation",
+      "label": "Book Consultation",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"book-consultation\"",
+      "autoTagged": true
+    },
+    {
+      "id": "whatsapp-us",
+      "label": "WhatsApp Us",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"whatsapp-us\"",
+      "autoTagged": true
+    },
+    {
+      "id": "email-us",
+      "label": "Email Us",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"email-us\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2025-puremed-aesthetics-all-rights",
+      "label": "&copy; 2025 PureMed Aesthetics. All rights reserved. | |",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"2025-puremed-aesthetics-all-rights\"",
+      "autoTagged": true
+    },
+    {
+      "id": "winslow-buckinghamshire-mk18-3hb",
+      "label": "Winslow &middot; Buckinghamshire &middot; MK18 3HB",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"winslow-buckinghamshire-mk18-3hb\"",
+      "autoTagged": true
+    },
+    {
+      "id": "book-consultation-2",
+      "label": "Book Consultation",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"book-consultation-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "whatsapp-2",
+      "label": "WhatsApp",
+      "location": "Layout",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-id=\"whatsapp-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "winslow-buckinghamshire-2",
+      "label": "Winslow, Buckinghamshire",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"winslow-buckinghamshire-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "medically-trained-practitioner",
+      "label": "Medically trained practitioner",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"medically-trained-practitioner\"",
+      "autoTagged": true
+    },
+    {
+      "id": "natural-looking-results",
+      "label": "Natural-looking results",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"natural-looking-results\"",
+      "autoTagged": true
+    },
+    {
+      "id": "advanced-non-surgical-treatments",
+      "label": "Advanced non-surgical treatments",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"advanced-non-surgical-treatments\"",
+      "autoTagged": true
+    },
+    {
+      "id": "personalised-treatment-plans",
+      "label": "Personalised treatment plans",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"personalised-treatment-plans\"",
+      "autoTagged": true
+    },
+    {
+      "id": "whatsapp-us-2",
+      "label": "WhatsApp Us",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"whatsapp-us-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "google-reviews",
+      "label": "Google Reviews",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"google-reviews\"",
+      "autoTagged": true
+    },
+    {
+      "id": "rated-excellent",
+      "label": "Rated Excellent",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"rated-excellent\"",
+      "autoTagged": true
+    },
+    {
+      "id": "14",
+      "label": "14+",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"14\"",
+      "autoTagged": true
+    },
+    {
+      "id": "years-of-aesthetics-expertise",
+      "label": "Years of aesthetics expertise",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"years-of-aesthetics-expertise\"",
+      "autoTagged": true
+    },
+    {
+      "id": "90-2",
+      "label": "90",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"90-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "5-star-reviews",
+      "label": "5-Star Reviews",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"5-star-reviews\"",
+      "autoTagged": true
+    },
+    {
+      "id": "14-2",
+      "label": "14+",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"14-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "years-experience",
+      "label": "Years Experience",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"years-experience\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-000s",
+      "label": "1,000s",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"1-000s\"",
+      "autoTagged": true
+    },
+    {
+      "id": "patients-treated",
+      "label": "Patients Treated",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"patients-treated\"",
+      "autoTagged": true
+    },
+    {
+      "id": "100",
+      "label": "100%",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"100\"",
+      "autoTagged": true
+    },
+    {
+      "id": "non-surgical",
+      "label": "Non-Surgical",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"non-surgical\"",
+      "autoTagged": true
+    },
+    {
+      "id": "our-treatments",
+      "label": "Our Treatments",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"our-treatments\"",
+      "autoTagged": true
+    },
+    {
+      "id": "find-out-more",
+      "label": "Find out more",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"find-out-more\"",
+      "autoTagged": true
+    },
+    {
+      "id": "find-out-more-2",
+      "label": "Find out more",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"find-out-more-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "find-out-more-3",
+      "label": "Find out more",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"find-out-more-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "find-out-more-4",
+      "label": "Find out more",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"find-out-more-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "nafisa-mughal",
+      "label": "Nafisa Mughal",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"nafisa-mughal\"",
+      "autoTagged": true
+    },
+    {
+      "id": "founder-lead-practitioner",
+      "label": "Founder &amp; Lead Practitioner",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"founder-lead-practitioner\"",
+      "autoTagged": true
+    },
+    {
+      "id": "dental-background",
+      "label": "Dental background",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"dental-background\"",
+      "autoTagged": true
+    },
+    {
+      "id": "14-years-in-aesthetics",
+      "label": "14+ years in aesthetics",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"14-years-in-aesthetics\"",
+      "autoTagged": true
+    },
+    {
+      "id": "advanced-facial-anatomy",
+      "label": "Advanced facial anatomy",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"advanced-facial-anatomy\"",
+      "autoTagged": true
+    },
+    {
+      "id": "continuous-cpd-training",
+      "label": "Continuous CPD training",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"continuous-cpd-training\"",
+      "autoTagged": true
+    },
+    {
+      "id": "why-puremed",
+      "label": "Why PureMed",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"why-puremed\"",
+      "autoTagged": true
+    },
+    {
+      "id": "client-results",
+      "label": "Client Results",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"client-results\"",
+      "autoTagged": true
+    },
+    {
+      "id": "real-results-real-people",
+      "label": "Real Results.Real People.",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"real-results-real-people\"",
+      "autoTagged": true
+    },
+    {
+      "id": "every-before-and-after-is",
+      "label": "Every before and after is a real PureMed client — no filters",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"every-before-and-after-is\"",
+      "autoTagged": true
+    },
+    {
+      "id": "laser-lift",
+      "label": "Laser Lift",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"laser-lift\"",
+      "autoTagged": true
+    },
+    {
+      "id": "liquid-facelift",
+      "label": "Liquid Facelift",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"liquid-facelift\"",
+      "autoTagged": true
+    },
+    {
+      "id": "rf-microneedling",
+      "label": "RF Microneedling",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"rf-microneedling\"",
+      "autoTagged": true
+    },
+    {
+      "id": "polynucleotides",
+      "label": "Polynucleotides",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"polynucleotides\"",
+      "autoTagged": true
+    },
+    {
+      "id": "book-your-consultation",
+      "label": "Book Your Consultation",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"book-your-consultation\"",
+      "autoTagged": true
+    },
+    {
+      "id": "client-reviews-2",
+      "label": "Client Reviews",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"client-reviews-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "what-our-clients-say",
+      "label": "What Our Clients Say",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"what-our-clients-say\"",
+      "autoTagged": true
+    },
+    {
+      "id": "nafisa-s-clinic-is-first",
+      "label": "\"Nafisa's Clinic is first class in every aspect. Extremely p",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"nafisa-s-clinic-is-first\"",
+      "autoTagged": true
+    },
+    {
+      "id": "l",
+      "label": "L",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"l\"",
+      "autoTagged": true
+    },
+    {
+      "id": "lou-robinson",
+      "label": "Lou Robinson",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"lou-robinson\"",
+      "autoTagged": true
+    },
+    {
+      "id": "google-review-verified-client",
+      "label": "Google Review &middot; Verified Client",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"google-review-verified-client\"",
+      "autoTagged": true
+    },
+    {
+      "id": "nafisa-is-really-knowledgeable-and",
+      "label": "\"Nafisa is really knowledgeable and made me feel at ease. I ",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"nafisa-is-really-knowledgeable-and\"",
+      "autoTagged": true
+    },
+    {
+      "id": "j",
+      "label": "J",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"j\"",
+      "autoTagged": true
+    },
+    {
+      "id": "jenny-woo",
+      "label": "Jenny Woo",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"jenny-woo\"",
+      "autoTagged": true
+    },
+    {
+      "id": "google-review-verified-client-2",
+      "label": "Google Review &middot; Verified Client",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"google-review-verified-client-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "nafisa-is-absolutely-amazing-she",
+      "label": "\"Nafisa is absolutely amazing — she explains everything full",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"nafisa-is-absolutely-amazing-she\"",
+      "autoTagged": true
+    },
+    {
+      "id": "t",
+      "label": "T",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"t\"",
+      "autoTagged": true
+    },
+    {
+      "id": "tracy-hill",
+      "label": "Tracy Hill",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"tracy-hill\"",
+      "autoTagged": true
+    },
+    {
+      "id": "google-review-verified-client-3",
+      "label": "Google Review &middot; Verified Client",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"google-review-verified-client-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "super-impressed-with-my-treatment",
+      "label": "\"Super impressed with my treatment and results. Nafisa is am",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"super-impressed-with-my-treatment\"",
+      "autoTagged": true
+    },
+    {
+      "id": "g",
+      "label": "G",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"g\"",
+      "autoTagged": true
+    },
+    {
+      "id": "gemma-charlesworth",
+      "label": "Gemma Charlesworth",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"gemma-charlesworth\"",
+      "autoTagged": true
+    },
+    {
+      "id": "google-review-verified-client-4",
+      "label": "Google Review &middot; Verified Client",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"google-review-verified-client-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "i-have-had-various-treatments",
+      "label": "\"I have had various treatments with Nafisa, targeting specif",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"i-have-had-various-treatments\"",
+      "autoTagged": true
+    },
+    {
+      "id": "r",
+      "label": "R",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"r\"",
+      "autoTagged": true
+    },
+    {
+      "id": "rachael-johns",
+      "label": "Rachael Johns",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"rachael-johns\"",
+      "autoTagged": true
+    },
+    {
+      "id": "google-review-verified-client-5",
+      "label": "Google Review &middot; Verified Client",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"google-review-verified-client-5\"",
+      "autoTagged": true
+    },
+    {
+      "id": "i-ve-had-several-treatments",
+      "label": "\"I've had several treatments with Nafisa and have always bee",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"i-ve-had-several-treatments\"",
+      "autoTagged": true
+    },
+    {
+      "id": "m",
+      "label": "M",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"m\"",
+      "autoTagged": true
+    },
+    {
+      "id": "marcela-guzman-turco",
+      "label": "Marcela Guzman Turco",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"marcela-guzman-turco\"",
+      "autoTagged": true
+    },
+    {
+      "id": "google-review-verified-client-6",
+      "label": "Google Review &middot; Verified Client",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"google-review-verified-client-6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-it-works",
+      "label": "How It Works",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"how-it-works\"",
+      "autoTagged": true
+    },
+    {
+      "id": "your-journey-with-puremed",
+      "label": "Your Journey with PureMed",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"your-journey-with-puremed\"",
+      "autoTagged": true
+    },
+    {
+      "id": "three-steps-from-your-first",
+      "label": "Three steps from your first conversation to results you'll l",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"three-steps-from-your-first\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1",
+      "label": "1",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"1\"",
+      "autoTagged": true
+    },
+    {
+      "id": "consultation",
+      "label": "Consultation",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"consultation\"",
+      "autoTagged": true
+    },
+    {
+      "id": "nafisa-takes-time-to-understand",
+      "label": "Nafisa takes time to understand your concerns, goals, and me",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"nafisa-takes-time-to-understand\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2",
+      "label": "2",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "personalised-treatment",
+      "label": "Personalised Treatment",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"personalised-treatment\"",
+      "autoTagged": true
+    },
+    {
+      "id": "a-bespoke-plan-built-around",
+      "label": "A bespoke plan built around your facial anatomy and goals. E",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"a-bespoke-plan-built-around\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3",
+      "label": "3",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-follow-up",
+      "label": "Results &amp; Follow Up",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"results-follow-up\"",
+      "autoTagged": true
+    },
+    {
+      "id": "we-review-your-results-and",
+      "label": "We review your results and check in on your skin. Long-term ",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"we-review-your-results-and\"",
+      "autoTagged": true
+    },
+    {
+      "id": "start-with-a-consultation",
+      "label": "Start With a Consultation",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"start-with-a-consultation\"",
+      "autoTagged": true
+    },
+    {
+      "id": "common-questions",
+      "label": "Common Questions",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"common-questions\"",
+      "autoTagged": true
+    },
+    {
+      "id": "everything-you-want-to-know",
+      "label": "Everything You Want to Know",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"everything-you-want-to-know\"",
+      "autoTagged": true
+    },
+    {
+      "id": "honest-answers-no-jargon-no",
+      "label": "Honest answers. No jargon, no sales spin.",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"honest-answers-no-jargon-no\"",
+      "autoTagged": true
+    },
+    {
+      "id": "book-a-consultation",
+      "label": "Book a Consultation",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"book-a-consultation\"",
+      "autoTagged": true
+    },
+    {
+      "id": "are-the-treatments-safe",
+      "label": "Are the treatments safe?",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"are-the-treatments-safe\"",
+      "autoTagged": true
+    },
+    {
+      "id": "all-treatments-are-carried-out",
+      "label": "All treatments are carried out by Nafisa Mughal, medically t",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"all-treatments-are-carried-out\"",
+      "autoTagged": true
+    },
+    {
+      "id": "will-i-look-natural",
+      "label": "Will I look natural?",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"will-i-look-natural\"",
+      "autoTagged": true
+    },
+    {
+      "id": "natural-results-are-the-only",
+      "label": "Natural results are the only results we deliver. Nafisa's ph",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"natural-results-are-the-only\"",
+      "autoTagged": true
+    },
+    {
+      "id": "what-is-the-laser-lift",
+      "label": "What is the Laser Lift?",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"what-is-the-laser-lift\"",
+      "autoTagged": true
+    },
+    {
+      "id": "laser-lift-endolift-is-our",
+      "label": "Laser Lift (Endolift) is our flagship skin tightening treatm",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"laser-lift-endolift-is-our\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-many-sessions-will-i",
+      "label": "How many sessions will I need?",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"how-many-sessions-will-i\"",
+      "autoTagged": true
+    },
+    {
+      "id": "it-depends-on-the-treatment",
+      "label": "It depends on the treatment and your goals. Many clients see",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"it-depends-on-the-treatment\"",
+      "autoTagged": true
+    },
+    {
+      "id": "is-there-any-downtime",
+      "label": "Is there any downtime?",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"is-there-any-downtime\"",
+      "autoTagged": true
+    },
+    {
+      "id": "most-treatments-have-minimal-to",
+      "label": "Most treatments have minimal to no downtime. Some mild redne",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"most-treatments-have-minimal-to\"",
+      "autoTagged": true
+    },
+    {
+      "id": "where-are-you-located",
+      "label": "Where are you located?",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"where-are-you-located\"",
+      "autoTagged": true
+    },
+    {
+      "id": "34a-high-street-winslow-buckinghamshire",
+      "label": "34a High Street, Winslow, Buckinghamshire, MK18 3HB, easily ",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"34a-high-street-winslow-buckinghamshire\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ready-to-start",
+      "label": "Ready to Start?",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"ready-to-start\"",
+      "autoTagged": true
+    },
+    {
+      "id": "book-consultation-3",
+      "label": "Book Consultation",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"book-consultation-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "send-us-a-whatsapp",
+      "label": "Send Us a WhatsApp",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"send-us-a-whatsapp\"",
+      "autoTagged": true
+    },
+    {
+      "id": "medically-led-aesthetics-winslow-buckinghamshire",
+      "label": "Medically-Led Aesthetics &nbsp;&middot;&nbsp; Winslow, Bucki",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"medically-led-aesthetics-winslow-buckinghamshire\"",
+      "autoTagged": true
+    },
+    {
+      "id": "our",
+      "label": "Our",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"our\"",
+      "autoTagged": true
+    },
+    {
+      "id": "6",
+      "label": "6",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "specialist-treatments",
+      "label": "Specialist Treatments",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"specialist-treatments\"",
+      "autoTagged": true
+    },
+    {
+      "id": "90-3",
+      "label": "90",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"90-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "five-star-reviews",
+      "label": "Five-Star Reviews",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"five-star-reviews\"",
+      "autoTagged": true
+    },
+    {
+      "id": "14-3",
+      "label": "14+",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"14-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "years-experience-2",
+      "label": "Years' Experience",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"years-experience-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "our-signature-treatment",
+      "label": "Our Signature Treatment",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"our-signature-treatment\"",
+      "autoTagged": true
+    },
+    {
+      "id": "60-min",
+      "label": "60 min",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"60-min\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-length",
+      "label": "Session length",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-length\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-2",
+      "label": "1–2",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "sessions-needed",
+      "label": "Sessions needed",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"sessions-needed\"",
+      "autoTagged": true
+    },
+    {
+      "id": "minimal",
+      "label": "Minimal",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"minimal\"",
+      "autoTagged": true
+    },
+    {
+      "id": "downtime",
+      "label": "Downtime",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"downtime\"",
+      "autoTagged": true
+    },
+    {
+      "id": "18-24-mo",
+      "label": "18–24 mo",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"18-24-mo\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-duration",
+      "label": "Results duration",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"results-duration\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-it-works-2",
+      "label": "How it works",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"how-it-works-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-3",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2-2",
+      "label": "2",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"2-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-2",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ideal-if-you-have",
+      "label": "Ideal if you have",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"ideal-if-you-have\"",
+      "autoTagged": true
+    },
+    {
+      "id": "dermal-fillers",
+      "label": "Dermal Fillers",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"dermal-fillers\"",
+      "autoTagged": true
+    },
+    {
+      "id": "60-min-2",
+      "label": "60 min",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"60-min-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-length-2",
+      "label": "Session length",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-length-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-4",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-needed",
+      "label": "Session needed",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-needed\"",
+      "autoTagged": true
+    },
+    {
+      "id": "minimal-2",
+      "label": "Minimal",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"minimal-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "bruising-risk",
+      "label": "Bruising risk",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"bruising-risk\"",
+      "autoTagged": true
+    },
+    {
+      "id": "12-18-mo",
+      "label": "12–18 mo",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"12-18-mo\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-duration-2",
+      "label": "Results duration",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"results-duration-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-it-works-3",
+      "label": "How it works",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"how-it-works-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-5",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-5\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2-3",
+      "label": "2",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"2-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-3",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ideal-if-you-have-2",
+      "label": "Ideal if you have",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"ideal-if-you-have-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "muscle-relaxing-injections",
+      "label": "Muscle-Relaxing Injections",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"muscle-relaxing-injections\"",
+      "autoTagged": true
+    },
+    {
+      "id": "30-min",
+      "label": "30 min",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"30-min\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-length-3",
+      "label": "Session length",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-length-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-6",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-needed-2",
+      "label": "Session needed",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-needed-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "none",
+      "label": "None",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"none\"",
+      "autoTagged": true
+    },
+    {
+      "id": "downtime-2",
+      "label": "Downtime",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"downtime-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-4-mo",
+      "label": "3–4 mo",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-4-mo\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-duration-3",
+      "label": "Results duration",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"results-duration-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-it-works-4",
+      "label": "How it works",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"how-it-works-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-7",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-7\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2-4",
+      "label": "2",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"2-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-4",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ideal-if-you-have-3",
+      "label": "Ideal if you have",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"ideal-if-you-have-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "skin-regeneration",
+      "label": "Skin Regeneration",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"skin-regeneration\"",
+      "autoTagged": true
+    },
+    {
+      "id": "45-min",
+      "label": "45 min",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"45-min\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-length-4",
+      "label": "Session length",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-length-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-5",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-5\"",
+      "autoTagged": true
+    },
+    {
+      "id": "sessions-needed-2",
+      "label": "Sessions needed",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"sessions-needed-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "minimal-3",
+      "label": "Minimal",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"minimal-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "downtime-3",
+      "label": "Downtime",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"downtime-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "from-4-wks",
+      "label": "From 4 wks",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"from-4-wks\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-visible",
+      "label": "Results visible",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"results-visible\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-it-works-5",
+      "label": "How it works",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"how-it-works-5\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-8",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-8\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2-5",
+      "label": "2",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"2-5\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-6",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ideal-if-you-have-4",
+      "label": "Ideal if you have",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"ideal-if-you-have-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "energy-based-treatment",
+      "label": "Energy-Based Treatment",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"energy-based-treatment\"",
+      "autoTagged": true
+    },
+    {
+      "id": "75-min",
+      "label": "75 min",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"75-min\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-length-5",
+      "label": "Session length",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-length-5\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-7",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-7\"",
+      "autoTagged": true
+    },
+    {
+      "id": "sessions-needed-3",
+      "label": "Sessions needed",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"sessions-needed-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "24-48-hr",
+      "label": "24–48 hr",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"24-48-hr\"",
+      "autoTagged": true
+    },
+    {
+      "id": "redness-pinkness",
+      "label": "Redness / pinkness",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"redness-pinkness\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-months",
+      "label": "3 months",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-months\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-build-over",
+      "label": "Results build over",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"results-build-over\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-it-works-6",
+      "label": "How it works",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"how-it-works-6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-9",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-9\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2-6",
+      "label": "2",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"2-6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-8",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-8\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ideal-if-you-have-5",
+      "label": "Ideal if you have",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"ideal-if-you-have-5\"",
+      "autoTagged": true
+    },
+    {
+      "id": "deep-hydration",
+      "label": "Deep Hydration",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"deep-hydration\"",
+      "autoTagged": true
+    },
+    {
+      "id": "45-min-2",
+      "label": "45 min",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"45-min-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "session-length-6",
+      "label": "Session length",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"session-length-6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-9",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-9\"",
+      "autoTagged": true
+    },
+    {
+      "id": "sessions-needed-4",
+      "label": "Sessions needed",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"sessions-needed-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "none-2",
+      "label": "None",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"none-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "downtime-4",
+      "label": "Downtime",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"downtime-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "6-12-mo",
+      "label": "6–12 mo",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"6-12-mo\"",
+      "autoTagged": true
+    },
+    {
+      "id": "results-duration-4",
+      "label": "Results duration",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"results-duration-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "how-it-works-7",
+      "label": "How it works",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"how-it-works-7\"",
+      "autoTagged": true
+    },
+    {
+      "id": "1-10",
+      "label": "1",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"1-10\"",
+      "autoTagged": true
+    },
+    {
+      "id": "2-7",
+      "label": "2",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"2-7\"",
+      "autoTagged": true
+    },
+    {
+      "id": "3-10",
+      "label": "3",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"3-10\"",
+      "autoTagged": true
+    },
+    {
+      "id": "ideal-if-you-have-6",
+      "label": "Ideal if you have",
+      "location": "treatments",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-id=\"ideal-if-you-have-6\"",
+      "autoTagged": true
+    },
+    {
+      "id": "trust-five-star-reviews",
+      "label": "90 Five-Star Reviews",
+      "location": "index",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-id=\"trust-five-star-reviews\"",
+      "autoTagged": true
+    }
+  ],
+  "imageFields": [
+    {
+      "id": "img-puremed-logo-transparent",
+      "label": "puremed_logo_transparent.webp",
+      "astroFile": "src/layouts/Layout.astro",
+      "astroProp": "data-stage-img=\"img-puremed-logo-transparent\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-hero-consultation",
+      "label": "puremed-hero-consultation.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-puremed-hero-consultation\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-hf-20260617-11",
+      "label": "puremed-hf-20260617-11.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-puremed-hf-20260617-11\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-nafisa-library-f-flux2pro-v1",
+      "label": "nafisa-library-f-flux2pro-v1.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-nafisa-library-f-flux2pro-v1\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-face-assessment-hf-v1",
+      "label": "puremed-face-assessment-hf-v1.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-puremed-face-assessment-hf-v1\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-laser-lift-hero-3",
+      "label": "puremed-laser-lift-hero-3.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-puremed-laser-lift-hero-3\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-hero-micro-needling",
+      "label": "hero-micro-needling.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-hero-micro-needling\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-hf-20260624-02",
+      "label": "puremed-hf-20260624-02.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-puremed-hf-20260624-02\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-nafisa-hero-v2",
+      "label": "nafisa-hero-v2.webp",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-nafisa-hero-v2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-img-10",
+      "label": "img-10.jpg",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-img-10\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-img-11",
+      "label": "img-11.jpg",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-img-11\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-img-12",
+      "label": "img-12.png",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-img-12\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-img-13",
+      "label": "img-13.png",
+      "astroFile": "src/pages/index.astro",
+      "astroProp": "data-stage-img=\"img-img-13\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-nafisa-20-seedream5lite-v1",
+      "label": "nafisa-20-seedream5lite-v1.webp",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-img=\"img-nafisa-20-seedream5lite-v1\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-numbing-cream-prep-hf",
+      "label": "puremed-numbing-cream-prep-hf-v1.webp",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-img=\"img-puremed-numbing-cream-prep-hf\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-laser-lift-hero-4",
+      "label": "puremed-laser-lift-hero-4.webp",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-img=\"img-puremed-laser-lift-hero-4\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-patient-consultation-hf-v1",
+      "label": "puremed-patient-consultation-hf-v1.webp",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-img=\"img-puremed-patient-consultation-hf-v1\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-polynucleotides-prep-hf-v1",
+      "label": "puremed-polynucleotides-prep-hf-v1.png",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-img=\"img-puremed-polynucleotides-prep-hf-v1\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-hero-micro-needling-2",
+      "label": "hero-micro-needling.webp",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-img=\"img-hero-micro-needling-2\"",
+      "autoTagged": true
+    },
+    {
+      "id": "img-puremed-skin-glow-closeup-hf",
+      "label": "puremed-skin-glow-closeup-hf-v1.webp",
+      "astroFile": "src/pages/treatments.astro",
+      "astroProp": "data-stage-img=\"img-puremed-skin-glow-closeup-hf\"",
+      "autoTagged": true
+    }
+  ]
+}
