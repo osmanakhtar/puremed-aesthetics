@@ -122,12 +122,24 @@ so nothing needs to be locked.
 - Production stays manual/parked until the Framer → Cloudways domain migration.
   Until then "published" = Cloudways staging URL; Osman decides when it goes further.
 
-### D6 — Cloneable blocks (deferred, per-region)
-For regions Osman designates (e.g. treatment cards): refactor that region in Astro to
-render from a JSON data file (`src/data/<region>.json`); editor gets "+ Add card"
-which clones the block client-side and appends to a `repeatables` key in the overlay;
-Loop 2 writes the JSON file. Client can delete only clones she created. Single
-surface (D1) means the refactor happens once, in Astro only.
+### D6: Repeatable items (BUILT 21 Jul, superseding the JSON-data design)
+For regions Osman designates with `data-stage-region="<id>"`: the editor shows
+"+ Add <label>" and the client can add another item that inherits the theme by
+construction. She can remove only items she added.
+
+**Design changed at build time.** v1 called for refactoring each region to render
+from `src/data/<region>.json`, with Loop 2 writing JSON. Built instead as a clone
+of the region's FIRST item with every anchor id suffixed `__c<n>`, derived the
+same deterministic way on both sides (browser: DOM item reset to its pre-overlay
+state; Loop 2: the Astro source item). Why: the clone's copy/image edits then flow
+through the EXISTING overlay routes with no new edit semantics, no per-region
+Astro refactor is needed (one attribute per container), and the publish diff stays
+readable markup rather than a data blob. Plain `id="…"` attributes are suffixed
+too, so a cloned section never duplicates a DOM id.
+
+Live regions: `tx-cards`, `results`, `reviews`, `faq` (Home) and `treatments`
+(whole treatment sections, Treatments page). Adding another = one attribute plus a
+label in `scripts/stage-build-manifest.js`.
 
 ---
 
@@ -136,10 +148,11 @@ surface (D1) means the refactor happens once, in Astro only.
 | Phase | What | Size | Depends on |
 |---|---|---|---|
 | **0. Surface unification** — **DONE 14 Jul** | Auto-tagger over Astro source; `astro build`; deploy dist as the Pi editing surface; regenerate manifest; mark pages `liveEditable` | S–M | — |
-| **1. Inline editor** | contenteditable on all anchors, paste/Enter guards, overlay save + revert-per-element, "edited" badges, sanitizer route on Pi | M | 0 |
-| **2. Submit pipeline** | Versioned submissions + `publish-request.md`; Loop 1 repoint; Loop 2 `--from-overlay` + innerHTML write-back; end-to-end test: edit → submit → diff → merge → staging → redeploy to Pi | M | 1 |
-| **3. Images** | Deploy upload patch; image overlay UI (replace + drag-reposition); `replaceStageImage()` + asset file transport in Loop 2 | M | 0 (patch deploy can parallel 1–2) |
-| **4. Cloneable blocks** | Per-region Astro refactor + "+ Add" UI + Loop 2 JSON write | M–L per region | 2 |
+| **1. Inline editor** — **DEPLOYED 14 Jul** | contenteditable on all anchors, paste/Enter guards, overlay save + revert-per-element, "edited" badges, sanitizer route on Pi. Patch: `scripts/stage-patches/2026-07-14-live-edit/` (27/27 route+sanitizer tests). Addendum same day after first browser pass: **engagement access control** (`engagement-access.js` middleware — clients scoped to their users.json `engagements` list on every route; nafisa → 3 PureMed engagements; 13/13 tests) + client-home cards route liveEditable engagements straight to `/prototype/<id>`. Browser pass confirmed by Osman 14 Jul — **Phase 1 complete** | M | 0 |
+| **2. Submit pipeline** — **DEPLOYED 14 Jul** | Versioned submissions + `publish-request.md`; Loop 1 submission alerts (endpoint verified live, 0 pending); Loop 2 `--from-overlay` + `replaceStageInner()` innerHTML write-back (verified: fixture → publish branch → clean diff → build green). 42/42 + 13/13 tests. **Phase 2b same day:** Loop 1 auto-runs Loop 2 into dedicated worktree (`puremed-publish/`); `scripts/mss-review.js` = the one interactive step (digest → diff → merge → push/staging → Pi baseline redeploy + overlay prune → branch delete). End-to-end verified with synthetic submission, artifacts cleaned. Remaining: Osman live pass (edit → submit → ping → `mss-review`) | M | 1 |
+| **3. Images** — **DEPLOYED 15 Jul; upload fix 21 Jul** | Dedicated live-edit upload route (browser WebP transcode + sharp fallback; superseded the 2026-07-08 gallery patch for this flow); click-image panel (upload / library / drag-reposition with effects suspension / reset); `replaceStageImage()` + binary transport in Loop 2 (verified e2e: append + in-place object-position, src swap, asset committed, build green); prune handles images. 59/59 tests. multer + sharp installed on the Pi 15 Jul. **21 Jul:** browser pass as `nafisa` found uploads failing for any photo >1MB: nginx had no `client_max_body_size` (1MB default) so it 413'd before Node saw the request; raised to 20M + reloaded, and the editor now reports 413 / non-JSON errors plainly instead of a parse error. | M | 0 |
+| **4. Repeatable items** (**BUILT + DEPLOYED 21 Jul**) | Client adds another item to a designated region ("+ Add treatment section" / card / result / review / question). Implemented as a CLONE of the region's first item with anchor ids suffixed `__c<n>`, derived identically in the browser and in Loop 2, rather than D6's per-region JSON refactor: no new edit semantics, clone edits ride the existing overlay, publish diff is plain markup. Shared derivation in `scripts/stage-region-util.js`; manifest regenerated by `scripts/stage-build-manifest.js` (refuses to write if an existing id would vanish). 83 + 29 tests; browser pass 21 Jul on both pages. | M | 2 |
+| **5. Whole new page sections (deferred)** | A section picker that drops a brand-new band into a page, with reordering. Needs page composition itself to come from data. Parked 21 Jul: Osman chose repeatable items first, revisit only if Nafisa asks for a layout the existing regions cannot express. | M–L | 4 |
 
 Rationale for order: 0→1→2 gets Nafisa editing and submitting copy end-to-end with
 the publish loop proven; images ride the same overlay/submit machinery once it exists.
@@ -179,13 +192,39 @@ the publish loop proven; images ride the same overlay/submit machinery once it e
 - Astro repo changes uncommitted (tagged pages, config, closed spans,
   `stage-manifest-additions.json`) — commit when ready.
 
+## 7. Client feedback round, 18-21 Jul 2026
+
+Nafisa's 18 Jul messages, and what each turned into:
+
+| She said | Diagnosis | Resolution |
+|---|---|---|
+| "check the add images not letting me add new ones from my laptop" | nginx on the Pi had no `client_max_body_size`, so its 1MB default 413'd almost every photo before Node saw it; the editor showed a JSON parse error, not the reason | limit raised to 20M + reload; editor now reports 413 / non-JSON errors plainly (21 Jul) |
+| "all of the treatments are on the old edit section but not on the dev one" | true: old prototype engagement `puremed` had 11 treatment sections, the Astro source only 6 | ported plasma-fibroblast, body-sculpting, skin-peels, dermaplaning, sculptra into `treatments.astro`; her edits preserved (see below) |
+| "I've added Sculptra there" (old review tool's custom-section box) | the old tool's `customSections` is a dead end: nothing carries it into the Astro source | her Sculptra copy adopted as the `tx-sculptra-intro` text on the ported section |
+| "make it so I can add sections that then just follow the theme" | this is D6 | Phase 4 built and deployed 21 Jul (§3, D6) |
+
+**Edit preservation is the hard gate on any surface regeneration.** Her overlay
+held 37 copy + 4 image edits, unsubmitted. The tagger is insertion-only and
+`stage-build-manifest.js` refuses to write a manifest that drops an existing id,
+so all 310 prior anchors survived; verified in the built HTML and against the
+live manifest before and after deploy. Never regenerate the surface without that
+check.
+
+**Old-engagement drift is now a known failure mode.** `puremed` (hand-made
+prototype, old review flow) and `puremed-site` (live edit) are separate surfaces
+and the client cannot tell them apart. She used the old one because it had the
+content. Retire `puremed` for her once the live-edit surface has everything, or
+this recurs.
+
 ## 6. Resume prompt
 
 ```
 Read other-projects/puremed/stage-client-autonomy-plan.md — free-edit plan for the
-puremed engagement. Phase 0 DONE (see §5: auto-tagger scripts/stage-autotag.js,
-310+20 anchors, DEV engagement puremed-site live on the Pi). Next = Phase 1 (§3):
-inline contenteditable editor on all anchors + client-edits.json overlay +
-sanitizer route, replacing the panel editor + isComplexEl lock for liveEditable
-engagements.
+puremed-site engagement. Phases 0-4 are BUILT AND DEPLOYED (§3): inline editing,
+images, versioned submit + publish loop, and repeatable items ("+ Add treatment
+section"). §7 has the 18-21 Jul client feedback round. Nafisa has 37 copy + 4
+image edits saved and UNSUBMITTED. Never regenerate the editing surface without
+the id-preservation check described in §7. Next open items: her live pass on the
+new add-item flow, and retiring the old `puremed` review engagement for her so the
+two surfaces stop diverging.
 ```
