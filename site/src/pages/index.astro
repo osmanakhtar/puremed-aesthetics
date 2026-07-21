@@ -93,7 +93,7 @@ import Layout from '../layouts/Layout.astro';
     </a>
 
     <!-- 5 uniform 16:9 treatment cards -->
-    <div class="tx-cards-grid fade-up">
+    <div class="tx-cards-grid fade-up" data-stage-region="tx-cards">
 
       <a href="/treatments#liquid-facelift" class="tx-ucard">
         <div class="tx-ucard-img">
@@ -215,7 +215,7 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="section-title" data-stage-id="real-results-real-people">Real Results.<br>Real People.</h2>
       <p class="section-subtitle" data-stage-id="every-before-and-after-is">Every before and after is a real PureMed client — no filters, no retouching.</p>
     </div>
-    <div class="results-grid">
+    <div class="results-grid" data-stage-region="results">
       <div class="result-card"><img src="/assets/web/img-10.jpg" alt="Full face before and after treatment — PureMed Aesthetics client result" style="width:100%;height:100%;object-fit:cover;display:block" data-stage-img="img-img-10"><span class="result-label" data-stage-id="laser-lift">Laser Lift</span></div>
       <div class="result-card"><img src="/assets/web/img-11.jpg" alt="Lower face before and after treatment — PureMed Aesthetics client result" style="width:100%;height:100%;object-fit:cover;display:block" data-stage-img="img-img-11"><span class="result-label" data-stage-id="liquid-facelift">Liquid Facelift</span></div>
       <div class="result-card"><img src="/assets/web/img-12.png" alt="RF Microneedling before and after — PureMed Aesthetics" style="width:100%;height:100%;object-fit:cover;display:block" data-stage-img="img-img-12"><span class="result-label" data-stage-id="rf-microneedling">RF Microneedling</span></div>
@@ -236,7 +236,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
     <div class="reviews-carousel-wrap fade-up">
       <div class="reviews-track-outer" id="reviewsOuter">
-        <div class="reviews-track" id="reviewsTrack">
+        <div class="reviews-track" id="reviewsTrack" data-stage-region="reviews">
           <div class="review-card">
             <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
             <p class="review-text" data-stage-id="nafisa-s-clinic-is-first">"Nafisa's Clinic is first class in every aspect. Extremely professional but very caring at the same time. Will only offer treatments that are safe. Takes her time to make sure you are happy with the result. Best clinic in Buckinghamshire."</p>
@@ -388,7 +388,7 @@ import Layout from '../layouts/Layout.astro';
           <a href="https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185" class="btn-primary" target="_blank" rel="noopener" data-stage-id="book-a-consultation"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a Consultation</a>
         </div>
       </div>
-      <div>
+      <div data-stage-region="faq">
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)" data-stage-id="are-the-treatments-safe">Are the treatments safe?<span class="faq-icon"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10"/></svg></span></button>
           <div class="faq-a" data-stage-id="all-treatments-are-carried-out">All treatments are carried out by Nafisa Mughal, medically trained with a dental background and advanced anatomy knowledge. We use only premium, clinically proven products and conduct a thorough consultation before any treatment.</div>
