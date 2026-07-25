@@ -3,53 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PureMed Social Content Review</title>
+<title>PureMed Aesthetics Social Content Review</title>
 <style>
-  :root { --blue:#23476A; --gold:#C6A77D; --warm:#F8F8F6; --grey:#F3F4F6; }
+  
+  :root { --primary:#23476A; --accent:#C6A77D; --warm:#F8F8F6; --grey:#F3F4F6; --kicker:#8A6B3B; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:Inter,-apple-system,sans-serif; background:var(--warm); color:#1f2937; padding:32px 16px 80px; overflow-x:hidden; }
+  body { font-family:'Inter',-apple-system, sans-serif; background:#F8F8F6; color:#1f2937; padding:32px 16px 80px; overflow-x:hidden; }
   .wrap { max-width:520px; margin:0 auto; }
-  h1 { font-family:'Cormorant Garamond',Georgia,serif; color:var(--blue); font-size:2rem; margin-bottom:4px; }
+  h1 { font-family:'Cormorant Garamond',Georgia, serif; color:#23476A; font-size:2rem; margin-bottom:4px; }
   .sub { color:#6b7280; font-size:.9rem; margin-bottom:28px; }
-  .post { background:#fff; border:1px solid var(--grey); border-radius:12px; margin-bottom:32px; overflow:hidden; box-shadow:0 1px 3px rgba(35,71,106,.08); }
+  .post { background:#FFFFFF; border:1px solid #F3F4F6; border-radius:12px; margin-bottom:32px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.12); }
   .post-head { display:flex; gap:12px; align-items:center; padding:14px 16px; }
-  .avatar { width:40px; height:40px; border-radius:50%; background:var(--blue); color:var(--gold); display:flex; align-items:center; justify-content:center; font-weight:700; }
-  .post-head strong { display:block; color:var(--blue); font-size:.95rem; }
+  .avatar { width:40px; height:40px; border-radius:50%; background:#23476A; color:#C6A77D; display:flex; align-items:center; justify-content:center; font-weight:700; }
+  .post-head strong { display:block; color:#23476A; font-size:.95rem; }
   .meta { color:#6b7280; font-size:.8rem; }
   .post img { width:100%; max-width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
+  .post video { width:100%; max-width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
   .no-img { width:100%; aspect-ratio:4/5; background:var(--grey); display:flex; align-items:center; justify-content:center; color:#9ca3af; }
   .carousel { position:relative; }
   .slides { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; max-width:100%; }
   .slides::-webkit-scrollbar { display:none; }
   .slide { flex:0 0 100%; min-width:0; scroll-snap-align:start; position:relative; overflow:hidden; }
-  .slide .count { position:absolute; top:10px; right:10px; background:rgba(35,71,106,.75); color:#fff; font-size:.72rem; padding:3px 9px; border-radius:12px; }
+  .slide .count { position:absolute; top:10px; right:10px; background:rgba(0,0,0,.55); color:#fff; font-size:.72rem; padding:3px 9px; border-radius:12px; z-index:5; }
   .c-arrow { position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%;
-             border:none; background:rgba(255,255,255,.92); color:var(--blue); font-size:1.5rem; line-height:1;
-             cursor:pointer; box-shadow:0 1px 4px rgba(35,71,106,.25); display:flex; align-items:center; justify-content:center; }
+             border:none; background:rgba(255,255,255,.92); color:var(--primary); font-size:1.5rem; line-height:1;
+             cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,.25); display:flex; align-items:center; justify-content:center; z-index:5; }
   .c-arrow.prev { left:10px; }
   .c-arrow.next { right:10px; }
   .c-arrow:hover { background:#fff; }
   .c-arrow[hidden] { display:none; }
   .txt-slide { width:100%; aspect-ratio:4/5; background:var(--warm); display:flex; flex-direction:column; position:relative; }
   .ts-body { flex:1; display:flex; flex-direction:column; justify-content:center; padding:12% 11% 4%; position:relative; z-index:2; }
-  .ts-frame { position:absolute; inset:14px; border:1px solid rgba(198,167,125,.6); pointer-events:none; z-index:1; }
-  .numeral { font-family:'Cormorant Garamond',Georgia,serif; color:var(--gold); font-size:4rem; line-height:1; margin-bottom:10px; }
-  .txt-slide .kicker { color:#8A6B3B; font-size:.75rem; font-weight:600; text-transform:uppercase; letter-spacing:.16em; margin-bottom:14px; }
-  .txt-slide h2 { font-family:'Cormorant Garamond',Georgia,serif; color:var(--blue); font-size:2.2rem; line-height:1.12; margin-bottom:14px; overflow-wrap:break-word; }
+  .ts-frame { position:absolute; inset:14px; border:1px solid #C6A77D99; pointer-events:none; z-index:1; }
+  .numeral { font-family:'Cormorant Garamond',Georgia, serif; color:var(--accent); font-size:4rem; line-height:1; margin-bottom:10px; }
+  .txt-slide .kicker { color:var(--kicker); font-size:.75rem; font-weight:600; text-transform:uppercase; letter-spacing:.16em; margin-bottom:14px; }
+  .txt-slide h2 { font-family:'Cormorant Garamond',Georgia, serif; color:#23476A; font-size:2.2rem; line-height:1.12; margin-bottom:14px; overflow-wrap:break-word; }
   .txt-slide p { color:#374151; font-size:1rem; line-height:1.6; }
-  .ts-footer { position:relative; z-index:2; text-align:center; padding:0 0 22px; color:#8A6B3B; font-size:.6rem; font-weight:600; letter-spacing:.3em; }
-  .ts-footer span { color:rgba(138,107,59,.65); font-weight:400; }
+  .ts-footer { position:relative; z-index:2; text-align:center; padding:0 0 22px; color:var(--kicker); font-size:.6rem; font-weight:600; letter-spacing:.3em; }
+  .ts-footer span { color:var(--kicker); opacity:.65; font-weight:400; }
   .txt-slide.blue { background:linear-gradient(155deg,#1B3852 0%,#23476A 55%,#2D5B88 100%); }
-  .txt-slide.blue .kicker { color:#D9BE94; }
-  .txt-slide.blue h2 { color:#fff; }
-  .txt-slide.blue p { color:#DCE4EC; }
-  .txt-slide.blue .ts-footer { color:#C6A77D; }
-  .txt-slide.blue .ts-footer span { color:rgba(198,167,125,.65); }
+  .txt-slide.blue .kicker { color:var(--accent); }
+  .txt-slide.blue h2 { color:#FFFFFF; }
+  .txt-slide.blue p { color:#FFFFFFCC; }
+  .txt-slide.blue .ts-footer { color:var(--accent); }
+  .txt-slide.dark, .txt-slide.cta { background:linear-gradient(150deg,#1B3852 0%,#23476A 55%,#2D5B88 100%); }
+  .ts-atmo { position:absolute; inset:0; z-index:0; pointer-events:none;
+             background:radial-gradient(circle at 85% 10%, #23476A2E 0%, transparent 55%),
+                        radial-gradient(circle at 10% 90%, #23476A24 0%, transparent 50%);
+             box-shadow:inset 0 0 120px rgba(0,0,0,.55); }
+  .post img.ts-ghost { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:42%; height:auto; aspect-ratio:auto; object-fit:contain; opacity:0.055; z-index:1; pointer-events:none; }
+  .txt-slide.dark .kicker, .txt-slide.cta .kicker { color:#9CA3AF; letter-spacing:.22em; }
+  .txt-slide.cta .kicker { color:#23476A; }
+  .txt-slide.dark h2, .txt-slide.cta h2 { font-size:2.9rem; line-height:1.04; letter-spacing:.015em; font-weight:400; }
+  .txt-slide.dark h2 { color:#23476A; }
+  .txt-slide.cta h2 { color:#FFFFFF; }
+  .txt-slide.dark p, .txt-slide.cta p { color:#9CA3AF; font-size:1.05rem; }
+  .txt-slide.dark .ts-footer, .txt-slide.cta .ts-footer { color:#9CA3AF; }
+  .txt-slide.dark .ts-footer span, .txt-slide.cta .ts-footer span { color:#23476A; opacity:1; }
+  .clip-slide { width:100%; aspect-ratio:4/5; position:relative; background:#23476A; overflow:hidden; }
+  .post .clip-slide img.clip-bg { position:absolute; inset:0; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; }
+  .clip-scrim { position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.72) 100%); }
+  .clip-info { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:10%; text-align:center; z-index:2; }
+  .clip-play { width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.5); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.1rem; padding-left:4px; }
+  .clip-tag { color:#fff; font-size:.7rem; font-weight:600; letter-spacing:.24em; }
+  .clip-meta { color:rgba(255,255,255,.75); font-size:.72rem; }
+  .clip-note { color:rgba(255,255,255,.6); font-size:.72rem; line-height:1.45; max-width:34ch; }
+  .clip-strap { position:absolute; left:0; bottom:12%; background:#23476A; color:#fff; font-family:'Cormorant Garamond',Georgia, serif; font-size:1.05rem; letter-spacing:.06em; padding:6px 18px 5px 14px; z-index:3; }
   .txt-slide.split { flex-direction:row; }
   .ts-img { flex:0 0 42%; min-width:0; overflow:hidden; }
   .post .ts-img img { width:100%; height:100%; aspect-ratio:auto; object-fit:cover; display:block; }
-  .ts-img:first-child { border-right:1px solid rgba(198,167,125,.6); }
-  .ts-img:last-child { border-left:1px solid rgba(198,167,125,.6); }
+  .ts-img:first-child { border-right:1px solid #C6A77D99; }
+  .ts-img:last-child { border-left:1px solid #C6A77D99; }
   .post img.ts-bg { position:absolute; inset:0; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; z-index:0; }
   .ts-col { flex:1; min-width:0; display:flex; flex-direction:column; }
   .split .ts-body { padding:10% 9% 4%; }
@@ -58,21 +82,25 @@
   .split p { font-size:.9rem; line-height:1.55; }
   .split .ts-footer { padding-bottom:16px; letter-spacing:.22em; }
   .txt-slide.photo { background-size:cover; background-position:center; }
-  .txt-slide.photo .ts-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(27,56,82,.12) 0%,rgba(27,56,82,.45) 45%,rgba(27,56,82,.88) 100%); z-index:1; }
+  .txt-slide.photo .ts-overlay { position:absolute; inset:0; background:linear-gradient(180deg,#1B38521F 0%,#1B385273 45%,#1B3852E0 100%); z-index:1; }
   .txt-slide.photo .ts-body { justify-content:flex-end; padding-bottom:6%; }
-  .txt-slide.photo .kicker { color:#D9BE94; }
-  .txt-slide.photo h2 { color:#fff; }
-  .txt-slide.photo p { color:#DCE4EC; }
-  .txt-slide.photo .ts-footer { color:#D9BE94; }
-  .txt-slide.photo .ts-footer span { color:rgba(217,190,148,.7); }
+  .txt-slide.photo .kicker { color:var(--accent); }
+  .txt-slide.photo h2 { color:#FFFFFF; }
+  .txt-slide.photo p { color:#FFFFFFCC; }
+  .txt-slide.photo .ts-footer { color:var(--accent); }
   .media { position:relative; }
-  .post img.brand-mark { position:absolute; height:auto; aspect-ratio:auto; object-fit:contain;
+  .post img.brand-mark { position:absolute; height:auto; aspect-ratio:auto; object-fit:contain; z-index:4;
                          pointer-events:none; filter:drop-shadow(0 1px 3px rgba(0,0,0,.28)); }
   .dots { display:flex; gap:6px; justify-content:center; padding:10px 0 2px; }
   .dots i { width:6px; height:6px; border-radius:50%; background:#cbd5e1; transition:background .15s; }
-  .dots i.on { background:var(--blue); }
+  .dots i.on { background:var(--primary); }
+  .reel { padding:12px 16px 4px; border-top:1px solid #eef0f3; margin-top:8px; }
+  .reel h4 { font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--kicker); margin:0 0 8px; }
+  .reel h4 span { text-transform:none; letter-spacing:0; color:#94a3b8; font-weight:400; }
+  .reel video { display:block; width:100%; max-height:420px; background:#000; border-radius:10px; object-fit:contain; margin:0 auto; }
+  .reel video.tall { width:auto; max-width:100%; aspect-ratio:9/16; }
   .caption { padding:16px; }
-  .caption h3 { font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:#8A6B3B; margin:14px 0 8px; }
+  .caption h3 { font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--kicker); margin:14px 0 8px; }
   .caption h3:first-child { margin-top:0; }
   .caption p { font-size:.92rem; line-height:1.55; margin-bottom:10px; overflow-wrap:anywhere; }
 </style>
@@ -80,7 +108,7 @@
 <body>
 <div class="wrap">
   <h1>Social Content Review</h1>
-  <p class="sub">first 4 of 16 posts planned this month · scheduled every 2 days · tap a post to approve, request a change, or flag it</p>
+  <p class="sub">first 5 of 16 posts planned this month · scheduled every 2 days · tap a post to approve, request a change, or flag it</p>
   
   <article class="post" data-stage-id="2026-08-01-laser-lift">
     <header class="post-head">
@@ -133,15 +161,15 @@
     <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
     <div class="caption">
       <h3>Instagram caption</h3>
-      <p>Skin starting to feel less firm along the jawline? You don't need surgery to lift it.</p>
+<p>Skin starting to feel less firm along the jawline? You don't need surgery to lift it.</p>
 <p>Laser Lift uses Endolift fibre-optic laser technology to tighten from within. An ultrafine fibre is guided under the skin through a pinpoint entry. No scalpel, no stitches, no general anaesthetic.</p>
 <p>The laser energy creates an immediate contraction and lift. Then your skin does the rest: new collagen builds over 3–6 months, so results keep improving long after you've left the clinic.</p>
 <p>Most people need just 1–2 sessions, with minimal downtime, and results typically last 18–24 months.</p>
 <p>If you've noticed laxity around your face, jaw or neck and surgery isn't for you, this is the conversation to have.</p>
 <p>Book a consultation. Link in bio.</p>
 <p>#LaserLift #SkinTightening #WinslowAesthetics #BuckinghamshireAesthetics #MedicalAesthetics</p>
-      <h3>Facebook caption</h3>
-      <p>Skin starting to feel less firm along the jawline? You don't need surgery to lift it.</p>
+<h3>Facebook caption</h3>
+<p>Skin starting to feel less firm along the jawline? You don't need surgery to lift it.</p>
 <p>Laser Lift tightens from within using Endolift fibre-optic laser technology: no scalpel, no general anaesthetic, minimal downtime. There's an immediate lift, and then new collagen keeps building over 3–6 months, so results improve for months afterwards.</p>
 <p>Most people need just 1–2 sessions, with results typically lasting 18–24 months.</p>
 <p>If you'd like to know whether it's right for your skin, book a consultation: https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185</p>
@@ -203,15 +231,15 @@
     <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
     <div class="caption">
       <h3>Instagram caption</h3>
-      <p>"Fillers always look fake."</p>
+<p>"Fillers always look fake."</p>
 <p>Truth is, you only notice the bad ones.</p>
 <p>A liquid facelift isn't about adding volume for the sake of it. It starts with a detailed facial assessment that maps where volume has been lost and where things have softened. Then structure goes back precisely where your face needs it.</p>
 <p>Done well, the result isn't "filler face". It's your jawline a little more defined. Your cheeks the way they were a few years ago. You, looking rested.</p>
 <p>And because we use hyaluronic acid fillers, results can be adjusted, or even reversed, over time if you change your mind.</p>
 <p>Wondering what's right for your face? That's exactly what a consultation is for. Link in bio.</p>
 <p>#LiquidFacelift #DermalFillers #NaturalResults #WinslowAesthetics #MedicalAesthetics</p>
-      <h3>Facebook caption</h3>
-      <p>"Fillers always look fake." I hear this a lot. The truth? You only notice the bad ones.</p>
+<h3>Facebook caption</h3>
+<p>"Fillers always look fake." I hear this a lot. The truth? You only notice the bad ones.</p>
 <p>A liquid facelift starts with a proper facial assessment, then restores lost structure exactly where your face needs it. Done well, nobody should be able to tell you've had anything done. You just look rested.</p>
 <p>And because we use hyaluronic acid fillers, results can be adjusted or reversed over time if you change your mind.</p>
 <p>Curious whether it's right for you? Let's talk it through first: https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185</p>
@@ -229,15 +257,15 @@
     <div class="media"><img src="assets/puremed-hero-consultation.webp" alt="Nafisa Mughal consulting with a client"><img class="brand-mark" src="assets/puremed_logo_cropped.webp" alt="" style="right:4%;bottom:4%;width:20%;opacity:0.95"></div>
     <div class="caption">
       <h3>Instagram caption</h3>
-      <p>The most important part of any treatment happens before it: the consultation.</p>
+<p>The most important part of any treatment happens before it: the consultation.</p>
 <p>Every treatment at PureMed starts the same way. We sit down, assess your skin properly, and talk honestly about what would help, and what wouldn't.</p>
 <p>I explain the risks as clearly as the benefits. We only go ahead when you're fully comfortable. And if something isn't right for you, I'll tell you, even if that means no treatment at all that day.</p>
 <p>That's what medically-led means in practice. A dental background gives me advanced knowledge of facial anatomy. The consultation is where that knowledge actually works for you.</p>
 <p>If you've been thinking about a treatment and don't know where to start, start there.</p>
 <p>Book a consultation. Link in bio.</p>
 <p>#MedicalAesthetics #WinslowAesthetics #BuckinghamshireAesthetics #ConsultationFirst</p>
-      <h3>Facebook caption</h3>
-      <p>The most important part of any treatment happens before it: the consultation.</p>
+<h3>Facebook caption</h3>
+<p>The most important part of any treatment happens before it: the consultation.</p>
 <p>Every appointment at PureMed starts with a proper assessment. Your skin, your goals, and an honest conversation about what would help and what wouldn't. I explain the risks as clearly as the benefits, and we only go ahead when you're fully comfortable.</p>
 <p>If you've been curious about aesthetics but don't know where to start, start with a conversation: https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185</p>
     </div>
@@ -254,17 +282,43 @@
     <div class="media"><img src="assets/puremed-face-assessment-hf-v1.webp" alt="Facial assessment at PureMed Aesthetics"><img class="brand-mark" src="assets/puremed_logo_cropped.webp" alt="" style="right:4%;bottom:4%;width:20%;opacity:0.95"></div>
     <div class="caption">
       <h3>Instagram caption</h3>
-      <p>Noticing lines settling in around your forehead or eyes? Start with a conversation, not a treatment.</p>
+<p>Noticing lines settling in around your forehead or eyes? Start with a conversation, not a treatment.</p>
 <p>Dynamic lines, the ones from frowning, smiling and raising your eyebrows, develop because of how your face moves. Which is exactly why there's no one-size-fits-all answer to them.</p>
 <p>The right starting point is a proper medical consultation. We look at how your face moves, what's causing the lines you've noticed, and whether treatment makes sense for you at all. Always with the aim of preserving your natural expression. Rested, not frozen.</p>
 <p>No pressure, and no treatment on the day unless it's genuinely right for you.</p>
 <p>Book a consultation to talk through lines and wrinkles. Link in bio.</p>
 <p>#SkinConsultation #WinslowAesthetics #BuckinghamshireAesthetics #AgeingWell #MedicalAesthetics</p>
-      <h3>Facebook caption</h3>
-      <p>Noticing lines settling in around your forehead or eyes? Start with a conversation, not a treatment.</p>
+<h3>Facebook caption</h3>
+<p>Noticing lines settling in around your forehead or eyes? Start with a conversation, not a treatment.</p>
 <p>Dynamic lines develop because of how your face moves, so there's no one-size-fits-all answer to them. A proper medical consultation looks at what's actually causing them, and whether treatment makes sense for you at all. Always with the aim of keeping your natural expression.</p>
 <p>No pressure, and nothing happens on the day unless it's genuinely right for you.</p>
 <p>Book a consultation to talk it through: https://facesconsent.com/v1/bookings/puremedaesthetics?clinicSlug=puremed-aesthetics-466185</p>
+    </div>
+  </article>
+
+  <article class="post" data-stage-id="2099-01-01-finishing-proof">
+    <header class="post-head">
+      <div class="avatar">P</div>
+      <div>
+        <strong>PureMed Aesthetics</strong>
+        <span class="meta">Thursday 1 January · 12:00 · Clinic &amp; practitioner trust · Carousel · 1 slides · swipe</span>
+      </div>
+    </header>
+    <div class="carousel">
+      <div class="slides"><div class="slide"><video src="assets/2099-01-01-finishing-proof-slide-1.mp4" autoplay muted loop playsinline></video><span class="count">1/1</span></div></div>
+      <button class="c-arrow prev" aria-label="Previous slide" hidden>&#8249;</button>
+      <button class="c-arrow next" aria-label="Next slide">&#8250;</button>
+    </div>
+    <div class="dots"><i class="on"></i></div>
+    <div class="reel">
+      <h4>Assembled reel <span>9:16 · the slides above as one continuous video</span></h4>
+      <video src="assets/2099-01-01-finishing-proof-reel-9x16.mp4" controls playsinline preload="metadata" class="tall"></video>
+    </div>
+    <div class="caption">
+      <h3>Instagram caption</h3>
+<p><em>caption to follow</em></p>
+<h3>Facebook caption</h3>
+<p><em>caption to follow</em></p>
     </div>
   </article>
 </div>

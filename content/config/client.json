@@ -23,6 +23,7 @@
     "defaultOn": true,
     "note": "Overlaid on photo slides and static images only — text slides are already brand cards. Phase 2 publisher must bake this into the exported image files."
   },
+  "topicLabel": "Treatment",
   "treatments": [
     { "id": "laser-lift", "name": "Laser Lift", "hero": true, "pomSensitive": false },
     { "id": "liquid-facelift", "name": "Liquid Facelift", "hero": false, "pomSensitive": false },

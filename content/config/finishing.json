@@ -1,0 +1,82 @@
+{
+  "description": "PureMed finishing brand package — authored for the Phase 3 theme-swap proof (7 Jul 2026): the exact same finishing/assembly engine as FSC (content-finish.js + content-reel.js), pointed at PureMed's theme. Grades are soft/warm to suit clinic footage; the reel transition dips to white rather than black. Canon for the engine: fightstar-championship/fsc-clip-finishing-plan.md.",
+  "logoBug": {
+    "logo": "assets/source/puremed_logo_transparent.png",
+    "position": "top-right",
+    "widthPct": 20,
+    "opacity": 0.95,
+    "defaultOn": true,
+    "note": "Gold-on-transparent master logo, top-right — mirrors the site header placement."
+  },
+  "colorGrades": [
+    {
+      "id": "pm-soft",
+      "type": "filters",
+      "chain": "eq=contrast=1.04:saturation=0.96:brightness=0.02",
+      "note": "Soft clinical lift — airy, slightly desaturated."
+    },
+    {
+      "id": "pm-warm",
+      "type": "filters",
+      "chain": "eq=contrast=1.05:saturation=1.05:brightness=0.02,colorbalance=rs=0.03:rm=0.02:bs=-0.02",
+      "note": "Gentle warm/gold cast to sit with the brand palette."
+    }
+  ],
+  "idents": [
+    {
+      "id": "pm-mark-in",
+      "template": "logo-reveal",
+      "durationS": 1.5,
+      "params": { "logo": "transparent" },
+      "note": "Gold logo reveal over the navy gradient."
+    }
+  ],
+  "stings": [
+    {
+      "id": "pm-outro",
+      "template": "logo-cta",
+      "durationS": 2.0,
+      "params": { "logo": "transparent", "cta": "@PUREMEDAESTHETICS" },
+      "note": "Logo + handle CTA closer."
+    }
+  ],
+  "transitions": [
+    { "id": "cut", "note": "Hard cut — plain concat." },
+    {
+      "id": "dip-white",
+      "template": "xfade",
+      "params": { "transition": "fadewhite", "durationS": 0.45 },
+      "note": "Dip to white — the airy clinic take on FSC's dip-black."
+    },
+    {
+      "id": "crossfade",
+      "template": "xfade",
+      "params": { "transition": "fade", "durationS": 0.5 },
+      "note": "Straight crossfade."
+    }
+  ],
+  "overlaySet": [
+    {
+      "id": "grain",
+      "kind": "overlay",
+      "template": "grain",
+      "params": { "opacity": 0.04 },
+      "note": "Very subtle film grain."
+    },
+    {
+      "id": "vignette",
+      "kind": "overlay",
+      "template": "vignette",
+      "params": { "strength": 0.3 },
+      "note": "Soft edge falloff."
+    },
+    {
+      "id": "lower-third",
+      "kind": "overlay",
+      "template": "strap",
+      "params": { "position": "bottom-left", "yPct": 0.88 },
+      "note": "Generalised lower-third — navy bar (theme primary), display font. Text from the clip's overlay.strap / finish.lowerThird."
+    }
+  ],
+  "audioDefaults": { "clipGainDb": 0 }
+}

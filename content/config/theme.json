@@ -1,0 +1,48 @@
+{
+  "description": "PureMed visual theme — backfilled from the brand CSS previously hardcoded in content-preview.js. Source of truth: .claude/puremed-brand-identity.md. Slide canvas is 1080×1350 (4:5).",
+  "palette": {
+    "primary": "#23476A",
+    "accent": "#C6A77D",
+    "warm": "#F8F8F6",
+    "grey": "#F3F4F6",
+    "kicker": "#8A6B3B",
+    "blueGradient": ["#1B3852", "#23476A", "#2D5B88"],
+    "textOnDark": "#FFFFFF",
+    "bodyText": "#374151"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia, serif",
+    "body": "Inter",
+    "bodyFallback": "-apple-system, sans-serif"
+  },
+  "logo": {
+    "primary": "assets/web/puremed_logo_cropped.webp",
+    "transparent": "assets/source/puremed_logo_transparent.png"
+  },
+  "slideRules": {
+    "styles": "photo (bg image + blue gradient overlay), blue (gradient CTA/cover), light (warm-white + gold hairline frame + oversized serif numeral)",
+    "frame": "1px gold hairline inset 14px on light slides",
+    "footerOnEverySlide": true
+  },
+  "account": {
+    "name": "PureMed Aesthetics",
+    "handle": "@puremedaesthetics",
+    "avatarText": "P",
+    "avatarBg": "#23476A",
+    "avatarColor": "#C6A77D"
+  },
+  "footer": {
+    "text": "PUREMED",
+    "accent": "AESTHETICS"
+  },
+  "preview": {
+    "pageBg": "#F8F8F6",
+    "cardBg": "#FFFFFF",
+    "cardBorder": "#F3F4F6",
+    "titleFont": "display",
+    "titleColor": "#23476A",
+    "bodyText": "#1f2937",
+    "metaText": "#6b7280"
+  }
+}

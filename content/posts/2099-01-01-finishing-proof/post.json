@@ -1,0 +1,29 @@
+{
+  "id": "2099-01-01-finishing-proof",
+  "date": "2099-01-01",
+  "time": "12:00",
+  "timezone": "Europe/London",
+  "pillar": "trust",
+  "format": "carousel",
+  "platforms": ["instagram"],
+  "state": "drafted",
+  "note": "Phase 3 theme-swap proof (7 Jul 2026) — NOT client content. Synthetic testsrc footage run through the shared finishing/assembly engine to prove FSC's pipeline is fully theme-driven. 2099 date keeps it out of every real calendar window. Safe to delete; regenerate via the plan's Phase 3 notes.",
+  "assets": [
+    {
+      "type": "clip",
+      "alt": "theme-swap proof (synthetic test pattern, not client footage)",
+      "template": { "id": "full-bleed-strap" },
+      "overlay": { "strap": "MEDICALLY-LED AESTHETICS" },
+      "finish": {
+        "colorGrade": "pm-warm",
+        "overlays": [
+          { "id": "vignette" },
+          { "text": "PUREMED AESTHETICS", "font": "body", "fontScale": 0.8, "color": "#FFFFFF", "xPct": 0.05, "yPct": 0.06, "effect": { "type": "fade-in" } }
+        ],
+        "strap": { "effect": { "type": "slide-in-left" } }
+      }
+    }
+  ],
+  "finish": { "ident": "pm-mark-in", "sting": "pm-outro", "transition": "dip-white" },
+  "updated": "2026-07-07T00:00:00.000Z"
+}
