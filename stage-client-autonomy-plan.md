@@ -1,3 +1,11 @@
+---
+project: main-stage-studio
+status: live
+next: "None. Phases 0-4 all live since 21 Jul 2026; operate via SOP-PUREMED-001"
+blocked_on: ""
+owner: osman
+---
+
 # Stage Client Autonomy — PureMed Free-Edit Plan
 
 **Goal:** Nafisa gets full autonomy to update her built website — inline copy editing on
@@ -27,7 +35,7 @@ by Osman; Phase 4 adds client-cloneable blocks for regions Osman designates.
 |---|---|
 | Client copy editor is already visual click-to-edit on `[data-stage-id]`, but panel-based and `isComplexEl()` locks elements with nested markup | Pi `views/partials/copy.html` (~line 599, 631–669) |
 | `puremed` engagement: 94 copy sections, all with `astroFile`/`astroProp` | Pi `engagements/puremed/manifest.json` |
-| Astro site exists: `site/src/pages/index.astro` (32 anchors), `treatments.astro` (62), `Layout.astro` (1) | `other-projects/puremed/site/` |
+| Astro site exists: `site/src/pages/index.astro` (32 anchors), `treatments.astro` (62), `Layout.astro` (1) | `main-stage-studio/02_clients/puremed/site/` |
 | **Anchor drift:** prototype HTML has 145 anchors vs 95 in Astro — ~50 prototype sections have no publish target | Pi `engagements/puremed/prototype/` |
 | **No image anchors anywhere** (`data-stage-img*` = 0); images hardcoded `src="/assets/web/…"` | Astro pages + prototype |
 | Client upload + browser-WebP patch built but **NOT deployed to Pi** (`multer` absent from live `server.js`) | `scripts/stage-patches/2026-07-08-client-upload/` |
@@ -219,7 +227,7 @@ this recurs.
 ## 6. Resume prompt
 
 ```
-Read other-projects/puremed/stage-client-autonomy-plan.md — free-edit plan for the
+Read main-stage-studio/02_clients/puremed/stage-client-autonomy-plan.md — free-edit plan for the
 puremed-site engagement. Phases 0-4 are BUILT AND DEPLOYED (§3): inline editing,
 images, versioned submit + publish loop, and repeatable items ("+ Add treatment
 section"). §7 has the 18-21 Jul client feedback round. Nafisa has 37 copy + 4

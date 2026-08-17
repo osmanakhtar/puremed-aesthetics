@@ -1,3 +1,11 @@
+---
+project: main-stage-studio
+status: live
+next: "Keep decisions logged same-session, per the standing rule"
+blocked_on: ""
+owner: osman
+---
+
 # PureMed Aesthetics — Decisions Log
 
 *Single source of truth for all project decisions: brand, strategic, and build.*
@@ -38,6 +46,93 @@
 |----------|---------------|
 | DEC-001 (resolved 2026-06-21) | Nav CSS and footer/CTA/WhatsApp CSS stripped from homepage `customCss`. Nav template (71) and footer template (15) are now sole sources of their respective styles. Homepage CSS reduced from 29,383 to 21,051 chars. All 9 section selectors intact. |
 
+### Clinical Platform — Phase 4 documents and signature (15 August 2026)
+
+Code at `booking-engine/service/src/documents/`, `src/notifications/email.ts`,
+`src/domain/{document-template,signed-document}.ts`; procedure at
+`booking-engine/sops/SOP-BOOK-005-*.md`. Directly answers CONS-003 (locked,
+versioned record of exactly what wording the patient accepted) and CONS-006
+(complete audit trail of completion/amendment/signature) from the
+requirements register.
+
+| Decision | What's locked |
+|----------|---------------|
+| Scope built | Versioned/immutable consent-form templates (DB-enforced one-live-version-per-name), in-flight signature capture with full evidential metadata (method, IP, user agent, per-clause acknowledgement timestamps, verbatim rendered text), real server-side PDF generation, SHA-256 hashing, best-effort email delivery with an audit log |
+| Deliverable proven live | Published a template, signed it over HTTP, downloaded the generated PDF, independently hashed the downloaded file — matched the hash from both the sign response and the download endpoint exactly. Signing with a missing clause acknowledgement correctly rejects `422` with the specific missing IDs, not a silent pass |
+| Blocked | Email delivery needs real SMTP credentials, same posture Google/Stripe were in — nobody's account was created on your behalf. Signing itself needs no email config; it's logged either way |
+| Not built | Countersignature enforcement (fields exist, no route sets them); external object storage for PDFs (stored in Postgres directly, deliberate scope cut) |
+
+### Clinical Platform — Phase 3 payments, and a real RLS bug fixed (15 August 2026)
+
+Code at `booking-engine/service/src/payments/` and
+`src/domain/{payment,paid-booking}.ts`; procedure at
+`booking-engine/sops/SOP-BOOK-004-*.md`.
+
+| Decision | What's locked |
+|----------|---------------|
+| Scope built | Stripe PaymentIntents (manual capture), fixed-amount deposits, signature-verified webhooks, PAY-007 refunds (actor/reason/timestamp recorded), PAY-005 recording of the five non-Stripe payment rails |
+| Deliverable proven | The Phase 3 spec's own test: two concurrent paid-booking attempts on the same slot, both authorise a card, exactly one commits + captures, the other's authorisation is cancelled and never charged. Proven against a real Postgres exclusion-constraint race, not mocked |
+| **Real bug found #1** | **Row-level security had never actually been enforced, since Phase 1.** The app connected as a Postgres superuser, which bypasses RLS unconditionally. Every tenant-isolation policy was syntactically present but inert. No production deployment exists, so nothing real was exposed, but it needed fixing before one does. Fixed with a dedicated non-superuser `app_runtime` role; a permanent regression test now exists (`test/rls-enforcement.test.ts`) |
+| **Real bug found #2** | A Postgres transaction-abort bug in the Phase 1 booking-commit code, invisible until Phase 3's payment flow needed to keep working in the same transaction after a conflict. Fixed with a SAVEPOINT |
+| Side effect | Fixing bug #1 required resetting the local dev database, which wiped Nafisa's Google Calendar connection from earlier the same day — she'll need to reconnect it (SOP-BOOK-003), a 2-minute repeat, not a data-loss incident |
+| Blocked | Stripe test-mode keys needed to verify live, same posture Google Calendar was in before its OAuth client existed — account creation isn't something done on your behalf. Test-mode keys need no business verification (SOP-BOOK-004 has the signup steps) |
+
+### Clinical Platform — Phase 2 calendar integration (15 August 2026)
+
+Code at `booking-engine/service/src/calendar/`; procedure at
+`booking-engine/sops/SOP-BOOK-003-*.md`.
+
+| Decision | What's locked |
+|----------|---------------|
+| Scope built | Google Calendar + ICS as free/busy readers, Google as event writer, reconciliation sweep, disconnected-state handling (a broken connection degrades availability, doesn't fail it) |
+| DIARY-004 enforcement | "Exactly one authoritative writer per resource" is a Postgres partial unique index, not a policy reminder — a second authoritative connection attempt fails at insert time (`409`), same pattern as the Phase 1 booking exclusion constraint |
+| Verified | ICS path fully live: connecting a feed removes its busy block from `/availability`; a second authoritative connection is rejected; a broken feed degrades gracefully. All proven with a local fixture server, not just unit tests |
+| Google Calendar — LIVE, 15 Aug | OAuth client registered (Google Cloud project `puremed-booking`, owned by osman.akhtar@gmail.com). Full flow verified against a real account: freeBusy correctly read an actual recurring commitment, a test booking synced a real event and was deleted again, no trace left. Fixed a real bug in the process (OAuth callback couldn't carry the tenant header; now reads tenant from the OAuth `state` param). |
+| Nafisa connected — LIVE, 15 Aug | She ran the consent flow herself against `care@puremed.uk` (screen-share/same-machine session, since only `localhost:3300` is a registered redirect URI so far). Connection confirmed `connected`, authoritative writer, real free/busy read back successfully with zero writes to her actual calendar. Real `resources` row created for her under tenant `puremed` (no longer throwaway test data). |
+| Still needed | App is still in **Testing mode** (test users only, "unverified app" warning, 100-user cap) — fine for now, becomes a blocker only once real client bookings need to go live publicly. Production redirect URI still needs adding to the OAuth client once a real host exists. |
+| Not built | MS Graph (stubbed, not needed for PureMed per `technical-design.md` §7.3); async job runner for outbound sync (currently synchronous best-effort + manual reconcile retry) |
+
+### Clinical Platform — Stage 1 build started (15 August 2026)
+
+Phase 1 of `booking-engine-plan.md` (scheduling core) built and verified same day
+as the buy-vs-build spike below confirmed the custom-build decision. Code at
+`booking-engine/service/`; procedure at `booking-engine/sops/SOP-BOOK-002-*.md`.
+
+| Decision | What's locked |
+|----------|---------------|
+| Stack | Node/TypeScript + Fastify + Postgres 16 (`btree_gist`), row-level security tenant-scoped from day one per `technical-design.md` §4 |
+| Correctness guarantee | Postgres `EXCLUDE USING gist` constraint on `bookings` (resource_id, time_range) — database-level, not application-lock-based. Verified: two concurrent commits for the identical resource/slot, exactly one succeeds, confirmed by automated test and a manual HTTP walkthrough |
+| Scope built | Resources, services, working patterns (admin API), availability computation (pure function, DST-correct), booking commit/conflict. No auth yet (`x-tenant-id` header stands in until Phase 7), no calendar sync, no payments, no consent |
+| Next | Phase 2, calendar integration (Google/MS Graph free-busy, outbound write, ICS fallback) per `booking-engine-plan.md` §12 |
+
+### Clinical Platform — buy vs. build (spiked and locked 15 August 2026)
+
+Spike: `clinical-platform/buy-vs-build-spike-2026-08-15.md`. Requested because
+`booking-engine-plan.md` §11 had only evaluated generic schedulers (Cal.com) as the
+rejected alternative, not vertical UK aesthetic-clinic platforms (Consentz, Pabau,
+MERIDIQ, Aesthetic Record, Cliniko, Semble).
+
+| Decision | What's locked |
+|----------|---------------|
+| Build vs. buy verdict | **Custom build confirmed for Stage 1**, but on corrected grounds. Vertical SaaS (esp. Consentz, UK-built and aesthetics-specific) covers booking, consent forms, calendar and photo storage competently and cheaply — the original "no scheduler covers the 80%" argument was true against Cal.com but false against these, and has been corrected in `booking-engine-plan.md` §11. |
+| What actually justifies building | No vendor found supports: (1) the prescriber-AND-practitioner hard scheduling dependency (BOOK-007), (2) cross-entity CQC-scope routing between PureMed and Whitehouse (BOOK-008), (3) requirement-gate parity between online and staff-executed WhatsApp bookings (BOOK-004). Buying also reproduces the Faces-style export/lock-in risk (Aesthetic Record's reported $1,120 export fee cited as a concrete example). The multi-tenant booking-engine product/case-study reason stands independently of all of this. |
+| Not verified | No vendor contacted directly; findings are web-search/marketing-sourced. If challenged later, get a real Consentz demo plus a written API/export answer before relying on this further. |
+
+### Clinical Platform (answers locked 15 August 2026)
+
+Plan: `clinical-platform/puremed-clinical-platform-plan.md`. Answers from Nafisa,
+folded into the plan's "Outstanding action items" and "Open questions" sections the
+same day.
+
+| Decision | What's locked |
+|----------|---------------|
+| Deposit policy | Universal: everyone pays a deposit, no exceptions. Resolves the 9.5 contradiction. |
+| Working pattern | Wed 10-3, Fri 1-5 (Friday is the day she can run later). Capacity expands in order: Thursday next (prescriber also works Thursdays), then Monday once Thursday saturates. Model as staged capacity tiers, not a flat weekly schedule. |
+| Faces Consent admin | Nafisa is the Faces admin. Field-level export capability and contract/notice terms still open. |
+| Qualification/indemnity records | Currently held only on Nafisa's laptop, no central store. Indemnity auto-renews annually; insurer emails a reminder a few weeks ahead, the real signal for expiry-tracking design rather than a fixed date. Scope-of-practice standard itself (action item 2) is still unanswered. |
+| PureMed premises exclusivity | PureMed's treatment and waiting room are exclusive to PureMed, no shared staff. Future capacity path: waiting room converts to a second treatment room, Whitehouse's downstairs reception becomes shared waiting area at that point. Not a live multi-tenancy requirement today. |
+| dermis.ai access | Login credentials added to the shared Google Sheet, unblocking the app-architecture mapping (action item 9). |
+
 ### Social Content Pipeline (locked 3 July 2026)
 
 Plan: `content/PLAN.md`. Phase 1 built 3 July 2026.
@@ -57,6 +152,7 @@ Plan: `content/PLAN.md`. Phase 1 built 3 July 2026.
 
 | Decision | Why it's open | Blocker? |
 |----------|---------------|---------|
+| Rebuild brand vs. live dermis.ai brand | Live puremed.uk (dermis.ai platform) uses `#343a67` navy, `#d0ac61` gold, Majesty + Hanken Grotesk, and a different gold face-profile logo — none of which match the MSS rebuild's locked spec (`#23476A`, Cormorant Garamond/Inter, blue/gold vector). Unclear whether this is Nafisa's actual current preference (adopted since the spec was locked) or a legacy vendor site the rebuild is meant to replace with its own distinct identity. See "Live Site Reference" in `puremed-brand-identity.md` | Blocks finalising the rebuild's colour/type system |
 | Logo — studio vs supplied | Nafisa to confirm whether to use studio-created vector (`puremedvectorbluegold.ai`) or supply her own SVG with transparent background | Blocks finalising header template |
 | Photography — hero, portrait, placeholders | Nafisa to confirm or replace hero photo, Nafisa portrait, and AI-generated placeholder slots. Full inventory in `brand/puremed-project-summary.docx` Section 04b | Required before launch |
 | Google review count | Currently showing 500+ as an estimate. Nafisa to confirm actual count | Before launch |
@@ -126,6 +222,14 @@ calendar icon). MCP reports success but stored content is shorter than what was 
 
 | Date | What changed | Why |
 |------|-------------|-----|
+| 10 Aug 2026 | **Systems build posture reversed: gap layer first, Faces Consent stays.** Nafisa discovery call captured as `discovery/2026-08-10-as-is-operating-model.md`; requirements register to v0.2 (50 rows to 84); clinical-platform plan to v0.2 with a new Section 9 superseding Section 7 for sequencing; `booking-engine/booking-engine-plan.md` to v1.6; client-facing `puremed-systems-proposal.md` drafted (scope and phasing, no pricing, systems workstream only) | The clinical-platform plan v0.1 was written from the requirements brief alone and assumed Faces Consent needed replacing wholesale (S1-S14). The call disproved the premise: Faces holds the diary, ~475 patient records and a consent library already matched to the treatment menu, and does those adequately. The real cost sits in five gaps Faces leaves: bulk clinical photo handling (7-15 images per patient, every patient, stranded on a personal phone), the paper toxin prescribing form (countersigned, meant to be photographed onto the patient file, with a confirmed backlog that never was), deposits absent on the WhatsApp booking path Nafisa executes herself, three competing writers to her Google Calendar including a ChatGPT inbox automation, and aftercare that fails roughly nine times in ten. Decisive argument for staging: the as-is record contains two proven abandonments (a Dropbox photo routine and the Faces one-at-a-time upload), both correct processes dropped for being slower than the shortcut, so anything shipped must be fewer steps than today on day one. Phase R (replacement) is now trigger-based, not scheduled, and explicitly may never happen. Also surfaced: WhatsApp is the operating surface not a channel; prescriber and treating practitioner differ on every toxin treatment and toxin is bookable only on his days; hyperhidrosis and jaw toxin run under Whitehouse's CQC registration; dermis.ai's scope is far wider than "site and maintenance" (app, memberships, loyalty points, Klarna, skin scanner, Meta ads, and an AI voice agent presenting as human to patients under PureMed's name) |
+| 10 Aug 2026 | Four domain-model gaps logged against the booking engine, none PureMed-specific: cross-resource availability (a service requiring two resources simultaneously, not just one of several eligible), payments taken outside the engine (six live channels at PureMed with no single view of what a booking has been paid), provider/location as a service attribute distinct from practitioner (CQC registration attaches to provider, location and activity), and staff-executed bookings as a first-class journey rather than an admin afterthought | Surfaced by the PureMed call but each recurs in any regulated practice with a supervising or prescribing role, so they belong in the multi-tenant model rather than in tenant configuration. Recorded at the end of `booking-engine-plan.md` §13 rather than rewriting the design, since the production system is not started |
+| 9 Aug 2026 | Discovered live puremed.uk runs on the dermis.ai platform with a different palette/type/logo than the MSS rebuild spec (`#343a67` + Majesty/Hanken Grotesk vs. the locked `#23476A` + Cormorant Garamond/Inter); flagged at the top of `.claude/puremed-brand-identity.md` with the live values recorded in a new "Live Site Reference" section, spec left unchanged pending Nafisa | Osman asked for a brand guide sourced from the live site; the fonts/colours pulled from puremed.uk's actual CSS and logo asset didn't match what's documented, and the asset host (Firebase project `dermis-d86a7`, `onboarding.dermis.ai` fonts) confirms it's a different vendor build, not the MSS Astro rebuild. This is the "dermis.ai to reconcile" item from the growth-engagement plan surfacing concretely — needs a decision on whether the rebuild adopts the live dermis.ai brand or keeps its own | Open |
+| 9 Aug 2026 | Brand guide refreshed: Voice and Tone section rewritten from Nafisa's detailed guidance (writing rules, banned phrases, worked before/after examples); new "Patient and Audience Photography Direction" section added covering stock/lifestyle imagery of the target reader (British women 35-65, three age bands, authenticity principles, four prompt templates) | Colours, fonts and logo were already confirmed against the requirements doc and live site and needed no change. The gap was voice detail and patient-facing image direction — prior prompt files (`puremed-nafisa-prompts.md`, `puremed-asset-generation-prompts.md`) only covered Nafisa/practitioner shots, not the patient herself. Canon = `.claude/puremed-brand-identity.md` |
+| 8 Aug 2026 | Stage page switcher redesigned (shared chrome, affects every live-edit engagement) | It was pinned full-width across the top of the viewport, which is exactly where every prototype puts its own header, so the thing under review was permanently half-covered; with nine pages the labels also wrapped to two lines and the active pill rendered as a circle. Now docked bottom-centre and collapsed to a single glass pill naming the current page and its position ("Laser Lift 2/9"), opening upward on demand, single-line labels, active row marked with a rail rather than a filled blob. Hides itself while the booking drawer is open so it cannot cover the Continue button. `puremed-site` gets the same improvement and was re-verified: its links remain blocked, as that surface intends. |
+| 8 Aug 2026 | Social-media-drive POC: microsites on Stage as `puremed-micro`, booking journey embedded in-page, Sculptra added as a seventh microsite | Each treatment page is to get its own Instagram presence driving traffic to it (traffic engine out of scope). Booking CTAs no longer navigate away: they open a drawer over the page carrying the client-facing journey with that treatment preselected, via a new `embed=1` mode on the booking prototype that hides the demo banner, mock site, rule trace and admin panes. Showing a working journey in place is the sales mechanism, so the treatment being sold stays on screen behind it. Sculptra was rebuilt from its own standalone page onto the shared template, gaining the real logo, practitioner section and booking wiring. Two shared systems were extended additively: `scripts/stage-autotag.js` gained `--files`/`--relroot` so plain HTML can be tagged, and Stage's live-edit surface gained an opt-in `allowNavigation` manifest flag so internal links click through instead of being swallowed by the editor (`puremed-site` does not set it and is unchanged). `live-edit.js` also gained an mtime cache-buster after a stale cached copy silently swallowed clicks during verification. Nafisa is scoped to the new engagement; her two in-flight edits survived the redeploy with zero stranded ids. Procedure: SOP-PUREMED-003. Still not signed off, and the before/after client photography still needs her approval. |
+| 8 Aug 2026 | Six treatment pages revived as standalone microsites, rebuilt self-contained and published for review | Previously explored and dropped as main-site pages; now taken forward as one-per-treatment landing pages in the Sculptra mould, linkable from ads or social without routing through the main site. Rebuild fixed four defects found on review: (1) the nav/footer logo used the untrimmed `puremed_logo_transparent.webp`, whose mark occupies under half the canvas, rendering the wordmark ~20px tall and illegible on navy, so a trimmed `puremed-logo-trimmed.webp` was generated from the alpha bbox; (2) ~76 links pointed at `puremed-homepage-v3/v5/v6.html`, which have never existed in `web/`, rewired to in-page anchors and the hub; (3) `puremed-laser-lift.html` still used `#0B1F3A` as brand navy, the value rejected on Nafisa's feedback, corrected to the locked `#23476A`; (4) no page carried a practitioner section at all, Nafisa appeared only as a dead nav link and two text mentions, so a section using the approved real photo `nafisa-hero-v2.webp` was added to all six. Pages are self-contained (fonts and images inlined) so they publish anywhere. Build/publish procedure in `sops/SOP-PUREMED-002`; live URLs in `tools/microsite-urls.json`. NOT signed off, and the before/after client photography on these pages still needs Nafisa's approval before anything is public. |
+| 6 Aug 2026 | Treatments page hero image swapped; mobile hero layout restructured | Hero used `nafisa-20-seedream5lite-v1.webp`, an AI-generated approximation that didn't resemble Nafisa and showed the wrong setting (generic clinical room vs the real branded lobby). Swapped to `nafisa-hero-v2.webp`, a real photo already in `assets/web/` (there's also a `puremed-nafisa-hero--do-not-use.webp`, a flat-background cutout variant, correctly left unused). Separately, below 900px the photo ran full-bleed behind the text with only a diagonal gradient for contrast, so the heading/stats sat on top of her face; restructured to stack the photo as its own block above the content on mobile, matching the clean split the desktop layout already has. `site/src/pages/treatments.astro`. MSS case study at `01_mss/website/site/src/pages/work/puremed.astro` reuses two screenshots of this page and was recaptured via `01_mss/website/tools/clips/shoot-site.js` to match. |
 | 3 July 2026 | Social content pipeline: plan approved, Phase 1 built | Nafisa's consistency pain point. Deterministic pipeline (state machine + agent stages + Stage approval + Graph API publish) planned in `content/PLAN.md`; Phase 1 delivered same day: config, August calendar (16 slots, validated), first batch of 4 posts with copy (linted clean), feed preview, review sync script (fixture-tested). Open: posting time, Meta prerequisites, real photography. |
 | 22 June 2026 | Decisions log updated with systems discovery and requirements doc | Typography confirmed (Cormorant Garamond/Inter). Systems and integrations open items added from discovery questionnaire (21 questions, answers not yet received). Booking URL conflict flagged as urgent. Brand identity file updated with confirmed typography and expanded design requirements. |
 | 22 June 2026 | Decisions log created and reconciled | Previous log was technical-only (DEC-001/002/003). Brand and strategic decisions from project summary and brand strategy docs folded in. Stale studio2 files flagged for deletion. |

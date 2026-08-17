@@ -1,3 +1,11 @@
+---
+project: main-stage-studio
+status: live
+next: "Work the OPEN section. Superseded for brand and strategy by .claude/puremed-decisions-log.md"
+blocked_on: ""
+owner: osman
+---
+
 # PureMed Decisions Log
 
 Items that need a decision or carry architectural risk. Each entry has enough context to understand the root cause without referring back to session transcripts.
