@@ -122,7 +122,7 @@ direct eye contact. 1:1.
 
 ```
 Read the 10 skin close-up prompts in
-~/workspace/other-projects/puremed/puremed-skin-closups-prompts.md
+~/workspace/main-stage-studio/02_clients/puremed/puremed-skin-closups-prompts.md
 
 Run all 10 prompts through each of the 6 free models below. That is 60 generations
 total — 10 prompts × 6 models. Confirm the free toggle is ON before each generation.
@@ -143,7 +143,7 @@ Aspect ratio: use whatever is specified at the end of each prompt.
 Run in this order: complete all 6 models for prompt 1 before moving to prompt 2.
 This keeps each scenario grouped together in the output, making review easier.
 
-Save every output to ~/workspace/other-projects/puremed/assets/web/ using this
+Save every output to ~/workspace/main-stage-studio/02_clients/puremed/assets/web/ using this
 naming convention:
 skin-[prompt-number]-[model-shortname]-v1.webp
 

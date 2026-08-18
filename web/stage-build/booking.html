@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Booking Engine, working prototype | Main Stage Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   MSS SHELL
+   ============================================================ */
+:root{
+  --parchment:#F5EFE5; --blush:#E8C9AE; --terracotta:#BF6B47;
+  --ember:#8C4A2F; --nearblack:#1C1712;
+  /* PureMed tenant palette */
+  --navy:#23476A; --navy-hover:#2D5B88; --navy-light:#E8EFF5;
+  --gold:#C6A77D; --white:#fff; --warm-white:#F8F8F6;
+  --light-grey:#F3F4F6; --pm-black:#1A1A2E; --mid-grey:#6B7280; --border:#E5E7EB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  background:var(--nearblack); color:var(--parchment);
+  font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+
+/* header */
+.shell-head{
+  border-bottom:1px solid rgba(245,239,229,.13);
+  padding:20px 32px; display:flex; gap:20px; align-items:flex-start;
+  flex-wrap:wrap; position:sticky; top:0; z-index:60;
+  background:rgba(28,23,18,.95); backdrop-filter:blur(10px);
+}
+.brand{display:flex;gap:13px;align-items:center;flex-shrink:0}
+.brand svg{display:block}
+.brand-txt strong{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;
+  letter-spacing:.01em;display:block;line-height:1.2
+}
+.brand-txt span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blush);opacity:.75}
+.head-claim{
+  flex:1; min-width:260px; font-size:13px; color:rgba(245,239,229,.62);
+  border-left:1px solid rgba(245,239,229,.15); padding-left:20px; line-height:1.5
+}
+.head-claim b{color:var(--parchment);font-weight:600}
+.head-actions{display:flex;gap:8px;align-items:center}
+
+.btn-ghost{
+  font:inherit;font-size:12px;font-weight:600;cursor:pointer;
+  background:transparent;color:var(--parchment);
+  border:1px solid rgba(245,239,229,.28);border-radius:3px;padding:8px 14px;
+  transition:background .18s,border-color .18s
+}
+.btn-ghost:hover{background:rgba(245,239,229,.09);border-color:rgba(245,239,229,.5)}
+
+/* banner */
+.demo-banner{
+  background:var(--ember);color:#fff;font-size:12px;font-weight:600;
+  padding:8px 32px;letter-spacing:.02em;display:flex;gap:10px;align-items:center
+}
+.demo-banner span{font-weight:400;opacity:.85}
+
+/* layout */
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:0;align-items:start}
+.stage{padding:34px 32px 80px;min-width:0}
+.inspector{
+  position:sticky;top:69px;height:calc(100vh - 69px);
+  border-left:1px solid rgba(245,239,229,.13);
+  display:flex;flex-direction:column;min-width:0;background:rgba(0,0,0,.16)
+}
+@media(max-width:1180px){
+  .wrap{grid-template-columns:1fr}
+  .inspector{position:static;height:auto;border-left:none;border-top:1px solid rgba(245,239,229,.13)}
+}
+
+/* stage intro */
+.stage-note{
+  font-size:12.5px;color:rgba(245,239,229,.5);margin-bottom:16px;
+  display:flex;gap:8px;align-items:baseline;flex-wrap:wrap
+}
+.stage-note .pin{
+  font-size:11px;color:var(--blush);border:1px solid rgba(232,201,174,.3);
+  border-radius:2px;padding:2px 7px
+}
+
+/* browser chrome */
+.chrome{
+  background:#2A2420;border:1px solid rgba(245,239,229,.14);
+  border-radius:8px 8px 0 0;padding:10px 14px;display:flex;gap:12px;align-items:center
+}
+.dots{display:flex;gap:6px}
+.dots i{width:10px;height:10px;border-radius:50%;background:rgba(245,239,229,.22);display:block}
+.urlbar{
+  flex:1;background:rgba(0,0,0,.3);border-radius:4px;padding:5px 12px;
+  font-size:11.5px;color:rgba(245,239,229,.62);
+  font-family:'JetBrains Mono',monospace;overflow:hidden;white-space:nowrap;text-overflow:ellipsis
+}
+.urlbar b{color:var(--parchment);font-weight:500}
+.viewport{
+  background:var(--white);border:1px solid rgba(245,239,229,.14);border-top:none;
+  border-radius:0 0 8px 8px;overflow:hidden;color:var(--pm-black);
+  font-family:'Inter',sans-serif
+}
+
+/* ============================================================
+   TENANT SITE MOCK (PureMed)
+   ============================================================ */
+.pm-topbar{background:var(--navy);color:#fff;padding:9px 22px;font-size:11px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.pm-topbar span{opacity:.62}
+.pm-nav{
+  padding:16px 22px;display:flex;align-items:center;gap:22px;
+  border-bottom:1px solid var(--border);flex-wrap:wrap
+}
+.pm-logo{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--navy);font-weight:500;letter-spacing:.02em}
+.pm-logo em{font-style:normal;color:var(--gold)}
+.pm-nav-links{display:flex;gap:16px;font-size:12.5px;color:var(--mid-grey);flex-wrap:wrap}
+.pm-hero{padding:44px 22px 40px;background:var(--warm-white);border-bottom:1px solid var(--border)}
+.pm-eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.pm-hero h1{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;line-height:1.14;color:var(--navy);margin-bottom:12px}
+.pm-hero h1 em{font-style:italic;color:var(--gold)}
+.pm-hero p{color:var(--mid-grey);font-size:14.5px;max-width:52ch;margin-bottom:22px}
+.pm-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:12px;padding:26px 22px 34px}
+.pm-card{
+  border:1px solid var(--border);border-radius:6px;padding:16px;cursor:pointer;
+  transition:border-color .18s,box-shadow .18s,transform .18s;background:#fff
+}
+.pm-card:hover{border-color:var(--navy);box-shadow:0 6px 22px rgba(35,71,106,.11);transform:translateY(-2px)}
+.pm-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--navy);margin-bottom:4px;line-height:1.2}
+.pm-card .cat{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.pm-card .meta{font-size:11.5px;color:var(--mid-grey);margin-top:9px;display:flex;gap:9px;flex-wrap:wrap}
+.btn-pm{
+  background:var(--navy);color:#fff;border:none;border-radius:5px;
+  padding:12px 22px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;
+  display:inline-flex;gap:9px;align-items:center;box-shadow:0 2px 9px rgba(35,71,106,.2);
+  transition:background .18s
+}
+.btn-pm:hover{background:var(--navy-hover)}
+.btn-pm:disabled{opacity:.42;cursor:not-allowed;box-shadow:none}
+.btn-pm.sec{background:#fff;color:var(--navy);border:1px solid var(--navy);box-shadow:none}
+.btn-pm.sec:hover{background:var(--navy-light)}
+.btn-pm.sm{padding:9px 15px;font-size:12.5px}
+
+/* ============================================================
+   BOOKING WIDGET
+   ============================================================ */
+.widget-mount{padding:0 22px 34px;background:var(--warm-white);border-top:1px solid var(--border)}
+.widget{
+  max-width:700px;margin:0 auto;background:#fff;border:1px solid var(--border);
+  border-radius:8px;box-shadow:0 8px 40px rgba(26,26,46,.09);overflow:hidden
+}
+.w-head{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:14px}
+.w-head h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--navy)}
+.w-head .close{background:none;border:none;font-size:19px;color:var(--mid-grey);cursor:pointer;line-height:1;padding:4px}
+.steps{display:flex;gap:0;padding:0 22px;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
+.steps::-webkit-scrollbar{display:none}
+.step{
+  font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+  color:#C3C8CE;padding:12px 13px 10px;border-bottom:2px solid transparent;white-space:nowrap
+}
+.step.on{color:var(--navy);border-bottom-color:var(--navy)}
+.step.done{color:var(--gold)}
+.step.skip{color:#DDE1E6;text-decoration:line-through;text-decoration-thickness:1px}
+.w-body{padding:24px 22px 26px;min-height:340px}
+.w-foot{
+  padding:14px 22px;border-top:1px solid var(--border);background:var(--warm-white);
+  display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap
+}
+.w-price{font-size:12.5px;color:var(--mid-grey)}
+.w-price b{color:var(--navy);font-size:16px;font-family:'Cormorant Garamond',serif;font-weight:600}
+
+.w-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--navy);margin-bottom:6px;line-height:1.2}
+.w-sub{font-size:13px;color:var(--mid-grey);margin-bottom:20px;max-width:56ch}
+
+/* service picker */
+.cat-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
+.cat-chip{
+  font:inherit;font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--border);background:#fff;color:var(--mid-grey);cursor:pointer;transition:.16s
+}
+.cat-chip:hover{border-color:var(--navy);color:var(--navy)}
+.cat-chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.svc-list{display:flex;flex-direction:column;gap:7px;max-height:400px;overflow-y:auto;padding-right:4px}
+.svc{
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+  border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;
+  background:#fff;text-align:left;font:inherit;width:100%;transition:.16s
+}
+.svc:hover{border-color:var(--navy);background:var(--navy-light)}
+.svc.on{border-color:var(--navy);background:var(--navy-light);box-shadow:inset 0 0 0 1px var(--navy)}
+.svc-n{font-size:13.5px;font-weight:600;color:var(--pm-black);display:block;margin-bottom:2px}
+.svc-m{font-size:11.5px;color:var(--mid-grey)}
+.svc-p{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--navy);white-space:nowrap}
+.svc-p small{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:400;color:var(--mid-grey);display:block;text-align:right}
+
+/* notices */
+.notice{border-radius:6px;padding:14px 16px;font-size:13px;margin-bottom:16px;line-height:1.5}
+.notice h5{font-size:13px;font-weight:700;margin-bottom:5px;display:flex;gap:8px;align-items:center}
+.notice.reroute{background:#FFF8EC;border:1px solid var(--gold);color:#6B5426}
+.notice.block{background:#FDF1F1;border:1px solid #E2A9A9;color:#8A3B3B}
+.notice.info{background:var(--navy-light);border:1px solid #BBD0E2;color:#2B4F72}
+.notice.ok{background:#F0F8F2;border:1px solid #B5D8BF;color:#2F6B41}
+.rid{
+  font-family:'JetBrains Mono',monospace;font-size:10px;background:rgba(0,0,0,.07);
+  padding:2px 6px;border-radius:2px;letter-spacing:.02em;font-weight:500
+}
+
+/* screening */
+.q{border:1px solid var(--border);border-radius:6px;padding:14px 16px;margin-bottom:9px}
+.q p{font-size:13.5px;font-weight:500;margin-bottom:10px;color:var(--pm-black)}
+.q .yn{display:flex;gap:8px}
+.yn button{
+  font:inherit;font-size:12.5px;font-weight:600;padding:7px 20px;border-radius:5px;
+  border:1px solid var(--border);background:#fff;color:var(--mid-grey);cursor:pointer;transition:.16s
+}
+.yn button:hover{border-color:var(--navy);color:var(--navy)}
+.yn button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.yn button.on.warn{background:var(--ember);border-color:var(--ember)}
+
+/* calendar */
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:12px;flex-wrap:wrap}
+.cal-head h4{font-size:14px;font-weight:600;color:var(--pm-black)}
+.cal-nav{display:flex;gap:6px}
+.cal-nav button{
+  font:inherit;font-size:12px;border:1px solid var(--border);background:#fff;border-radius:4px;
+  padding:5px 11px;cursor:pointer;color:var(--navy);font-weight:600
+}
+.cal-nav button:disabled{opacity:.35;cursor:not-allowed}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
+.day-h{text-align:center;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mid-grey);font-weight:600;padding-bottom:4px}
+.day-h b{display:block;font-size:14px;color:var(--pm-black);font-weight:600;letter-spacing:0;margin-top:2px}
+.day-h.closed b{color:#C9CDD3}
+.day-col{display:flex;flex-direction:column;gap:5px;min-height:40px}
+.slot{
+  font:inherit;font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:500;
+  border:1px solid var(--border);border-radius:4px;padding:7px 2px;text-align:center;
+  background:#fff;color:var(--navy);cursor:pointer;transition:.14s
+}
+.slot:hover{background:var(--navy-light);border-color:var(--navy)}
+.slot.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.day-empty{font-size:10.5px;color:#C9CDD3;text-align:center;padding-top:10px;font-style:italic}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--mid-grey);margin-top:14px;padding-top:12px;border-top:1px solid var(--border)}
+.legend i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:5px;vertical-align:-1px}
+
+/* form */
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+.fld label{display:block;font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;color:var(--mid-grey);margin-bottom:5px}
+.fld input,.fld select,.fld textarea{
+  width:100%;font:inherit;font-size:13.5px;padding:10px 12px;border:1px solid var(--border);
+  border-radius:5px;background:#fff;color:var(--pm-black);font-family:'Inter',sans-serif
+}
+.fld input:focus,.fld select:focus{outline:2px solid var(--navy);outline-offset:-1px;border-color:var(--navy)}
+.fld input[readonly]{background:var(--light-grey);color:var(--mid-grey)}
+.fld .hint{font-size:11px;color:var(--mid-grey);margin-top:4px}
+.fld .err{font-size:11.5px;color:#B44B4B;margin-top:4px;font-weight:500}
+
+/* documents */
+.doc-tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.doc-tab{
+  font:inherit;font-size:11.5px;font-weight:600;padding:7px 12px;border-radius:5px;
+  border:1px solid var(--border);background:#fff;color:var(--mid-grey);cursor:pointer;
+  display:flex;gap:7px;align-items:center
+}
+.doc-tab.on{border-color:var(--navy);color:var(--navy);background:var(--navy-light)}
+.doc-tab .tick{color:#3E8A57;font-weight:700}
+.doc-tab .opt{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.doc-paper{
+  border:1px solid var(--border);border-radius:6px;background:var(--warm-white);
+  padding:18px 20px;max-height:260px;overflow-y:auto;margin-bottom:14px
+}
+.doc-paper h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:3px}
+.doc-ver{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mid-grey);margin-bottom:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ph-badge{background:#FFF3D6;border:1px solid var(--gold);color:#7A5F22;font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-family:'Inter',sans-serif}
+.real-badge{background:#EAF4EE;border:1px solid #A8CDB6;color:#2F6B41;font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-family:'Inter',sans-serif}
+.doc-paper p{font-size:12.5px;line-height:1.62;margin-bottom:10px;color:#3A3F49}
+.doc-paper p.ph{color:#8A7443;font-style:italic}
+.clause{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--border);border-radius:5px;margin-bottom:7px;background:#fff;cursor:pointer}
+.clause input{margin-top:2px;width:15px;height:15px;accent-color:var(--navy);flex-shrink:0;cursor:pointer}
+.clause span{font-size:12.5px;line-height:1.5}
+.clause.ticked{border-color:#A8CDB6;background:#F6FBF7}
+.sig-zone{border:1px dashed #B9C0C8;border-radius:6px;padding:14px;background:#fff}
+.sig-lbl{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;gap:10px;flex-wrap:wrap}
+.sig-lbl span{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;color:var(--mid-grey)}
+.sig-lbl button{font:inherit;font-size:11.5px;background:none;border:none;color:var(--navy);cursor:pointer;text-decoration:underline;font-weight:600}
+#sigpad{width:100%;height:110px;border:1px solid var(--border);border-radius:5px;background:var(--warm-white);touch-action:none;display:block;cursor:crosshair}
+.sig-foot{font-size:11px;color:var(--mid-grey);margin-top:7px}
+
+/* payment */
+.pay-sum{border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:16px}
+.pay-row{display:flex;justify-content:space-between;padding:11px 15px;font-size:13px;border-bottom:1px solid var(--border)}
+.pay-row:last-child{border-bottom:none}
+.pay-row.tot{background:var(--navy-light);font-weight:700;color:var(--navy);font-size:14.5px}
+.pay-row .sub{font-size:11px;color:var(--mid-grey);display:block;font-weight:400}
+.card-box{border:1px solid var(--border);border-radius:6px;padding:16px;background:var(--light-grey)}
+.card-warn{background:var(--ember);color:#fff;font-size:11.5px;font-weight:600;padding:9px 13px;border-radius:5px;margin-bottom:14px;line-height:1.45}
+
+/* confirm */
+.conf-hero{text-align:center;padding:8px 0 22px}
+.conf-tick{width:52px;height:52px;border-radius:50%;background:#EAF4EE;color:#3E8A57;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px}
+.conf-hero h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--navy);margin-bottom:5px}
+.conf-hero p{font-size:13px;color:var(--mid-grey)}
+.conf-card{border:1px solid var(--border);border-radius:6px;padding:16px 18px;margin-bottom:12px}
+.conf-card h5{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:11px}
+.kv{display:flex;justify-content:space-between;gap:14px;font-size:13px;padding:5px 0;border-bottom:1px solid #F2F4F6}
+.kv:last-child{border-bottom:none}
+.kv span:first-child{color:var(--mid-grey)}
+.kv span:last-child{font-weight:600;text-align:right}
+.dl{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #F2F4F6;font-size:12.5px}
+.dl:last-child{border-bottom:none}
+.dl .h{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mid-grey);display:block;margin-top:2px;word-break:break-all}
+
+/* ============================================================
+   INSPECTOR
+   ============================================================ */
+.ins-tabs{display:flex;border-bottom:1px solid rgba(245,239,229,.13);flex-shrink:0}
+.ins-tab{
+  flex:1;font:inherit;font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
+  background:none;border:none;color:rgba(245,239,229,.45);padding:14px 6px;cursor:pointer;
+  border-bottom:2px solid transparent;transition:.16s
+}
+.ins-tab:hover{color:var(--parchment)}
+.ins-tab.on{color:var(--terracotta);border-bottom-color:var(--terracotta)}
+.ins-pane{flex:1;overflow-y:auto;padding:18px 20px 40px;display:none}
+.ins-pane.on{display:block}
+.ins-h{
+  font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--blush);
+  font-weight:700;margin:22px 0 10px;padding-bottom:6px;border-bottom:1px solid rgba(245,239,229,.13)
+}
+.ins-h:first-child{margin-top:0}
+.ins-p{font-size:12px;color:rgba(245,239,229,.55);line-height:1.55;margin-bottom:14px}
+
+/* rule trace */
+.trace{display:flex;flex-direction:column-reverse;gap:7px}
+.tr{
+  border-left:2px solid var(--terracotta);background:rgba(245,239,229,.045);
+  padding:9px 11px;border-radius:0 4px 4px 0;animation:slidein .28s ease
+}
+@keyframes slidein{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+.tr.pass{border-left-color:#6E9E7E}
+.tr.block{border-left-color:#C46B6B}
+.tr.flag{border-left-color:var(--gold)}
+.tr.evt{border-left-color:rgba(245,239,229,.25)}
+.tr-id{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:var(--blush);letter-spacing:.03em}
+.tr-t{font-size:11.5px;color:rgba(245,239,229,.82);line-height:1.45;margin-top:3px}
+.tr-in{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:rgba(245,239,229,.42);margin-top:4px;word-break:break-word}
+.empty{font-size:12px;color:rgba(245,239,229,.35);font-style:italic;padding:14px 0}
+
+/* admin controls */
+.ctl{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(245,239,229,.09)}
+.ctl-l{min-width:0}
+.ctl-l b{font-size:12.5px;font-weight:600;display:block}
+.ctl-l small{font-size:10.5px;color:rgba(245,239,229,.45);display:block;line-height:1.4;margin-top:2px}
+.ctl-l .rid{background:rgba(245,239,229,.1);color:var(--blush)}
+.sw{position:relative;width:38px;height:21px;flex-shrink:0;cursor:pointer}
+.sw input{opacity:0;width:0;height:0;position:absolute}
+.sw i{position:absolute;inset:0;background:rgba(245,239,229,.17);border-radius:999px;transition:.2s;display:block}
+.sw i:after{content:'';position:absolute;width:15px;height:15px;border-radius:50%;background:var(--parchment);top:3px;left:3px;transition:.2s}
+.sw input:checked + i{background:var(--terracotta)}
+.sw input:checked + i:after{transform:translateX(17px)}
+.sw input:focus-visible + i{outline:2px solid var(--blush);outline-offset:2px}
+.num{
+  width:66px;font:inherit;font-family:'JetBrains Mono',monospace;font-size:12px;
+  background:rgba(0,0,0,.28);border:1px solid rgba(245,239,229,.2);color:var(--parchment);
+  border-radius:3px;padding:5px 7px;text-align:right;flex-shrink:0
+}
+select.num{width:auto;text-align:left}
+
+/* record pane */
+.rec{border:1px solid rgba(245,239,229,.14);border-radius:5px;padding:12px;margin-bottom:11px;background:rgba(0,0,0,.2)}
+.rec h6{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--blush);font-weight:700;margin-bottom:9px}
+.rec .kv2{display:flex;justify-content:space-between;gap:10px;font-size:11.5px;padding:4px 0;border-bottom:1px solid rgba(245,239,229,.07)}
+.rec .kv2:last-child{border-bottom:none}
+.rec .kv2 span:first-child{color:rgba(245,239,229,.5)}
+.rec .kv2 span:last-child{text-align:right;font-weight:500;word-break:break-word;min-width:0}
+.hash{font-family:'JetBrains Mono',monospace;font-size:9px;color:#8FB59C;word-break:break-all;line-height:1.5}
+.mail{background:#fff;color:#1A1A2E;border-radius:5px;padding:13px;font-size:11.5px;line-height:1.5;font-family:'Inter',sans-serif}
+.mail .mh{border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:9px}
+.mail .mh div{display:flex;gap:7px;margin-bottom:2px}
+.mail .mh b{color:var(--mid-grey);font-weight:600;min-width:44px;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
+.att{display:flex;gap:7px;align-items:center;border:1px solid var(--border);border-radius:4px;padding:6px 9px;margin-top:5px;font-size:11px}
+.att svg{flex-shrink:0;color:#B44B4B}
+
+/* footer */
+.shell-foot{
+  border-top:1px solid rgba(245,239,229,.13);padding:26px 32px 40px;
+  font-size:12px;color:rgba(245,239,229,.45);line-height:1.6
+}
+.shell-foot b{color:rgba(245,239,229,.75);font-weight:600}
+.shell-foot a{color:var(--blush)}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;max-width:1100px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ── Embedded mode (?embed=1) ────────────────────────────────────────────────
+   Shows the client-facing journey only, for embedding in a real page. */
+body.embed-widget{background:var(--warm-white);padding:0}
+body.embed-widget .demo-banner,
+body.embed-widget .shell-head,
+body.embed-widget .stage-note,
+body.embed-widget .chrome,
+body.embed-widget .pm-topbar,
+body.embed-widget .pm-nav,
+body.embed-widget #site-view,
+body.embed-widget .shell-foot,
+body.embed-widget .inspector{display:none!important}
+body.embed-widget .wrap{grid-template-columns:minmax(0,1fr)}
+body.embed-widget .stage{padding:0}
+body.embed-widget .viewport{border:none;border-radius:0;background:var(--warm-white)}
+body.embed-widget .widget-mount{padding:0;border-top:none;background:transparent}
+body.embed-widget .widget{max-width:none;border:none;border-radius:0;box-shadow:none}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  DEMONSTRATION PROTOTYPE
+  <span>No payment is taken, no data is stored or sent, and nothing here connects to a live system. Do not enter real card or medical details.</span>
+</div>
+
+<header class="shell-head">
+  <div class="brand">
+    <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="2" y="16" width="24" height="22" rx="2.5" fill="#BF6B47"/>
+      <rect x="14" y="2" width="24" height="22" rx="2.5" fill="#F5EFE5"/>
+      <rect x="14" y="16" width="12" height="8" rx="1.5" fill="#1C1712"/>
+    </svg>
+    <span class="brand-txt">
+      <strong>Booking Engine</strong>
+      <span>Main Stage Studio &middot; Systems</span>
+    </span>
+  </div>
+  <p class="head-claim">
+    A booking journey for a regulated practice, where <b>every step the client is asked to complete traces to a numbered rule</b>. Change a setting on the right, watch the journey change on the left. Configured here for a medically-led aesthetics clinic.
+  </p>
+  <div class="head-actions">
+    <button class="btn-ghost" id="btn-reset">Start again</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ STAGE ============ -->
+  <main class="stage">
+    <p class="stage-note">
+      <span class="pin">Clock pinned to Monday 10 August 2026, 09:00</span>
+      <span>Availability is computed, not hardcoded. The same inputs always produce the same slots.</span>
+    </p>
+
+    <div class="chrome">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="urlbar"><b>puremed.uk</b>/treatments &nbsp;&middot;&nbsp; booking engine embedded in-page, no redirect off-domain</div>
+    </div>
+
+    <div class="viewport">
+      <div class="pm-topbar">
+        <span>34a High Street, Winslow MK18 3HB</span>
+        <span>care@puremed.uk</span>
+        <span>&#9733;&#9733;&#9733;&#9733;&#9733; 90 Five-Star Reviews</span>
+      </div>
+      <nav class="pm-nav">
+        <span class="pm-logo">Pure<em>Med</em></span>
+        <span class="pm-nav-links">
+          <span>Home</span><span>Treatments</span><span>Results</span><span>About Nafisa</span><span>Contact</span>
+        </span>
+      </nav>
+
+      <div id="site-view">
+        <section class="pm-hero">
+          <p class="pm-eyebrow">Medically-Led Aesthetics &middot; Winslow, Buckinghamshire</p>
+          <h1>Our <em>Treatments</em></h1>
+          <p>Every treatment is personally delivered by Nafisa Mughal, medically trained, anatomy-expert, and entirely focused on results that look like you.</p>
+          <button class="btn-pm" id="cta-hero">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Book Consultation
+          </button>
+        </section>
+        <div class="pm-cards" id="site-cards"></div>
+      </div>
+
+      <div class="widget-mount" id="mount" hidden>
+        <div class="widget" role="dialog" aria-label="Book an appointment">
+          <div class="w-head">
+            <h3>Book an appointment</h3>
+            <button class="close" id="w-close" aria-label="Close booking">&times;</button>
+          </div>
+          <div class="steps" id="steps"></div>
+          <div class="w-body" id="w-body"></div>
+          <div class="w-foot">
+            <div class="w-price" id="w-price"></div>
+            <div style="display:flex;gap:8px">
+              <button class="btn-pm sec sm" id="btn-back">Back</button>
+              <button class="btn-pm sm" id="btn-next">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell-foot" style="border-top:none;padding:26px 0 0">
+      <div class="foot-grid">
+        <div>
+          <b>What is real here</b><br>
+          The treatment list, prices and appointment durations are PureMed's live 2026 price list. The booking and cancellation policy is the clinic's own published wording, used verbatim.
+        </div>
+        <div>
+          <b>What is placeholder</b><br>
+          Consent and medical history wording is marked <span class="ph-badge">Placeholder</span> throughout. Real clinical forms have not been supplied yet and inventing plausible clinical wording would make this look more finished than it is. Deposit percentages are a studio assumption, not clinic policy.
+        </div>
+        <div>
+          <b>What is not built</b><br>
+          No server, no database, no calendar connection, no payment provider. Availability is computed live in the browser from a fixed working pattern and a fixed set of busy blocks, standing in for a real calendar sync.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ INSPECTOR ============ -->
+  <aside class="inspector">
+    <div class="ins-tabs" role="tablist">
+      <button class="ins-tab on" data-pane="trace" role="tab">Rule trace</button>
+      <button class="ins-tab" data-pane="admin" role="tab">Admin</button>
+      <button class="ins-tab" data-pane="record" role="tab">The record</button>
+    </div>
+
+    <div class="ins-pane on" id="pane-trace">
+      <p class="ins-p">Every requirement the client is shown appears here first, with the rule that produced it. Nothing is asked for that cannot be explained by a numbered row. This is the compliance artefact, not a debug view.</p>
+      <div class="trace" id="trace"></div>
+      <p class="empty" id="trace-empty">No rules have fired yet. Start a booking on the left.</p>
+    </div>
+
+    <div class="ins-pane" id="pane-admin">
+      <p class="ins-p">Everything optional in the journey is a setting, not code. Change one and the client journey changes immediately. This is the practice's own control panel.</p>
+
+      <div class="ins-h">Journey steps</div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Require consent documents</b><small>Turns the whole document and signature step on or off <span class="rid">RULE-020</span></small></div>
+        <label class="sw"><input type="checkbox" id="cfg-docs" checked><i></i><span class="sr">Require consent documents</span></label>
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Require medical screening</b><small>Pre-booking contraindication questions <span class="rid">RULE-010</span></small></div>
+        <label class="sw"><input type="checkbox" id="cfg-screen" checked><i></i><span class="sr">Require medical screening</span></label>
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Take payment at booking</b><small>Deposit or full payment before commit <span class="rid">RULE-030</span></small></div>
+        <label class="sw"><input type="checkbox" id="cfg-pay" checked><i></i><span class="sr">Take payment at booking</span></label>
+      </div>
+
+      <div class="ins-h">Clinical policy</div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Injectables need prior consultation</b><small>Blocks direct booking of prescription-only treatments without a recent face-to-face <span class="rid">RULE-004</span></small></div>
+        <label class="sw"><input type="checkbox" id="cfg-priorconsult" checked><i></i><span class="sr">Injectables need prior consultation</span></label>
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>This client has a consultation on record</b><small>Simulates the client's history. Flip it and rebook an injectable to see RULE-004 reroute</small></div>
+        <label class="sw"><input type="checkbox" id="cfg-hashistory"><i></i><span class="sr">Client has consultation on record</span></label>
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Minimum age, injectables</b><small>Checked against date of birth <span class="rid">RULE-006</span></small></div>
+        <input type="number" class="num" id="cfg-age" value="18" min="16" max="25">
+      </div>
+
+      <div class="ins-h">Money</div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Deposit mode</b><small>Applied to every paid service</small></div>
+        <select class="num" id="cfg-depmode">
+          <option value="percent">Percentage</option>
+          <option value="fixed">Fixed amount</option>
+          <option value="full">Full price</option>
+          <option value="none">No deposit</option>
+        </select>
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Deposit value</b><small>Percent, or pounds if fixed. <span class="ph-badge">Placeholder</span> studio assumption</small></div>
+        <input type="number" class="num" id="cfg-depval" value="25" min="0" max="100">
+      </div>
+
+      <div class="ins-h">Scheduling</div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Minimum notice</b><small>Hours ahead a slot can be booked</small></div>
+        <input type="number" class="num" id="cfg-lead" value="24" min="0" max="168">
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Slot grid</b><small>Minutes. Start times never float</small></div>
+        <select class="num" id="cfg-grid">
+          <option value="15" selected>15 min</option>
+          <option value="30">30 min</option>
+          <option value="60">60 min</option>
+        </select>
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Post-treatment buffer</b><small>Minutes held after every appointment</small></div>
+        <input type="number" class="num" id="cfg-buffer" value="15" min="0" max="60">
+      </div>
+      <div class="ctl">
+        <div class="ctl-l"><b>Read practitioner's calendar</b><small>Import busy time from the linked Google or Outlook calendar. Turn off and blocked time reappears as bookable</small></div>
+        <label class="sw"><input type="checkbox" id="cfg-cal" checked><i></i><span class="sr">Read practitioner calendar</span></label>
+      </div>
+    </div>
+
+    <div class="ins-pane" id="pane-record">
+      <p class="ins-p">What the practice holds the moment a booking commits. The client receives the identical documents with the identical hashes.</p>
+      <div id="record-out"><p class="empty">Nothing committed yet. Complete a booking to see the record.</p></div>
+    </div>
+  </aside>
+</div>
+
+<footer class="shell-foot">
+  <div class="foot-grid">
+    <div>
+      <b>Main Stage Studio, Systems</b><br>
+      Booking Engine prototype v1.0, 7 August 2026. Architecture and build plan: <span class="mono" style="font-size:11px">booking-engine-plan.md</span>
+    </div>
+    <div>
+      <b>Regulatory note</b><br>
+      Nothing in this prototype has had legal or compliance review. It demonstrates a design approach, it is not a compliance assurance. Health data handling, lawful basis and retention are specified in the architecture plan and require the practice's own review before any live use.
+    </div>
+    <div>
+      <b>Determinism</b><br>
+      No randomness, no inference, no language model in the decision path. Availability is a pure function of the working pattern, imported busy time, buffers and notice period. Requirements are a pure function of the service selected and the practice's settings.
+    </div>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+/* ============================================================
+   PINNED CLOCK
+   The prototype's "now". Everything time-based derives from it,
+   so the demo is identical on every machine, on every day.
+   ============================================================ */
+const NOW = new Date(2026, 7, 10, 9, 0, 0); // Mon 10 Aug 2026, 09:00 local
+
+/* ============================================================
+   TENANT CONFIGURATION
+   In the real system this is database rows an admin edits.
+   ============================================================ */
+const CFG = {
+  docs:true, screen:true, pay:true,
+  priorConsult:true, hasHistory:false, minAge:18,
+  depMode:'percent', depVal:25,
+  leadHours:24, grid:15, buffer:15, readCal:true
+};
+
+/* Working pattern for the single practitioner, Nafisa Mughal.
+   0 = Sunday. Times in minutes from midnight. */
+const PATTERN = {
+  0:null,
+  1:[540,1020],  // Mon 09:00-17:00
+  2:[540,1020],  // Tue 09:00-17:00
+  3:[600,840],   // Wed 10:00-14:00
+  4:[540,1020],  // Thu 09:00-17:00
+  5:[540,1020],  // Fri 09:00-17:00
+  6:[540,780]    // Sat 09:00-13:00
+};
+
+/* Busy time imported from the practitioner's own calendar, plus
+   existing bookings. Fixed, so the demo never drifts.
+   [yyyy, m(0-idx), d, startMin, endMin, source] */
+const BUSY = [
+  [2026,7,10,660,780,'Existing booking, Laser Lift'],
+  [2026,7,10,900,960,'Google Calendar, personal'],
+  [2026,7,11,540,660,'Google Calendar, school run'],
+  [2026,7,11,840,930,'Existing booking, Liquid Facelift'],
+  [2026,7,12,600,720,'Existing booking, Sculptra'],
+  [2026,7,13,690,750,'Google Calendar, lunch'],
+  [2026,7,13,900,1020,'Existing booking, Polynucleotides'],
+  [2026,7,14,540,720,'Google Calendar, training day'],
+  [2026,7,15,600,660,'Existing booking, Skin Peel'],
+  [2026,7,17,540,780,'Google Calendar, annual leave'],
+  [2026,7,18,780,900,'Existing booking, RF Microneedling'],
+  [2026,7,19,600,720,'Google Calendar, supplier meeting'],
+  [2026,7,20,660,720,'Google Calendar, lunch'],
+  [2026,7,21,900,1020,'Existing booking, Anti-Wrinkle'],
+  [2026,7,22,540,600,'Existing booking, Dermaplaning'],
+  [2026,7,24,600,780,'Google Calendar, conference'],
+  [2026,7,25,660,780,'Existing booking, Laser Lift'],
+  [2026,7,26,600,660,'Google Calendar, personal'],
+  [2026,7,27,840,960,'Existing booking, Cheek Filler'],
+  [2026,7,28,540,660,'Google Calendar, school run']
+];
+
+/* ============================================================
+   SERVICE CATALOGUE
+   Prices and durations are PureMed's live list.
+   Scope: the eleven treatments carried on puremed.uk/treatments,
+   plus the consultation and review services that the rules
+   engine needs in order to route.
+   flags: pom = prescription-only medicine, inj = injectable,
+          energy = energy-based device
+   ============================================================ */
+const CATS = [
+  ['consult','Consultations'],
+  ['toxin','Anti-Wrinkle'],
+  ['filler','Fillers &amp; Volume'],
+  ['regen','Skin Regeneration'],
+  ['device','Devices &amp; Body'],
+  ['skin','Skin Health']
+];
+
+const SERVICES = [
+  // Consultations and review
+  {id:'consult-clinic', cat:'consult', name:'Skin Consultation, Winslow', price:25.00, mins:30, flags:[], doc:null,
+   note:'Face-to-face assessment and treatment planning'},
+  {id:'consult-online', cat:'consult', name:'Online Consultation', price:25.00, mins:15, flags:['remote'], doc:null,
+   note:'Video consultation. Cannot satisfy the prescribing rule'},
+  {id:'review', cat:'consult', name:'Review After Treatment', price:0.00, mins:15, flags:[], doc:null,
+   note:'Follow-up appointment, no charge'},
+
+  // Anti-wrinkle, the full toxin variant set
+  {id:'btx-1', cat:'toxin', name:'Botulinum Toxin, One Area', price:179.63, mins:15, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-2', cat:'toxin', name:'Botulinum Toxin, Two Areas', price:205.24, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-3', cat:'toxin', name:'Botulinum Toxin, Three Areas', price:265.58, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-allu', cat:'toxin', name:'Alluzience, Three Areas', price:285.52, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-brow', cat:'toxin', name:'Botulinum Toxin, Brow Lift', price:265.56, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-lip', cat:'toxin', name:'Botulinum Toxin, Lip Flip / Smokers Lines', price:100.00, mins:15, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-gummy', cat:'toxin', name:'Botulinum Toxin, Gummy Smile', price:179.63, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-dao', cat:'toxin', name:'Botulinum Toxin, DAO', price:179.00, mins:15, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-neck', cat:'toxin', name:'Botulinum Toxin, Neck', price:350.00, mins:15, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-necklift', cat:'toxin', name:'Botulinum Toxin, Neck Lift', price:350.00, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-jaw', cat:'toxin', name:'Botulinum Toxin, Face Slimming / Jaw Clenching', price:349.27, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+  {id:'btx-sweat', cat:'toxin', name:'Excessive Sweating, Botulinum Toxin', price:550.00, mins:30, flags:['pom','inj'], doc:'DOC-BTX'},
+
+  // Fillers and volume
+  {id:'liquid-facelift', cat:'filler', name:'Liquid Facelift, Dermal Fillers', price:750.00, mins:75, flags:['inj'], doc:'DOC-FILLER', site:'liquid-facelift'},
+  {id:'sculptra', cat:'filler', name:'Sculptra, Collagen Biostimulator', price:425.00, mins:60, flags:['inj'], doc:'DOC-FILLER', site:'sculptra'},
+
+  // Skin regeneration
+  {id:'polynucleotides', cat:'regen', name:'Polynucleotides', price:400.00, mins:30, flags:['inj'], doc:'DOC-REGEN', site:'polynucleotides'},
+  {id:'skin-boosters', cat:'regen', name:'Skin Boosters', price:80.00, mins:30, flags:['inj'], doc:'DOC-REGEN', site:'skin-boosters'},
+  {id:'plasma-fibroblast', cat:'regen', name:'Plasma Fibroblast', price:176.58, mins:45, flags:['energy'], doc:'DOC-DEVICE', site:'plasma-fibroblast'},
+
+  // Devices and body
+  {id:'laser-lift', cat:'device', name:'Laser Lift, Endolift', price:1900.00, mins:90, flags:['energy'], doc:'DOC-DEVICE', site:'laser-lift'},
+  {id:'rf-microneedling', cat:'device', name:'Radio Frequency Microneedling', price:250.00, mins:30, flags:['energy'], doc:'DOC-DEVICE', site:'rf-microneedling'},
+  {id:'body-sculpting', cat:'device', name:'Body Sculpting, HI-EMT', price:200.00, mins:45, flags:['energy'], doc:'DOC-DEVICE', site:'body-sculpting'},
+
+  // Skin health
+  {id:'skin-peels', cat:'skin', name:'Skin Peel, Bio RePeel', price:68.00, mins:30, flags:[], doc:'DOC-SKIN', site:'skin-peels'},
+  {id:'enzyme-peel', cat:'skin', name:'Enzyme Peel with LED Light Therapy', price:89.00, mins:30, flags:[], doc:'DOC-SKIN'},
+  {id:'dermaplaning', cat:'skin', name:'Dermaplaning', price:48.24, mins:45, flags:[], doc:'DOC-SKIN', site:'dermaplaning'}
+];
+
+/* Cards shown on the mock treatments page: the site's own eleven,
+   in the site's own order. Anti-Wrinkle opens the toxin variant list. */
+const SITE_CARDS = [
+  {label:'Laser Lift', cat:'Skin Tightening', svc:'laser-lift'},
+  {label:'Liquid Facelift', cat:'Dermal Fillers', svc:'liquid-facelift'},
+  {label:'Anti-Wrinkle', cat:'Muscle-Relaxing Injections', svc:'btx-2'},
+  {label:'Polynucleotides', cat:'Skin Regeneration', svc:'polynucleotides'},
+  {label:'RF Microneedling', cat:'Energy-Based', svc:'rf-microneedling'},
+  {label:'Skin Boosters', cat:'Deep Hydration', svc:'skin-boosters'},
+  {label:'Plasma Fibroblast', cat:'Skin Tightening', svc:'plasma-fibroblast'},
+  {label:'Body Sculpting', cat:'Fat Reduction', svc:'body-sculpting'},
+  {label:'Skin Peels', cat:'Chemical Exfoliation', svc:'skin-peels'},
+  {label:'Dermaplaning', cat:'Exfoliation', svc:'dermaplaning'},
+  {label:'Sculptra', cat:'Collagen Biostimulator', svc:'sculptra'}
+];
+
+/* ============================================================
+   DOCUMENT TEMPLATES
+   Fidelity rule, inherited from the wealth-onboarding pack:
+   wording the clinic already owns is reproduced verbatim,
+   wording nobody has supplied is a LABELLED placeholder.
+   Inventing plausible clinical copy is the failure mode.
+   ============================================================ */
+const DOCS = {
+  'DOC-POLICY':{
+    id:'DOC-POLICY', v:'v1.0', title:'Booking and Cancellation Policy',
+    real:true, optional:false,
+    body:[
+      'All clients must complete medical and consent forms and provide accurate information. Treatment suitability is assessed at consultation.',
+      'All payments are non-refundable, including advance bookings, packages, missed appointments, or change of mind. In rare medical cases, credit may be offered at the clinic’s discretion.',
+      'We require 48 hours’ notice for cancellations or changes. Late cancellations or non-attendance will result in loss of treatment. Late arrival may lead to reduced time or cancellation.',
+      'Payments made by card or online incur a non-refundable payment processing fee of 1.8% + VAT + 20p per transaction. This fee is charged by the payment provider and will not be refunded under any circumstances.',
+      'Packages must be used within the stated timeframe or will be forfeited.',
+      'Results vary and are not guaranteed; maintenance may be required.',
+      'You must inform us of any medical changes before treatment.',
+      'We are not liable for indirect damages; liability for negligence is not excluded.'
+    ],
+    clauses:[
+      'I have read and accept the booking and cancellation policy, including that payments are non-refundable.',
+      'I understand that 48 hours’ notice is required to cancel or change this appointment, and that late cancellation or non-attendance results in loss of the treatment.'
+    ]
+  },
+  'DOC-MEDHX':{
+    id:'DOC-MEDHX', v:'v0.1', title:'Medical History Declaration',
+    real:false, optional:false,
+    body:[
+      'PLACEHOLDER. The clinic’s own medical history form has not been supplied. In the live system this document is reproduced from the clinic’s existing paperwork, version-controlled, and rendered here in full.',
+      'The structure is fixed: current medications, known allergies, previous aesthetic treatments and dates, relevant medical conditions, pregnancy and breastfeeding status, anticoagulant use, and a declaration of accuracy.',
+      'No clinical wording has been drafted by the studio. Substituting plausible-looking medical text would make this prototype appear more complete than it is.'
+    ],
+    clauses:[
+      'I confirm the information I have given is accurate and complete to the best of my knowledge.',
+      'I will inform the clinic of any change to my health or medication before my appointment.'
+    ]
+  },
+  'DOC-BTX':{
+    id:'DOC-BTX', v:'v0.1', title:'Informed Consent, Botulinum Toxin',
+    real:false, optional:false,
+    body:[
+      'PLACEHOLDER. Treatment-specific informed consent for botulinum toxin. The clinic’s existing consent form is the source and has not been supplied.',
+      'The live document sets out the nature of the treatment, that botulinum toxin is a prescription-only medicine, the intended effect and its duration, common and rare risks, alternatives including no treatment, aftercare requirements, and the client’s right to withdraw consent at any point before treatment.',
+      'Each material risk is presented as its own acknowledgement rather than a single blanket agreement, so the record shows what was individually understood and when.'
+    ],
+    clauses:[
+      'PLACEHOLDER. I understand the nature of the treatment, its intended effect, and that results are not guaranteed.',
+      'PLACEHOLDER. I have been informed of the common and rare risks and have had the opportunity to ask questions.',
+      'PLACEHOLDER. I understand this is a prescription-only medicine that will be prescribed for me following assessment.'
+    ]
+  },
+  'DOC-FILLER':{
+    id:'DOC-FILLER', v:'v0.1', title:'Informed Consent, Dermal Filler',
+    real:false, optional:false,
+    body:[
+      'PLACEHOLDER. Treatment-specific informed consent for dermal filler and collagen biostimulator treatments. The clinic’s existing form is the source and has not been supplied.',
+      'The live document covers product type and longevity, vascular occlusion risk and its management, the availability of dissolving agents where applicable, aftercare, and the review appointment.'
+    ],
+    clauses:[
+      'PLACEHOLDER. I understand the treatment, its expected longevity, and that results are not guaranteed.',
+      'PLACEHOLDER. I have been informed of the risks, including rare vascular complications, and how they are managed.'
+    ]
+  },
+  'DOC-REGEN':{
+    id:'DOC-REGEN', v:'v0.1', title:'Informed Consent, Injectable Skin Regeneration',
+    real:false, optional:false,
+    body:['PLACEHOLDER. Treatment-specific informed consent for polynucleotide and skin booster treatments. Clinic form not yet supplied.'],
+    clauses:[
+      'PLACEHOLDER. I understand the treatment, the course of sessions recommended, and that results build over time.',
+      'PLACEHOLDER. I have been informed of the risks and aftercare requirements.'
+    ]
+  },
+  'DOC-DEVICE':{
+    id:'DOC-DEVICE', v:'v0.1', title:'Informed Consent, Energy-Based Treatment',
+    real:false, optional:false,
+    body:['PLACEHOLDER. Treatment-specific informed consent for laser, radiofrequency, plasma and electromagnetic device treatments. Clinic form not yet supplied. The live document also records the patch test where the device protocol requires one.'],
+    clauses:[
+      'PLACEHOLDER. I understand the treatment, the expected downtime, and that results are not guaranteed.',
+      'PLACEHOLDER. I have been informed of the risks including burns, pigmentation change and scarring, and of the aftercare required.'
+    ]
+  },
+  'DOC-SKIN':{
+    id:'DOC-SKIN', v:'v0.1', title:'Consent, Skin Treatment',
+    real:false, optional:false,
+    body:['PLACEHOLDER. Consent for chemical peel, enzyme peel and dermaplaning treatments. Clinic form not yet supplied.'],
+    clauses:['PLACEHOLDER. I understand the treatment, the expected peeling or sensitivity afterwards, and the aftercare required.']
+  },
+  'DOC-PHOTO':{
+    id:'DOC-PHOTO', v:'v1.0', title:'Photography and Marketing Consent',
+    real:false, optional:true,
+    body:[
+      'This consent is separate from your treatment consent and is entirely optional. Declining it will not affect your treatment, your appointment, or the care you receive.',
+      'Clinical photographs are taken as part of your treatment record whether or not you agree to this. This document asks only about using images publicly, for example on the clinic website or social media.',
+      'You may withdraw this consent at any time by contacting the clinic, and images will be removed from future use.',
+      'PLACEHOLDER. The specific permissions, image types, channels and retention period are the clinic’s to set and have not been supplied.'
+    ],
+    clauses:[
+      'I agree that my before and after photographs may be used publicly by the clinic.',
+      'I understand this is optional, that declining does not affect my treatment, and that I can withdraw at any time.'
+    ]
+  }
+};
+
+/* ============================================================
+   SCREENING QUESTIONS
+   Outcome per answer: pass, flag (reroute), or block.
+   ============================================================ */
+const SCREEN_Q = [
+  {id:'preg', q:'Are you pregnant, planning pregnancy, or breastfeeding?', yes:'block', rule:'RULE-011',
+   msg:'Injectable and energy-based treatments are not offered during pregnancy or breastfeeding.'},
+  {id:'anticoag', q:'Are you taking any blood-thinning medication (for example warfarin, apixaban, or regular aspirin)?', yes:'flag', rule:'RULE-012',
+   msg:'Anticoagulant use needs assessment before an injectable treatment is booked.'},
+  {id:'infection', q:'Do you have an active skin infection, cold sore, or inflammation in the treatment area?', yes:'flag', rule:'RULE-013',
+   msg:'Active infection in the treatment area needs assessment before booking.'},
+  {id:'conditions', q:'Do you have a neuromuscular condition, or a known allergy to any of the products used?', yes:'flag', rule:'RULE-014',
+   msg:'This history needs clinical assessment before an injectable treatment is booked.'}
+];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+let S = null;
+function freshState(){
+  return {
+    open:false, step:'service', cat:'consult',
+    svcId:null, rerouted:null, blocked:null,
+    screen:{}, weekStart:startOfWeek(NOW), slot:null,
+    client:{first:'',last:'',dob:'',email:'',mobile:''}, errors:{},
+    docIdx:0, signed:{}, sigData:null, sigMethod:null, sigName:'',
+    clauses:{}, paid:false, ref:null, trace:[], committed:null
+  };
+}
+
+/* ============================================================
+   RULES ENGINE
+   Pure function. Given a service and the config, return exactly
+   what this booking requires and which rules produced it.
+   ============================================================ */
+function resolve(svc){
+  const out = {docs:[], screening:false, deposit:{mode:'none',amount:0}, ageMin:0, fired:[], reroute:null};
+  if(!svc) return out;
+  const isInj = svc.flags.includes('inj');
+  const isPom = svc.flags.includes('pom');
+  const isEnergy = svc.flags.includes('energy');
+
+  // RULE-001, every booking acknowledges the practice's booking policy
+  out.docs.push('DOC-POLICY');
+  out.fired.push({id:'RULE-001', kind:'', t:'Booking and cancellation policy acknowledgement required on every service.', in:'service = any'});
+
+  // RULE-004, prescription-only medicines need a recent face-to-face consultation
+  if(isPom && CFG.priorConsult && !CFG.hasHistory){
+    out.reroute = 'consult-clinic';
+    out.fired.push({id:'RULE-004', kind:'flag',
+      t:'Prescription-only treatment with no consultation on record in the last 12 months. Booking rerouted to Skin Consultation.',
+      in:'flags contains pom, consultation_on_record = false'});
+  } else if(isPom && CFG.priorConsult && CFG.hasHistory){
+    out.fired.push({id:'RULE-004', kind:'pass',
+      t:'Consultation on record within 12 months. Direct booking permitted.',
+      in:'flags contains pom, consultation_on_record = true'});
+  }
+
+  // RULE-006, age minimum on injectables
+  if(isInj){
+    out.ageMin = CFG.minAge;
+    out.fired.push({id:'RULE-006', kind:'', t:'Minimum age '+CFG.minAge+' applies. Date of birth is checked.', in:'flags contains inj'});
+  }
+
+  // RULE-010, medical screening
+  if(CFG.screen && (isInj || isEnergy)){
+    out.screening = true;
+    out.fired.push({id:'RULE-010', kind:'', t:'Medical screening required before a slot is offered.', in:'flags contains inj or energy, screening_enabled = true'});
+  }
+
+  // RULE-020 / 021, documents
+  if(CFG.docs){
+    if(isInj || isEnergy){
+      out.docs.push('DOC-MEDHX');
+      out.fired.push({id:'RULE-021', kind:'', t:'Medical history declaration required.', in:'flags contains inj or energy'});
+    }
+    if(svc.doc){
+      out.docs.push(svc.doc);
+      out.fired.push({id:'RULE-020', kind:'', t:'Treatment consent '+svc.doc+' required for this service.', in:'service = '+svc.id});
+    }
+    if(isInj || isEnergy){
+      out.docs.push('DOC-PHOTO');
+      out.fired.push({id:'RULE-022', kind:'', t:'Photography consent offered as a separate, optional document. It never blocks the booking.', in:'flags contains inj or energy'});
+    }
+  } else {
+    out.fired.push({id:'RULE-020', kind:'', t:'Document step disabled in practice settings. No consent is captured.', in:'documents_enabled = false'});
+  }
+
+  // RULE-030 / 031, money
+  if(svc.price === 0){
+    out.fired.push({id:'RULE-031', kind:'', t:'Zero-price service. No payment step.', in:'price = 0.00'});
+  } else if(!CFG.pay){
+    out.fired.push({id:'RULE-030', kind:'', t:'Payment at booking disabled in practice settings. Client pays at the clinic.', in:'payment_enabled = false'});
+  } else {
+    let amt = 0, label = '';
+    if(CFG.depMode === 'percent'){ amt = round2(svc.price * CFG.depVal / 100); label = CFG.depVal+'% deposit'; }
+    else if(CFG.depMode === 'fixed'){ amt = Math.min(CFG.depVal, svc.price); label = 'fixed deposit'; }
+    else if(CFG.depMode === 'full'){ amt = svc.price; label = 'full payment'; }
+    if(CFG.depMode !== 'none' && amt > 0){
+      out.deposit = {mode:CFG.depMode, amount:amt, label:label};
+      out.fired.push({id:'RULE-030', kind:'', t:'Taking '+label+' of '+gbp(amt)+' at booking.', in:'price = '+gbp(svc.price)+', deposit_mode = '+CFG.depMode+', value = '+CFG.depVal});
+    } else {
+      out.fired.push({id:'RULE-030', kind:'', t:'No deposit configured. Client pays at the clinic.', in:'deposit_mode = none'});
+    }
+  }
+
+  // RULE-040, cancellation window, from the clinic's real policy
+  out.fired.push({id:'RULE-040', kind:'', t:'48 hours’ notice required to cancel or change. Payments non-refundable per clinic policy.', in:'policy = DOC-POLICY v1.0'});
+
+  return out;
+}
+
+/* ============================================================
+   AVAILABILITY ENGINE
+   Pure function of pattern, busy time, duration, buffer,
+   notice period and grid. No randomness anywhere.
+   ============================================================ */
+function computeDay(date, svc){
+  const dow = date.getDay();
+  const win = PATTERN[dow];
+  if(!win || !svc) return [];
+  const need = svc.mins + CFG.buffer;
+  const earliest = new Date(NOW.getTime() + CFG.leadHours*3600e3);
+
+  // busy intervals for this day
+  const busy = (CFG.readCal ? BUSY : BUSY.filter(b => b[5].indexOf('Existing booking') === 0))
+    .filter(b => b[0]===date.getFullYear() && b[1]===date.getMonth() && b[2]===date.getDate())
+    .map(b => [b[3], b[4]]);
+
+  const out = [];
+  for(let t = win[0]; t + need <= win[1]; t += CFG.grid){
+    const s = t, e = t + need;
+    if(busy.some(b => s < b[1] && e > b[0])) continue;
+    const abs = new Date(date.getFullYear(), date.getMonth(), date.getDate(), Math.floor(s/60), s%60);
+    if(abs < earliest) continue;
+    out.push(s);
+  }
+  return out;
+}
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+function round2(n){ return Math.round(n*100)/100; }
+function gbp(n){ return '£' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+function hhmm(m){ return String(Math.floor(m/60)).padStart(2,'0') + ':' + String(m%60).padStart(2,'0'); }
+function startOfWeek(d){ const x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() - ((x.getDay()+6)%7)); return x; }
+function addDays(d,n){ const x = new Date(d); x.setDate(x.getDate()+n); return x; }
+function fmtDate(d){ return d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}); }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function svcById(id){ return SERVICES.find(s => s.id === id) || null; }
+function $(id){ return document.getElementById(id); }
+
+async function sha256(str){
+  try{
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }catch(e){
+    let h = 0; for(let i=0;i<str.length;i++){ h = (h*31 + str.charCodeAt(i))|0; }
+    return 'fallback-' + (h>>>0).toString(16);
+  }
+}
+
+/* ============================================================
+   TRACE
+   ============================================================ */
+function trace(entry){
+  const seen = S.trace.some(t => t.id === entry.id && t.t === entry.t);
+  if(seen) return;
+  S.trace.push(entry);
+  renderTrace();
+}
+function traceEvent(id, t, inp){ trace({id:id, kind:'evt', t:t, in:inp||''}); }
+
+function renderTrace(){
+  const box = $('trace');
+  $('trace-empty').style.display = S.trace.length ? 'none' : 'block';
+  box.innerHTML = S.trace.map(t =>
+    '<div class="tr '+(t.kind||'')+'">' +
+      '<div class="tr-id">'+esc(t.id)+'</div>' +
+      '<div class="tr-t">'+esc(t.t)+'</div>' +
+      (t.in ? '<div class="tr-in">'+esc(t.in)+'</div>' : '') +
+    '</div>'
+  ).join('');
+}
+
+/* ============================================================
+   STEP MODEL
+   The visible steps depend entirely on what the rules require.
+   ============================================================ */
+function stepList(){
+  const svc = svcById(S.svcId);
+  const r = resolve(svc);
+  const steps = [{k:'service', l:'Treatment'}];
+  steps.push({k:'screen', l:'Screening', skip:!r.screening});
+  steps.push({k:'slot', l:'Time'});
+  steps.push({k:'details', l:'Details'});
+  steps.push({k:'docs', l:'Documents', skip:!(CFG.docs && r.docs.length)});
+  steps.push({k:'pay', l:'Payment', skip:!(r.deposit.amount > 0)});
+  steps.push({k:'confirm', l:'Confirmed'});
+  return steps;
+}
+function activeSteps(){ return stepList().filter(s => !s.skip); }
+function nextStep(){
+  const a = activeSteps(), i = a.findIndex(s => s.k === S.step);
+  return i >= 0 && i < a.length-1 ? a[i+1].k : null;
+}
+function prevStep(){
+  const a = activeSteps(), i = a.findIndex(s => s.k === S.step);
+  return i > 0 ? a[i-1].k : null;
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function render(){
+  renderSteps();
+  const svc = svcById(S.svcId);
+  const r = resolve(svc);
+  const body = $('w-body');
+
+  if(S.step === 'service')       body.innerHTML = viewService();
+  else if(S.step === 'screen')   body.innerHTML = viewScreen(svc);
+  else if(S.step === 'slot')     body.innerHTML = viewSlot(svc);
+  else if(S.step === 'details')  body.innerHTML = viewDetails(svc, r);
+  else if(S.step === 'docs')     { body.innerHTML = viewDocs(r); initSigPad(); }
+  else if(S.step === 'pay')      body.innerHTML = viewPay(svc, r);
+  else if(S.step === 'confirm')  body.innerHTML = viewConfirm(svc, r);
+
+  renderFoot(svc, r);
+  bindBody();
+}
+
+function renderSteps(){
+  $('steps').innerHTML = stepList().map(s => {
+    const a = activeSteps(), ai = a.findIndex(x => x.k === S.step);
+    const mi = a.findIndex(x => x.k === s.k);
+    let cls = 'step';
+    if(s.skip) cls += ' skip';
+    else if(s.k === S.step) cls += ' on';
+    else if(mi > -1 && mi < ai) cls += ' done';
+    return '<div class="'+cls+'">'+esc(s.l)+'</div>';
+  }).join('');
+}
+
+function renderFoot(svc, r){
+  const price = $('w-price'), next = $('btn-next'), back = $('btn-back');
+  back.style.visibility = prevStep() ? 'visible' : 'hidden';
+
+  if(S.step === 'confirm'){
+    price.innerHTML = 'Reference <b style="font-size:13px;font-family:JetBrains Mono,monospace">'+esc(S.ref)+'</b>';
+    next.textContent = 'Done';
+    next.disabled = false;
+    back.style.visibility = 'hidden';
+    return;
+  }
+  if(svc){
+    const dep = r.deposit.amount > 0 ? ' &nbsp;&middot;&nbsp; '+r.deposit.label+' '+gbp(r.deposit.amount) : '';
+    price.innerHTML = esc(svc.name) + '<br><b>' + (svc.price === 0 ? 'No charge' : gbp(svc.price)) + '</b>' + dep;
+  } else {
+    price.innerHTML = '<span style="opacity:.7">Select a treatment to see the price</span>';
+  }
+  next.textContent = S.step === 'pay' ? 'Pay and confirm booking'
+                   : S.step === 'docs' ? 'Continue'
+                   : 'Continue';
+  next.disabled = !canAdvance(svc, r);
+}
+
+function canAdvance(svc, r){
+  if(S.blocked) return false;
+  switch(S.step){
+    case 'service': return !!svc;
+    case 'screen':  return SCREEN_Q.every(q => S.screen[q.id] !== undefined);
+    case 'slot':    return !!S.slot;
+    case 'details': return true;
+    case 'docs':    return r.docs.filter(d => !DOCS[d].optional).every(d => S.signed[d]);
+    case 'pay':     return S.paid;
+    default: return true;
+  }
+}
+
+/* ---------- step: service ---------- */
+function viewService(){
+  const cats = CATS.map(c =>
+    '<button class="cat-chip'+(S.cat===c[0]?' on':'')+'" data-cat="'+c[0]+'">'+c[1]+'</button>'
+  ).join('');
+  const list = SERVICES.filter(s => s.cat === S.cat).map(s =>
+    '<button class="svc'+(S.svcId===s.id?' on':'')+'" data-svc="'+s.id+'">' +
+      '<span><span class="svc-n">'+esc(s.name)+'</span>' +
+      '<span class="svc-m">'+s.mins+' min' + (s.note ? ' &nbsp;&middot;&nbsp; '+esc(s.note) : '') + '</span></span>' +
+      '<span class="svc-p">'+(s.price===0?'No charge':gbp(s.price))+
+        (s.flags.includes('pom')?'<small>Prescription-only</small>':'')+'</span>' +
+    '</button>'
+  ).join('');
+
+  let notice = '';
+  if(S.rerouted){
+    const from = svcById(S.rerouted);
+    notice = '<div class="notice reroute"><h5>Consultation needed first <span class="rid">RULE-004</span></h5>' +
+      esc(from.name)+' is a prescription-only medicine. It cannot be booked directly without a face-to-face consultation on record in the last 12 months. Your booking has been switched to a <b>Skin Consultation</b>, where suitability is assessed and the treatment can be planned and prescribed.</div>';
+  }
+  return notice +
+    '<h4 class="w-title">What is your appointment for?</h4>' +
+    '<p class="w-sub">The treatment you choose determines the price, the length of the appointment, which questions you are asked, and which forms you sign. Nothing else changes it.</p>' +
+    '<div class="cat-row">'+cats+'</div><div class="svc-list">'+list+'</div>';
+}
+
+/* ---------- step: screening ---------- */
+function viewScreen(svc){
+  let out = '<h4 class="w-title">A few medical questions</h4>' +
+    '<p class="w-sub">Asked because you have chosen '+esc(svc.name)+'. These are checked before you are offered a time, so you are never asked to pick a slot you cannot use.</p>';
+
+  if(S.blocked){
+    out += '<div class="notice block"><h5>We cannot book this online <span class="rid">'+esc(S.blocked.rule)+'</span></h5>' +
+      esc(S.blocked.msg)+' Please call the clinic on 01296 123456 or email care@puremed.uk and Nafisa will advise you directly.</div>';
+  } else {
+    const flags = SCREEN_Q.filter(q => S.screen[q.id] === true && q.yes === 'flag');
+    if(flags.length){
+      out += '<div class="notice reroute"><h5>Assessment needed first <span class="rid">'+esc(flags[0].rule)+'</span></h5>' +
+        esc(flags[0].msg)+' Continue and your booking will be made as a consultation instead, at '+gbp(25)+'.</div>';
+    }
+  }
+
+  out += SCREEN_Q.map(q => {
+    const v = S.screen[q.id];
+    return '<div class="q"><p>'+esc(q.q)+'</p><div class="yn">' +
+      '<button data-q="'+q.id+'" data-v="1" class="'+(v===true?'on warn':'')+'">Yes</button>' +
+      '<button data-q="'+q.id+'" data-v="0" class="'+(v===false?'on':'')+'">No</button>' +
+    '</div></div>';
+  }).join('');
+  return out;
+}
+
+/* ---------- step: slot ---------- */
+function viewSlot(svc){
+  const ws = S.weekStart;
+  const cols = [];
+  for(let i=0;i<7;i++){
+    const d = addDays(ws,i);
+    const slots = computeDay(d, svc);
+    const closed = !PATTERN[d.getDay()];
+    cols.push({d:d, slots:slots, closed:closed});
+  }
+  const heads = cols.map(c =>
+    '<div class="day-h'+(c.closed?' closed':'')+'">'+c.d.toLocaleDateString('en-GB',{weekday:'short'})+'<b>'+c.d.getDate()+'</b></div>'
+  ).join('');
+  const body = cols.map(c => {
+    if(c.closed) return '<div class="day-col"><div class="day-empty">Closed</div></div>';
+    if(!c.slots.length) return '<div class="day-col"><div class="day-empty">None</div></div>';
+    return '<div class="day-col">' + c.slots.slice(0,8).map(m => {
+      const key = c.d.getTime()+'|'+m;
+      return '<button class="slot'+(S.slot && S.slot.key===key?' on':'')+'" data-slot="'+key+'">'+hhmm(m)+'</button>';
+    }).join('') + (c.slots.length>8 ? '<div class="day-empty">+'+(c.slots.length-8)+'</div>' : '') + '</div>';
+  }).join('');
+
+  const canPrev = ws > startOfWeek(NOW);
+  const monthLbl = ws.toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+
+  return '<h4 class="w-title">Choose a time</h4>' +
+    '<p class="w-sub">Showing '+svc.mins+' minutes for '+esc(svc.name)+', plus a '+CFG.buffer+' minute buffer, at least '+CFG.leadHours+' hours from now. Times Nafisa is unavailable have already been removed.</p>' +
+    '<div class="cal-head"><h4>'+esc(monthLbl)+'</h4><div class="cal-nav">' +
+      '<button data-week="-1" '+(canPrev?'':'disabled')+'>&larr; Earlier</button>' +
+      '<button data-week="1">Later &rarr;</button></div></div>' +
+    '<div class="week">'+heads+'</div><div class="week">'+body+'</div>' +
+    '<div class="legend">' +
+      '<span><i style="background:#fff;border:1px solid var(--border)"></i>Available</span>' +
+      '<span><i style="background:var(--navy)"></i>Selected</span>' +
+      '<span>Removed: existing bookings, imported calendar busy time, closed days, and anything inside the notice period</span>' +
+    '</div>' +
+    (S.slot ? '<div class="notice ok" style="margin-top:14px;margin-bottom:0"><b>'+esc(fmtDate(S.slot.date))+'</b> at <b>'+hhmm(S.slot.min)+'</b>, ending '+hhmm(S.slot.min+svc.mins)+'. Held for you for 10 minutes.</div>' : '');
+}
+
+/* ---------- step: details ---------- */
+function viewDetails(svc, r){
+  const c = S.client, e = S.errors;
+  return '<h4 class="w-title">Your details</h4>' +
+    '<p class="w-sub">Held against the booking. Your identity record and your signed forms are stored separately, so contact details can be corrected or removed without touching the clinical record.</p>' +
+    '<div class="frow">' +
+      fld('first','First name','text',c.first,e.first) +
+      fld('last','Last name','text',c.last,e.last) +
+    '</div><div class="frow">' +
+      fld('email','Email','email',c.email,e.email,'Confirmation, forms and reminders go here') +
+      fld('mobile','Mobile','tel',c.mobile,e.mobile) +
+    '</div><div class="frow">' +
+      fld('dob','Date of birth','date',c.dob,e.dob, r.ageMin ? 'Minimum age '+r.ageMin+' for this treatment (RULE-006)' : '') +
+      '<div></div>' +
+    '</div>';
+}
+function fld(k,label,type,val,err,hint){
+  return '<div class="fld"><label for="f-'+k+'">'+esc(label)+'</label>' +
+    '<input id="f-'+k+'" data-f="'+k+'" type="'+type+'" value="'+esc(val||'')+'" autocomplete="off">' +
+    (err ? '<div class="err">'+esc(err)+'</div>' : (hint ? '<div class="hint">'+esc(hint)+'</div>' : '')) +
+    '</div>';
+}
+
+/* ---------- step: documents ---------- */
+function viewDocs(r){
+  const ids = r.docs;
+  if(S.docIdx >= ids.length) S.docIdx = 0;
+  const cur = DOCS[ids[S.docIdx]];
+
+  const tabs = ids.map((id,i) => {
+    const d = DOCS[id];
+    return '<button class="doc-tab'+(i===S.docIdx?' on':'')+'" data-doc="'+i+'">' +
+      (S.signed[id]?'<span class="tick">&#10003;</span>':'') + esc(d.title) +
+      (d.optional?'<span class="opt">Optional</span>':'') + '</button>';
+  }).join('');
+
+  const body = cur.body.map(p =>
+    '<p'+(p.indexOf('PLACEHOLDER')===0?' class="ph"':'')+'>'+esc(p)+'</p>'
+  ).join('');
+
+  const clauses = cur.clauses.map((c,i) => {
+    const on = (S.clauses[cur.id]||{})[i];
+    return '<label class="clause'+(on?' ticked':'')+'">' +
+      '<input type="checkbox" data-clause="'+i+'" '+(on?'checked':'')+'>' +
+      '<span>'+esc(c)+'</span></label>';
+  }).join('');
+
+  const allTicked = cur.clauses.every((_,i) => (S.clauses[cur.id]||{})[i]);
+  const signedThis = S.signed[cur.id];
+
+  let sig = '';
+  if(signedThis){
+    sig = '<div class="notice ok"><h5>Signed</h5>Signed by '+esc(signedThis.name)+' at '+esc(signedThis.time)+
+      ', method: '+esc(signedThis.method)+'. Document version '+esc(cur.v)+
+      '.<div class="hash" style="margin-top:6px;color:#2F6B41">SHA-256 '+esc(signedThis.hash)+'</div></div>';
+  } else {
+    sig = '<div class="sig-zone">' +
+      '<div class="sig-lbl"><span>Sign here</span>' +
+        '<button data-sigclear>Clear</button></div>' +
+      '<canvas id="sigpad" aria-label="Signature area"></canvas>' +
+      '<div class="frow" style="margin-top:11px;margin-bottom:0">' +
+        '<div class="fld"><label for="sig-name">Or type your full name</label>' +
+        '<input id="sig-name" type="text" value="'+esc(S.sigName)+'" autocomplete="off" placeholder="Full name"></div>' +
+        '<div class="fld"><label>&nbsp;</label>' +
+        '<button class="btn-pm" id="btn-sign" '+(allTicked?'':'disabled')+' style="width:100%;justify-content:center">Sign and continue</button></div>' +
+      '</div>' +
+      '<p class="sig-foot">' + (allTicked
+        ? 'Signing records the exact document version shown, a timestamp, and a hash of the rendered PDF.'
+        : 'Tick each statement above before signing. Each one is recorded separately with its own timestamp.') + '</p>' +
+    '</div>';
+  }
+
+  return '<h4 class="w-title">'+esc(cur.title)+'</h4>' +
+    '<p class="w-sub">'+(cur.optional
+      ? 'This one is optional. Declining it does not affect your treatment or this booking.'
+      : 'Required before this appointment can be confirmed. You will receive a signed copy by email.')+'</p>' +
+    '<div class="doc-tabs">'+tabs+'</div>' +
+    '<div class="doc-paper"><h4>'+esc(cur.title)+'</h4>' +
+      '<div class="doc-ver"><span>'+esc(cur.id)+' '+esc(cur.v)+'</span>' +
+      (cur.real ? '<span class="real-badge">Clinic’s own wording</span>'
+                : '<span class="ph-badge">Placeholder wording</span>') + '</div>' +
+      body + '</div>' + clauses + sig;
+}
+
+/* ---------- step: payment ---------- */
+function viewPay(svc, r){
+  const fee = round2(r.deposit.amount * 0.018 + 0.20);
+  return '<h4 class="w-title">Payment</h4>' +
+    '<p class="w-sub">Your card is authorised now and the booking is only committed if the authorisation succeeds. If anything fails, the authorisation is released and no booking is made.</p>' +
+    '<div class="pay-sum">' +
+      '<div class="pay-row"><span>'+esc(svc.name)+'<span class="sub">'+svc.mins+' minutes with Nafisa Mughal</span></span><span>'+gbp(svc.price)+'</span></div>' +
+      '<div class="pay-row"><span>'+esc(r.deposit.label.charAt(0).toUpperCase()+r.deposit.label.slice(1))+'<span class="sub">Balance of '+gbp(round2(svc.price-r.deposit.amount))+' payable at the clinic</span></span><span>'+gbp(r.deposit.amount)+'</span></div>' +
+      '<div class="pay-row"><span>Card processing fee<span class="sub">1.8% + 20p, charged by the payment provider, non-refundable</span></span><span>'+gbp(fee)+'</span></div>' +
+      '<div class="pay-row tot"><span>To pay now</span><span>'+gbp(round2(r.deposit.amount+fee))+'</span></div>' +
+    '</div>' +
+    '<div class="card-warn">Demonstration only. This prototype is not connected to a payment provider. The fields below are locked and filled with a public test card number. Do not enter real card details anywhere in this page.</div>' +
+    '<div class="card-box">' +
+      '<div class="fld" style="margin-bottom:12px"><label>Card number</label><input type="text" value="4242 4242 4242 4242" readonly></div>' +
+      '<div class="frow" style="margin-bottom:0">' +
+        '<div class="fld"><label>Expiry</label><input type="text" value="12 / 30" readonly></div>' +
+        '<div class="fld"><label>Security code</label><input type="text" value="123" readonly></div>' +
+      '</div>' +
+    '</div>' +
+    (S.paid ? '<div class="notice ok" style="margin-top:14px;margin-bottom:0"><h5>Authorised</h5>'+gbp(round2(r.deposit.amount+fee))+' authorised. Simulated. The booking commits when you continue.</div>'
+            : '<button class="btn-pm" id="btn-auth" style="width:100%;justify-content:center;margin-top:14px">Authorise '+gbp(round2(r.deposit.amount+fee))+' (simulated)</button>');
+}
+
+/* ---------- step: confirm ---------- */
+function viewConfirm(svc, r){
+  const c = S.committed;
+  const docRows = c.docs.map(d =>
+    '<div class="dl"><span>'+esc(d.title)+' '+esc(d.v)+'<span class="h">SHA-256 '+esc(d.hash)+'</span></span>' +
+    '<span style="color:var(--navy);font-weight:600;white-space:nowrap">PDF &darr;</span></div>'
+  ).join('') || '<p style="font-size:12.5px;color:var(--mid-grey)">No documents were required by the current settings.</p>';
+
+  return '<div class="conf-hero"><div class="conf-tick">&#10003;</div>' +
+    '<h3>Your appointment is booked</h3>' +
+    '<p>A confirmation, a calendar invitation and signed copies of everything you agreed to are on their way to '+esc(c.email)+'.</p></div>' +
+    '<div class="conf-card"><h5>Appointment</h5>' +
+      kv('Treatment', c.svcName) + kv('With', 'Nafisa Mughal') +
+      kv('When', c.when) + kv('Where', '34a High Street, Winslow MK18 3HB') +
+      kv('Duration', c.mins + ' minutes') + kv('Reference', c.ref) +
+    '</div>' +
+    '<div class="conf-card"><h5>Payment</h5>' +
+      kv('Treatment price', gbp(c.price)) +
+      kv(c.paidLabel, c.paid > 0 ? gbp(c.paid) : 'Nothing taken') +
+      kv('Balance at the clinic', gbp(round2(c.price - c.depositOnly))) +
+    '</div>' +
+    '<div class="conf-card"><h5>Your signed documents</h5>' + docRows + '</div>' +
+    '<div class="notice info" style="margin-bottom:0"><b>48 hours’ notice</b> is required to cancel or change this appointment. Payments are non-refundable per the clinic’s booking policy, which you acknowledged and which is attached to your confirmation email.</div>';
+}
+function kv(a,b){ return '<div class="kv"><span>'+esc(a)+'</span><span>'+esc(b)+'</span></div>'; }
+
+/* ============================================================
+   SIGNATURE PAD
+   ============================================================ */
+let sigCtx = null, drawing = false, sigHasInk = false;
+function initSigPad(){
+  const cv = $('sigpad');
+  if(!cv) return;
+  const dpr = window.devicePixelRatio || 1;
+  const rect = cv.getBoundingClientRect();
+  cv.width = rect.width * dpr; cv.height = rect.height * dpr;
+  sigCtx = cv.getContext('2d');
+  sigCtx.scale(dpr, dpr);
+  sigCtx.lineWidth = 2; sigCtx.lineCap = 'round'; sigCtx.lineJoin = 'round';
+  sigCtx.strokeStyle = '#1A1A2E';
+  sigHasInk = false;
+
+  const pos = ev => {
+    const r = cv.getBoundingClientRect();
+    return [ev.clientX - r.left, ev.clientY - r.top];
+  };
+  cv.addEventListener('pointerdown', ev => {
+    drawing = true; cv.setPointerCapture(ev.pointerId);
+    const [x,y] = pos(ev); sigCtx.beginPath(); sigCtx.moveTo(x,y);
+  });
+  cv.addEventListener('pointermove', ev => {
+    if(!drawing) return;
+    const [x,y] = pos(ev); sigCtx.lineTo(x,y); sigCtx.stroke(); sigHasInk = true;
+  });
+  cv.addEventListener('pointerup', () => { drawing = false; });
+  cv.addEventListener('pointerleave', () => { drawing = false; });
+}
+
+/* ============================================================
+   COMMIT
+   ============================================================ */
+async function commit(){
+  const svc = svcById(S.svcId);
+  const r = resolve(svc);
+  S.ref = 'PM-' + String(NOW.getFullYear()).slice(2) + String(NOW.getMonth()+1).padStart(2,'0') + '-' +
+          (4821 + SERVICES.findIndex(s => s.id === svc.id) * 7 + (S.slot ? S.slot.min : 0)).toString(36).toUpperCase();
+
+  const docs = [];
+  for(const id of r.docs){
+    const sd = S.signed[id];
+    if(sd) docs.push({id:id, title:DOCS[id].title, v:DOCS[id].v, hash:sd.hash, name:sd.name, time:sd.time, method:sd.method});
+  }
+  const fee = r.deposit.amount > 0 ? round2(r.deposit.amount * 0.018 + 0.20) : 0;
+
+  S.committed = {
+    ref:S.ref, svcName:svc.name, mins:svc.mins, price:svc.price,
+    when: S.slot ? fmtDate(S.slot.date) + ', ' + hhmm(S.slot.min) : '',
+    email:S.client.email || 'your email address',
+    name:(S.client.first + ' ' + S.client.last).trim() || 'The client',
+    paid: r.deposit.amount > 0 ? round2(r.deposit.amount + fee) : 0,
+    depositOnly: r.deposit.amount,
+    paidLabel: r.deposit.amount > 0 ? 'Paid now (' + r.deposit.label + ' plus fee)' : 'Paid now',
+    docs:docs, rules:S.trace.filter(t => t.id.indexOf('RULE') === 0).map(t => t.id)
+  };
+
+  traceEvent('COMMIT', 'Booking ' + S.ref + ' committed atomically: slot locked, documents sealed, payment captured, calendar event written, booking pack sent to care@puremed.uk.', 'transaction = single');
+  renderRecord();
+}
+
+/* ============================================================
+   RECORD PANE
+   ============================================================ */
+function renderRecord(){
+  const out = $('record-out');
+  if(!S.committed){
+    out.innerHTML = '<p class="empty">Nothing committed yet. Complete a booking to see the record.</p>';
+    return;
+  }
+  const c = S.committed;
+  const atts = c.docs.map(d =>
+    '<div class="att"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>' +
+    esc(d.id) + '-' + esc(c.ref) + '.pdf</div>'
+  ).join('') || '<div style="font-size:11px;color:var(--mid-grey);margin-top:6px">No documents attached under the current settings.</div>';
+
+  out.innerHTML =
+    '<div class="rec"><h6>Booking record</h6>' +
+      kv2('Reference', c.ref) + kv2('Client', c.name) + kv2('Service', c.svcName) +
+      kv2('When', c.when) + kv2('Price at booking', gbp(c.price)) +
+      kv2('Paid', c.paid > 0 ? gbp(c.paid) : 'Nothing taken') +
+      kv2('Rules fired', c.rules.join(', ') || 'none') +
+    '</div>' +
+
+    '<div class="rec"><h6>Evidential documents</h6>' +
+      (c.docs.length ? c.docs.map(d =>
+        '<div style="margin-bottom:10px;padding-bottom:9px;border-bottom:1px solid rgba(245,239,229,.08)">' +
+        '<div style="font-size:11.5px;font-weight:600;margin-bottom:4px">'+esc(d.title)+' <span style="opacity:.5">'+esc(d.v)+'</span></div>' +
+        '<div style="font-size:10.5px;color:rgba(245,239,229,.5);margin-bottom:4px">Signed by '+esc(d.name)+', '+esc(d.time)+', '+esc(d.method)+'</div>' +
+        '<div class="hash">'+esc(d.hash)+'</div></div>'
+      ).join('') : '<p style="font-size:11.5px;color:rgba(245,239,229,.45)">None required by the current settings.</p>') +
+    '</div>' +
+
+    '<div class="rec"><h6>Sent to the practice, immediately</h6>' +
+      '<div class="mail"><div class="mh">' +
+        '<div><b>To</b> care@puremed.uk</div>' +
+        '<div><b>Subj</b> New booking '+esc(c.ref)+', '+esc(c.svcName)+'</div>' +
+      '</div>' +
+      '<div>'+esc(c.name)+' has booked '+esc(c.svcName)+' for '+esc(c.when)+'. '+
+      (c.paid > 0 ? gbp(c.paid)+' taken at booking. ' : 'No payment taken at booking. ') +
+      'Signed documents attached. Full record and screening answers in the practice dashboard.</div>' +
+      atts +
+      '</div>' +
+    '</div>' +
+
+    '<div class="rec"><h6>Also written at commit</h6>' +
+      kv2('Practitioner calendar', 'Event created, links back to record') +
+      kv2('Client', 'Confirmation, ICS invitation, signed PDFs') +
+      kv2('Audit log', S.trace.length + ' entries, append-only') +
+    '</div>';
+}
+function kv2(a,b){ return '<div class="kv2"><span>'+esc(a)+'</span><span>'+esc(b)+'</span></div>'; }
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+function selectService(id, viaCard){
+  const svc = svcById(id);
+  if(!svc) return;
+  S.svcId = id; S.cat = svc.cat; S.slot = null; S.screen = {}; S.blocked = null;
+  S.signed = {}; S.clauses = {}; S.paid = false; S.docIdx = 0; S.rerouted = null;
+
+  traceEvent('INPUT', 'Client selected: ' + svc.name + (viaCard ? ', from the treatments page' : ''), 'service_id = ' + svc.id);
+
+  const r = resolve(svc);
+
+  if(r.reroute){
+    // Only the rule that caused the reroute is traced for the original
+    // service. Its downstream requirements never applied, because the
+    // booking never became that service.
+    r.fired.filter(f => f.id === 'RULE-004').forEach(f => trace(f));
+    S.rerouted = id;
+    S.svcId = r.reroute;
+    S.cat = svcById(r.reroute).cat;
+    resolve(svcById(r.reroute)).fired.forEach(f => trace(f));
+  } else {
+    r.fired.forEach(f => trace(f));
+  }
+}
+
+function bindBody(){
+  const body = $('w-body');
+
+  body.querySelectorAll('[data-cat]').forEach(b => b.onclick = () => { S.cat = b.dataset.cat; render(); });
+  body.querySelectorAll('[data-svc]').forEach(b => b.onclick = () => { selectService(b.dataset.svc, false); render(); });
+
+  body.querySelectorAll('[data-q]').forEach(b => b.onclick = () => {
+    const q = SCREEN_Q.find(x => x.id === b.dataset.q);
+    const val = b.dataset.v === '1';
+    S.screen[q.id] = val;
+    if(val && q.yes === 'block'){
+      S.blocked = q;
+      trace({id:q.rule, kind:'block', t:'BLOCK. ' + q.msg + ' Online booking stopped, client directed to contact the clinic.', in:q.id + ' = yes'});
+    } else if(val && q.yes === 'flag'){
+      if(S.blocked && S.blocked.id === q.id) S.blocked = null;
+      trace({id:q.rule, kind:'flag', t:'FLAG. ' + q.msg + ' Booking will be made as a consultation.', in:q.id + ' = yes'});
+    } else {
+      if(S.blocked && S.blocked.id === q.id) S.blocked = null;
+      trace({id:q.rule, kind:'pass', t:'PASS. No contraindication declared.', in:q.id + ' = no'});
+    }
+    render();
+  });
+
+  body.querySelectorAll('[data-week]').forEach(b => b.onclick = () => {
+    S.weekStart = addDays(S.weekStart, 7 * Number(b.dataset.week));
+    render();
+  });
+  body.querySelectorAll('[data-slot]').forEach(b => b.onclick = () => {
+    const [t,m] = b.dataset.slot.split('|');
+    S.slot = {key:b.dataset.slot, date:new Date(Number(t)), min:Number(m)};
+    const svc = svcById(S.svcId);
+    traceEvent('HOLD', 'Slot leased for 10 minutes: ' + fmtDate(S.slot.date) + ' ' + hhmm(S.slot.min) + ' to ' + hhmm(S.slot.min + svc.mins) + ', plus ' + CFG.buffer + ' min buffer. Nobody else can take it while the lease holds.', 'resource = nafisa, lease_ttl = 600s');
+    render();
+  });
+
+  body.querySelectorAll('[data-f]').forEach(i => {
+    i.oninput = () => { S.client[i.dataset.f] = i.value; };
+  });
+
+  body.querySelectorAll('[data-doc]').forEach(b => b.onclick = () => { S.docIdx = Number(b.dataset.doc); render(); });
+  body.querySelectorAll('[data-clause]').forEach(cb => cb.onchange = () => {
+    const r = resolve(svcById(S.svcId));
+    const cur = DOCS[r.docs[S.docIdx]];
+    S.clauses[cur.id] = S.clauses[cur.id] || {};
+    S.clauses[cur.id][cb.dataset.clause] = cb.checked;
+    if(cb.checked){
+      traceEvent('CLAUSE', 'Clause ' + (Number(cb.dataset.clause)+1) + ' of ' + cur.id + ' ' + cur.v + ' acknowledged individually, with its own timestamp.', 'document = ' + cur.id + ', clause = ' + cb.dataset.clause);
+    }
+    render();
+  });
+  const clearBtn = body.querySelector('[data-sigclear]');
+  if(clearBtn) clearBtn.onclick = () => {
+    const cv = $('sigpad');
+    if(cv && sigCtx){ sigCtx.clearRect(0,0,cv.width,cv.height); sigHasInk = false; }
+  };
+  const nameIn = $('sig-name');
+  if(nameIn) nameIn.oninput = () => { S.sigName = nameIn.value; };
+
+  const signBtn = $('btn-sign');
+  if(signBtn) signBtn.onclick = async () => {
+    const r = resolve(svcById(S.svcId));
+    const cur = DOCS[r.docs[S.docIdx]];
+    const typed = ($('sig-name') && $('sig-name').value.trim()) || '';
+    const fallbackName = (S.client.first + ' ' + S.client.last).trim();
+    if(!sigHasInk && !typed){
+      alert('Draw your signature in the box, or type your full name.');
+      return;
+    }
+    const method = sigHasInk ? 'drawn' : 'typed';
+    const name = typed || fallbackName || 'Client';
+    const time = new Date().toLocaleString('en-GB');
+    const payload = cur.id + '|' + cur.v + '|' + name + '|' + time + '|' + method + '|' + cur.body.join(' ') + '|' + cur.clauses.join(' ');
+    const hash = await sha256(payload);
+    S.signed[cur.id] = {name:name, time:time, method:method, hash:hash};
+    traceEvent('SIGN', cur.id + ' ' + cur.v + ' signed by ' + name + ', method ' + method + '. PDF rendered server-side and hashed. Version, timestamp, method, IP and per-clause events stored with it.', 'sha256 = ' + hash.slice(0,24) + '...');
+    const nextUnsigned = r.docs.findIndex(d => !S.signed[d] && !DOCS[d].optional);
+    if(nextUnsigned > -1) S.docIdx = nextUnsigned;
+    render();
+  };
+
+  const auth = $('btn-auth');
+  if(auth) auth.onclick = () => {
+    const r = resolve(svcById(S.svcId));
+    const fee = round2(r.deposit.amount * 0.018 + 0.20);
+    S.paid = true;
+    traceEvent('PAYMENT', 'Payment intent authorised for ' + gbp(round2(r.deposit.amount + fee)) + ', manual capture. Simulated. If the commit that follows fails, this authorisation is voided and no booking exists.', 'idempotency_key = ' + (S.slot ? S.slot.key : 'n/a'));
+    render();
+  };
+}
+
+/* validation on leaving details */
+function validateDetails(r){
+  const e = {}, c = S.client;
+  if(!c.first.trim()) e.first = 'Required';
+  if(!c.last.trim()) e.last = 'Required';
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c.email)) e.email = 'Enter a valid email address';
+  if(!/^[\d\s+()-]{9,}$/.test(c.mobile)) e.mobile = 'Enter a valid mobile number';
+  if(!c.dob) e.dob = 'Required';
+  else if(r.ageMin){
+    const dob = new Date(c.dob);
+    let age = NOW.getFullYear() - dob.getFullYear();
+    const m = NOW.getMonth() - dob.getMonth();
+    if(m < 0 || (m === 0 && NOW.getDate() < dob.getDate())) age--;
+    if(age < r.ageMin){
+      e.dob = 'This treatment has a minimum age of ' + r.ageMin + '.';
+      trace({id:'RULE-006', kind:'block', t:'BLOCK. Date of birth gives age ' + age + ', below the minimum of ' + r.ageMin + ' for this treatment.', in:'dob = ' + c.dob});
+    } else {
+      trace({id:'RULE-006', kind:'pass', t:'PASS. Age ' + age + ' meets the minimum of ' + r.ageMin + '.', in:'dob = ' + c.dob});
+    }
+  }
+  S.errors = e;
+  return Object.keys(e).length === 0;
+}
+
+/* ============================================================
+   WIRING
+   ============================================================ */
+function openWidget(svcId){
+  S.open = true;
+  $('mount').hidden = false;
+  $('site-view').style.display = 'none';
+  traceEvent('START', 'Booking journey started from puremed.uk' + (svcId ? ', with treatment context carried from the page' : ''), 'tenant = puremed, channel = embedded widget');
+  if(svcId) selectService(svcId, true);
+  S.step = 'service';
+  render();
+  $('mount').scrollIntoView({behavior:'smooth', block:'start'});
+}
+function closeWidget(){
+  $('mount').hidden = true;
+  $('site-view').style.display = '';
+  S.open = false;
+}
+
+function buildCards(){
+  $('site-cards').innerHTML = SITE_CARDS.map(c => {
+    const s = svcById(c.svc);
+    return '<div class="pm-card" data-card="'+c.svc+'">' +
+      '<div class="cat">'+esc(c.cat)+'</div>' +
+      '<h4>'+esc(c.label)+'</h4>' +
+      '<div class="meta"><span>'+gbp(s.price)+'</span><span>'+s.mins+' min</span></div>' +
+      '<div style="margin-top:12px"><span style="font-size:12px;color:var(--navy);font-weight:600">Book &rarr;</span></div>' +
+    '</div>';
+  }).join('');
+  document.querySelectorAll('[data-card]').forEach(el =>
+    el.onclick = () => openWidget(el.dataset.card));
+}
+
+function bindShell(){
+  $('cta-hero').onclick = () => openWidget(null);
+  $('w-close').onclick = closeWidget;
+  $('btn-reset').onclick = () => { S = freshState(); renderTrace(); renderRecord(); closeWidget(); };
+
+  $('btn-back').onclick = () => { const p = prevStep(); if(p){ S.step = p; render(); } };
+  $('btn-next').onclick = async () => {
+    const svc = svcById(S.svcId), r = resolve(svc);
+    if(S.step === 'confirm'){ S = freshState(); renderTrace(); renderRecord(); closeWidget(); return; }
+    if(S.step === 'details' && !validateDetails(r)){ render(); return; }
+    if(S.step === 'screen'){
+      const flag = SCREEN_Q.find(q => S.screen[q.id] === true && q.yes === 'flag');
+      if(flag && S.svcId !== 'consult-clinic'){
+        traceEvent('REROUTE', 'Screening flag. Booking switched from ' + svc.name + ' to Skin Consultation so suitability can be assessed.', 'flag = ' + flag.id);
+        S.svcId = 'consult-clinic'; S.slot = null; S.signed = {}; S.clauses = {}; S.paid = false;
+        const r2 = resolve(svcById('consult-clinic'));
+        r2.fired.forEach(f => trace(f));
+      }
+    }
+    const n = nextStep();
+    if(!n) return;
+    if(n === 'confirm') await commit();
+    S.step = n;
+    render();
+  };
+
+  // inspector tabs
+  document.querySelectorAll('.ins-tab').forEach(t => t.onclick = () => {
+    document.querySelectorAll('.ins-tab').forEach(x => x.classList.remove('on'));
+    document.querySelectorAll('.ins-pane').forEach(x => x.classList.remove('on'));
+    t.classList.add('on');
+    $('pane-' + t.dataset.pane).classList.add('on');
+  });
+
+  // admin controls
+  const bind = (id, key, kind, label) => {
+    const el = $(id);
+    el.onchange = () => {
+      CFG[key] = kind === 'bool' ? el.checked : (kind === 'num' ? Number(el.value) : el.value);
+      traceEvent('CONFIG', 'Practice setting changed: ' + label + ' is now ' + (kind === 'bool' ? (el.checked ? 'on' : 'off') : el.value) + '. The journey recalculates immediately.', key + ' = ' + CFG[key]);
+      if(S.svcId){
+        S.signed = {}; S.clauses = {}; S.paid = false; S.docIdx = 0;
+        const svc = svcById(S.svcId);
+        if(key === 'priorConsult' || key === 'hasHistory'){ S.slot = null; }
+        resolve(svc).fired.forEach(f => trace(f));
+        const a = activeSteps();
+        if(!a.some(s => s.k === S.step)) S.step = a[0].k;
+      }
+      if(S.open) render();
+    };
+  };
+  bind('cfg-docs','docs','bool','require consent documents');
+  bind('cfg-screen','screen','bool','require medical screening');
+  bind('cfg-pay','pay','bool','take payment at booking');
+  bind('cfg-priorconsult','priorConsult','bool','injectables need prior consultation');
+  bind('cfg-hashistory','hasHistory','bool','client has consultation on record');
+  bind('cfg-age','minAge','num','minimum age for injectables');
+  bind('cfg-depmode','depMode','str','deposit mode');
+  bind('cfg-depval','depVal','num','deposit value');
+  bind('cfg-lead','leadHours','num','minimum notice');
+  bind('cfg-grid','grid','num','slot grid');
+  bind('cfg-buffer','buffer','num','post-treatment buffer');
+  bind('cfg-cal','readCal','bool','read practitioner calendar');
+}
+
+/* boot */
+S = freshState();
+buildCards();
+bindShell();
+renderTrace();
+renderRecord();
+
+/* Embedded mode: ?embed=1 strips this file back to the client-facing journey
+   alone, so it can be dropped into a real page in an iframe and show exactly what
+   a client would see. Everything that exists to explain the prototype to us — the
+   demo banner, the studio header, the fake browser chrome and mock clinic site,
+   and the whole inspector column of rule trace / admin / record — is presentation
+   scaffolding around the journey, not part of it, so embed mode hides all of it
+   and opens the widget immediately. */
+if(new URLSearchParams(location.search).get('embed') === '1'){
+  document.body.classList.add('embed-widget');
+}
+
+/* Deep link from a treatment microsite: ?svc=<service id> opens the journey with
+   that treatment already carried in, so an ad → page → booking click-through
+   never asks the client to re-pick what the page was selling. Unknown or absent
+   ids fall through to the normal landing view rather than erroring. */
+(function deepLink(){
+  var q = new URLSearchParams(location.search);
+  var id = q.get('svc');
+  var valid = id && svcById(id) ? id : null;
+  /* Embedded, the journey IS the page, so it opens whether or not a treatment
+     was named. Standalone, an absent or unknown id just leaves the landing view. */
+  if(q.get('embed') === '1') openWidget(valid);
+  else if(valid) openWidget(valid);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><title>PureMed Aesthetics — Treatment Microsites</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap");
+
+
+:root{
+  --navy:#2a2e54; --navy-deep:#1B3752; --gold:#d0ac61; --gold-soft:#e0c27a;
+  --white:#FFFFFF; --warm:#F8F8F6; --ink:#23262A; --muted:#656986; --line:#ddd7c9;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--warm);color:var(--ink);
+  font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+.wa-sticky{position:fixed;bottom:28px;right:28px;z-index:200;width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(11,31,58,.28);text-decoration:none;overflow:hidden;transition:transform .15s ease}
+.wa-sticky:hover{transform:translateY(-2px)}
+.wa-sticky:active{transform:translateY(0) scale(.96)}
+.wa-sticky svg{width:28px;height:28px;fill:var(--navy);position:relative;z-index:1}
+.wa-sticky::after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,255,255,.85),transparent);transform:skewX(-20deg)}
+.wa-sticky:hover::after,.wa-sticky:active::after{animation:wa-shimmer .85s ease forwards}
+@keyframes wa-shimmer{from{left:-60%}to{left:140%}}
+
+.masthead{background:var(--navy);color:var(--white);padding:56px 0 64px}
+.masthead-top{display:flex;align-items:center;justify-content:space-between;gap:32px;
+  padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.16)}
+.masthead-logo{height:56px;width:auto}
+.masthead-meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.62);text-align:right;line-height:1.9}
+.masthead-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;
+  align-items:end;padding-top:48px}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.eyebrow::before{content:'';width:34px;height:1px;background:var(--gold)}
+.masthead h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;
+  font-size:clamp(36px,4.6vw,58px);line-height:1.1;margin:0 0 18px;text-wrap:balance}
+.masthead h1 em{font-style:italic;color:var(--gold-soft)}
+.masthead p{margin:0;color:rgba(255,255,255,.76);max-width:60ch}
+.prac-card{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:16px}
+.prac-card img{width:72px;height:72px;border-radius:8px;object-fit:cover;object-position:50% 18%}
+.prac-card strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:21px;font-weight:600;letter-spacing:.01em}
+.prac-card span{display:block;font-size:12px;color:rgba(255,255,255,.62);margin-top:3px;line-height:1.5}
+
+.sec{padding:72px 0}
+.sec-head{margin-bottom:36px}
+.sec-head h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;
+  font-size:clamp(27px,3vw,38px);color:var(--navy);margin:0 0 10px;text-wrap:balance}
+.sec-head p{margin:0;color:var(--muted);max-width:66ch}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(316px,1fr));gap:26px}
+.card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);
+  border-radius:10px;overflow:hidden;text-decoration:none;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--gold);
+  box-shadow:0 18px 44px rgba(35,71,106,.15)}
+.card:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.card-media{aspect-ratio:16/10;overflow:hidden;background:var(--navy)}
+.card-media img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:9px;flex:1}
+.card-body h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+  font-size:25px;color:var(--navy);margin:0;line-height:1.2}
+.card-body p{margin:0;font-size:14.5px;color:var(--muted);flex:1}
+.card-go{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--navy);margin-top:6px}
+.card-go svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;
+  transition:transform .22s ease}
+.card:hover .card-go svg{transform:translateX(4px)}
+
+.notes{background:var(--white);border-top:1px solid var(--line)}
+.note-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.note{padding:26px 28px;border-right:1px solid var(--line);background:var(--white)}
+.note:last-child{border-right:none}
+.note h4{margin:0 0 8px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--gold)}
+.note p{margin:0;font-size:14.5px;color:var(--muted)}
+.note strong{color:var(--ink);font-weight:600}
+
+.foot{background:var(--navy-deep);color:rgba(255,255,255,.68);padding:34px 0;font-size:13px}
+.foot .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foot a{color:var(--gold-soft)}
+
+@media(max-width:860px){
+  .masthead-body{grid-template-columns:1fr;gap:34px;align-items:start}
+  .masthead-top{flex-direction:column;align-items:flex-start;gap:20px}
+  .masthead-meta{text-align:left}
+  .note{border-right:none;border-bottom:1px solid var(--line)}
+  .note:last-child{border-bottom:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+
+</style>
+</head><body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <img class="masthead-logo" src="../assets/web/hub-puremed-logo-trimmed-560.webp" alt="PureMed Aesthetics" data-stage-img="img-hub-puremed-logo-trimmed-560">
+      <div class="masthead-meta" data-stage-id="treatment-micrositesfor-review-august-2026">Treatment microsites<br>For review &middot; August 2026</div>
+    </div>
+    <div class="masthead-body">
+      <div>
+        <div class="eyebrow" data-stage-id="seven-standalone-pages">Seven standalone pages</div>
+        <h1 data-stage-id="one-page-per-treatment-each">One page per treatment,<br>each able to stand <em>on its own</em>.</h1>
+        <p data-stage-id="every-treatment-gets-a-self-contained">Every treatment gets a self-contained page that can be linked from an ad, a
+           social post or a Google listing without sending anyone through the main site
+           first. Same brand, same practitioner, one subject each.</p>
+      </div>
+      <div class="prac-card">
+        <img src="../assets/web/hub-nafisa-hero-v2-220.webp" alt="Nafisa Mughal at the PureMed clinic in Winslow" data-stage-img="img-hub-nafisa-hero-v2-220">
+        <div>
+          <strong data-stage-id="nafisa-mughal">Nafisa Mughal</strong>
+          <span data-stage-id="founder-lead-practitionerwinslow-buckinghamshire">Founder &amp; Lead Practitioner<br>Winslow, Buckinghamshire</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-stage-id="the-treatments">The treatments</h2>
+        <p data-stage-id="open-any-page-to-review">Open any page to review it end to end. Each one runs hero, explanation,
+           benefits, suitability, process, FAQs, before and after, Nafisa, and a booking CTA.</p>
+      </div>
+      <div class="grid">
+      <a class="card" href="/prototype/puremed-micro/puremed-laser-lift">
+        <div class="card-media"><img src="../assets/web/hub-thumb-puremed-laser-lift.webp" alt="Laser Lift at PureMed Aesthetics" data-stage-img="img-hub-thumb-puremed-laser-lift"></div>
+        <div class="card-body">
+          <h3 data-stage-id="laser-lift">Laser Lift</h3>
+          <p data-stage-id="non-surgical-skin-tightening-that-lifts">Non-surgical skin tightening that lifts and firms using laser energy, with no downtime.</p>
+          <span class="card-go" data-stage-id="view-microsite">View microsite <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="/prototype/puremed-micro/puremed-liquid-facelift">
+        <div class="card-media"><img src="../assets/web/hub-thumb-puremed-liquid-facelift.webp" alt="Liquid Facelift at PureMed Aesthetics" data-stage-img="img-hub-thumb-puremed-liquid-facelift"></div>
+        <div class="card-body">
+          <h3 data-stage-id="liquid-facelift">Liquid Facelift</h3>
+          <p data-stage-id="dermal-fillers-used-to-restore">Dermal fillers used to restore lost volume and redefine facial contours.</p>
+          <span class="card-go" data-stage-id="view-microsite-2">View microsite <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="/prototype/puremed-micro/puremed-anti-wrinkle">
+        <div class="card-media"><img src="../assets/web/hub-thumb-puremed-anti-wrinkle.webp" alt="Anti-Wrinkle Injections at PureMed Aesthetics" data-stage-img="img-hub-thumb-puremed-anti-wrinkle"></div>
+        <div class="card-body">
+          <h3 data-stage-id="anti-wrinkle-injections">Anti-Wrinkle Injections</h3>
+          <p data-stage-id="muscle-relaxing-injections-that-soften-dynamic">Muscle-relaxing injections that soften dynamic lines while preserving natural expression.</p>
+          <span class="card-go" data-stage-id="view-microsite-3">View microsite <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="/prototype/puremed-micro/puremed-polynucleotides">
+        <div class="card-media"><img src="../assets/web/hub-thumb-puremed-polynucleotides.webp" alt="Polynucleotides at PureMed Aesthetics" data-stage-img="img-hub-thumb-puremed-polynucleotides"></div>
+        <div class="card-body">
+          <h3 data-stage-id="polynucleotides">Polynucleotides</h3>
+          <p data-stage-id="regenerative-pnct-treatment-that-repairs">Regenerative PNCT treatment that repairs skin quality from the inside out.</p>
+          <span class="card-go" data-stage-id="view-microsite-4">View microsite <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="/prototype/puremed-micro/puremed-rf-microneedling">
+        <div class="card-media"><img src="../assets/web/hub-thumb-puremed-rf-microneedling.webp" alt="RF Microneedling at PureMed Aesthetics" data-stage-img="img-hub-thumb-puremed-rf-microneedling"></div>
+        <div class="card-body">
+          <h3 data-stage-id="rf-microneedling">RF Microneedling</h3>
+          <p data-stage-id="radiofrequency-and-microneedling-combined-to">Radiofrequency and microneedling combined to stimulate deep collagen renewal.</p>
+          <span class="card-go" data-stage-id="view-microsite-5">View microsite <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="/prototype/puremed-micro/puremed-skin-boosters">
+        <div class="card-media"><img src="../assets/web/hub-thumb-puremed-skin-boosters.webp" alt="Skin Boosters at PureMed Aesthetics" data-stage-img="img-hub-thumb-puremed-skin-boosters"></div>
+        <div class="card-body">
+          <h3 data-stage-id="skin-boosters">Skin Boosters</h3>
+          <p data-stage-id="deep-hydration-that-improves-texture">Deep hydration that improves texture, firmness and glow across the whole face.</p>
+          <span class="card-go" data-stage-id="view-microsite-6">View microsite <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="/prototype/puremed-micro/puremed-sculptra">
+        <div class="card-media"><img src="../assets/web/hub-thumb-puremed-sculptra.webp" alt="Sculptra at PureMed Aesthetics" data-stage-img="img-hub-thumb-puremed-sculptra"></div>
+        <div class="card-body">
+          <h3 data-stage-id="sculptra">Sculptra</h3>
+          <p data-stage-id="a-collagen-biostimulator-that-rebuilds">A collagen biostimulator that rebuilds facial structure gradually, lasting up to two years.</p>
+          <span class="card-go" data-stage-id="view-microsite-7">View microsite <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec notes">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-stage-id="what-to-look-at">What to look at</h2>
+        <p data-stage-id="three-things-worth-a-decision">Three things worth a decision before these go anywhere public.</p>
+      </div>
+      <div class="note-grid"><div class="note"><h4 data-stage-id="imagery">Imagery</h4><p data-stage-id="every-page-carries-its-own">Every page carries its own hero, treatment and before/after imagery. Before/after photos are <strong>real client results</strong> and need your sign-off before anything goes public.</p></div><div class="note"><h4 data-stage-id="nafisa">Nafisa</h4><p data-stage-id="each-page-now-ends-with">Each page now ends with a practitioner section using the real clinic photo. The AI-generated likenesses were <strong>deliberately not used</strong>.</p></div><div class="note"><h4 data-stage-id="still-to-confirm">Still to confirm</h4><p data-stage-id="the-figure-is-still-an">The <strong>500+ Google reviews</strong> figure is still an estimate, and Nafisa's credentials line needs checking against what she can evidence.</p></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div data-stage-id="puremed-aesthetics-34a-high-street">PureMed Aesthetics &middot; 34a High Street, Winslow, MK18 3HB</div>
+    <div><a href="/prototype/puremed-micro/booking" data-stage-id="open-the-booking-journey">Open the booking journey</a></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/447850087025" class="wa-sticky" aria-label="WhatsApp PureMed Aesthetics">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.21.71-.83.9-1.11.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.29.14.48.21.55.33.07.12.07.68-.17 1.36z"></path></svg>
+</a>
+</body></html>

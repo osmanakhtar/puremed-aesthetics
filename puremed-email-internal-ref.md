@@ -58,7 +58,7 @@ Current DNS records of note:
 Migration was done using a custom Python IMAP-to-IMAP script (`migrate-imap.py`) rather than Google's Data Migration Service, which required Gmail activation before it would run — and Gmail activation pushed the MX cutover before migration was complete.
 
 **Migration scripts** are saved at:
-`/Users/osmanakhtar/workspace/other-projects/puremed/`
+`/Users/osmanakhtar/workspace/main-stage-studio/02_clients/puremed/`
 
 - `test-imap-connection.py` — IMAP connection and folder count test
 - `migrate-imap.py` — full IMAP-to-IMAP migration with deduplication and auto-reconnect

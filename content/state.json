@@ -1,19 +1,19 @@
 {
-  "reindexed": "2026-07-03T19:37:47.793Z",
+  "reindexed": "2026-08-06T01:37:08.701Z",
   "posts": [
     {
       "id": "2026-08-01-laser-lift",
       "state": "review",
       "date": "2026-08-01",
       "pillar": "education",
-      "updated": "2026-07-03T19:37:47.792Z"
+      "updated": "2026-07-04T02:05:18.904Z"
     },
     {
       "id": "2026-08-03-liquid-facelift",
       "state": "review",
       "date": "2026-08-03",
       "pillar": "myth-busting",
-      "updated": "2026-07-03T19:37:47.792Z"
+      "updated": "2026-07-04T02:05:18.905Z"
     },
     {
       "id": "2026-08-05-trust",
@@ -28,6 +28,13 @@
       "date": "2026-08-07",
       "pillar": "education",
       "updated": "2026-07-03T19:37:47.793Z"
+    },
+    {
+      "id": "2099-01-01-finishing-proof",
+      "state": "drafted",
+      "date": "2099-01-01",
+      "pillar": "trust",
+      "updated": "2026-07-07T00:00:00.000Z"
     }
   ]
 }

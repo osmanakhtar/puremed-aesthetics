@@ -123,7 +123,7 @@ The only always-on infrastructure is two cron entries on the Pi. Everything agen
   content-insights.js
   content-lint.js          # compliance term lint
 
-~/workspace/other-projects/puremed/content/
+~/workspace/main-stage-studio/02_clients/puremed/content/
   PLAN.md                  # this file
   config/                  # client.json, voice.md, pillars.md, compliance.md
   calendar/2026-08.json

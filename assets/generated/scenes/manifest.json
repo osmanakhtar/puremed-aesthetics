@@ -8,7 +8,7 @@
       "type": "scene",
       "aspect_ratio": "4:5",
       "section_selector": null,
-      "copy_context": "Endolift device on white trolley beside treatment chair, navy accent wall, gold trim — no people, no text",
+      "copy_context": "Endolift device on white trolley beside treatment chair, navy accent wall, gold trim \u2014 no people, no text",
       "parent_scene_id": null,
       "assets": [
         {
@@ -42,7 +42,7 @@
       "type": "scene",
       "aspect_ratio": "4:5",
       "section_selector": null,
-      "copy_context": "Gloved hands marking guide dots on cheekbone with white cosmetic pencil — assessment scene, no needles",
+      "copy_context": "Gloved hands marking guide dots on cheekbone with white cosmetic pencil \u2014 assessment scene, no needles",
       "parent_scene_id": null,
       "assets": [
         {
@@ -76,7 +76,7 @@
       "type": "scene",
       "aspect_ratio": "4:5",
       "section_selector": null,
-      "copy_context": "Consultation: practitioner + patient reviewing facial diagram on tablet — product-free (POM-safe)",
+      "copy_context": "Consultation: practitioner + patient reviewing facial diagram on tablet \u2014 product-free (POM-safe)",
       "parent_scene_id": null,
       "assets": [
         {
@@ -204,6 +204,358 @@
           "compressed_path": "assets/generated/scenes/compressed/puremed-scene-skin-boosters-seedream45-v1.webp",
           "preferred": false,
           "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "scene-treatment-room-angle",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Treatment room, alternate angle - navy accent wall, gold mirror, cream couch, warm wood floor, empty",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "3fe86dff-19b7-4068-a6b0-e2e9539f20c5",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_161310_3fe86dff-19b7-4068-a6b0-e2e9539f20c5.png",
+          "filename": "puremed-scene-treatment-room-angle-flux2pro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-treatment-room-angle-flux2pro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-treatment-room-angle-flux2pro-v1.webp",
+          "preferred": true,
+          "notes": "empty-rooms/hands-only catalogue, grounded via image_references on real clinic photos"
+        }
+      ]
+    },
+    {
+      "id": "scene-reception-desk-detail",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Reception desk detail - white marble, fresh lilies, warm timber slat wall, empty, no people (regenerated 3x to remove synthetic person/silhouette)",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "7939eebf-bf54-4aef-8729-976f0beb66b5",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_161627_7939eebf-bf54-4aef-8729-976f0beb66b5.png",
+          "filename": "puremed-scene-reception-desk-detail-flux2pro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-reception-desk-detail-flux2pro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-reception-desk-detail-flux2pro-v1.webp",
+          "preferred": true,
+          "notes": "empty-rooms/hands-only catalogue, grounded via image_references on real clinic photos"
+        }
+      ]
+    },
+    {
+      "id": "scene-hands-treatment-tray",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Gloved hands arranging sterile tools and product bottles on tray, treatment room background - hands only, no face",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "311cd713-0c21-4278-99c6-e07592299994",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_161310_311cd713-0c21-4278-99c6-e07592299994.png",
+          "filename": "puremed-scene-hands-treatment-tray-flux2pro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-hands-treatment-tray-flux2pro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-hands-treatment-tray-flux2pro-v1.webp",
+          "preferred": true,
+          "notes": "empty-rooms/hands-only catalogue, grounded via image_references on real clinic photos"
+        }
+      ]
+    },
+    {
+      "id": "scene-hands-consultation-desk",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Hands writing consultation notes on marble desk, tablet nearby - hands only, no face",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "12957824-959d-4221-8133-0c44a94e0b1d",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_161310_12957824-959d-4221-8133-0c44a94e0b1d.png",
+          "filename": "puremed-scene-hands-consultation-desk-flux2pro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-hands-consultation-desk-flux2pro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-hands-consultation-desk-flux2pro-v1.webp",
+          "preferred": true,
+          "notes": "empty-rooms/hands-only catalogue, grounded via image_references on real clinic photos"
+        }
+      ]
+    },
+    {
+      "id": "scene-hands-device-detail",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Gloved hand adjusting settings on treatment device screen - hands only, no face",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "b31847c6-e592-43e1-9f7e-3424aee614da",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_161310_b31847c6-e592-43e1-9f7e-3424aee614da.png",
+          "filename": "puremed-scene-hands-device-detail-flux2pro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-hands-device-detail-flux2pro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-hands-device-detail-flux2pro-v1.webp",
+          "preferred": true,
+          "notes": "empty-rooms/hands-only catalogue, grounded via image_references on real clinic photos"
+        }
+      ]
+    },
+    {
+      "id": "scene-waiting-area",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Empty waiting area - black wire chairs, window light, reception desk background",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "flux_2_pro",
+          "variant": "v1",
+          "job_id": "46a88f87-484d-4761-a855-239279a2cff4",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_161310_46a88f87-484d-4761-a855-239279a2cff4.png",
+          "filename": "puremed-scene-waiting-area-flux2pro-v1.png",
+          "format": "png",
+          "local_path": "assets/generated/scenes/puremed-scene-waiting-area-flux2pro-v1.png",
+          "compressed_path": "assets/generated/scenes/compressed/puremed-scene-waiting-area-flux2pro-v1.webp",
+          "preferred": true,
+          "notes": "empty-rooms/hands-only catalogue, grounded via image_references on real clinic photos"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-injectable-treatment",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa performing injectable treatment, close hands+expression, PUREMED plaque visible - element likeness",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "7c792df4-50ae-485d-83f8-cd66aff0208a",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170610_7c792df4-50ae-485d-83f8-cd66aff0208a.png",
+          "filename": "01-injectable-treatment-nanobanana2.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/01-injectable-treatment-nanobanana2.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-face-assessment",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa pre-treatment face assessment, gloved hands on patient jaw, gold mirror in background",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "f648a981-b519-471c-8615-b9def59e343f",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170610_f648a981-b519-471c-8615-b9def59e343f.png",
+          "filename": "02-face-assessment-nanobanana2.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/02-face-assessment-nanobanana2.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-skin-marking",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa marking patient skin with white pencil, precise, treatment room",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2",
+          "variant": "v1",
+          "job_id": "ab187aad-7a6f-4f2d-81aa-c9c298964f42",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170610_ab187aad-7a6f-4f2d-81aa-c9c298964f42.png",
+          "filename": "03-skin-marking-nanobanana2.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/03-skin-marking-nanobanana2.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-mirror-review",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa showing patient results in handheld mirror, both natural and pleased",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "gpt_image_2",
+          "variant": "v1",
+          "job_id": "032b9b5f-dd8c-4c92-a5fd-f6cb47ac7669",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170610_032b9b5f-dd8c-4c92-a5fd-f6cb47ac7669.png",
+          "filename": "04-mirror-review-gptimage2.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/04-mirror-review-gptimage2.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-reception-greeting",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa greeting patient at reception desk, warm welcome, real logo plaque + lilies",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "gpt_image_2",
+          "variant": "v1",
+          "job_id": "106ad144-588b-4303-a573-95b73c1f8f60",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170610_106ad144-588b-4303-a573-95b73c1f8f60.png",
+          "filename": "05-reception-greeting-gptimage2.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/05-reception-greeting-gptimage2.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-consultation-desk",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa at consultation desk with tablet, patient across, PUREMED AESTHETICS wall plaque exact match",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "3fd70047-31a1-46d7-a8f3-b36c3369be4b",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170611_3fd70047-31a1-46d7-a8f3-b36c3369be4b.png",
+          "filename": "06-consultation-desk-seedream45.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/06-consultation-desk-seedream45.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-device-treatment",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa operating RF/laser device on patient, focused, high technical precision",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "seedream_v4_5",
+          "variant": "v1",
+          "job_id": "924ba134-4ceb-4a77-9da5-741c714946c4",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170648_924ba134-4ceb-4a77-9da5-741c714946c4.png",
+          "filename": "07-device-treatment-seedream45.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/07-device-treatment-seedream45.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-reception-portrait",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa standing portrait in reception near lilies, PUREMED AESTHETICS wall sign, hero-quality",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "seedream_v5_lite",
+          "variant": "v1",
+          "job_id": "95239d64-6306-4c72-ae2a-dbf8de417d02",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170611_95239d64-6306-4c72-ae2a-dbf8de417d02.png",
+          "filename": "08-reception-portrait-seedream5lite.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/08-reception-portrait-seedream5lite.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-hands-tray",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa's gloved hands prepping tools/products on tray, face partially visible for identity",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "nano_banana_2_lite",
+          "variant": "v1",
+          "job_id": "eb39bb79-765a-4ef6-9a16-cfc5c6f30ba7",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170648_eb39bb79-765a-4ef6-9a16-cfc5c6f30ba7.png",
+          "filename": "09-hands-tray-nanobanana2lite.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/09-hands-tray-nanobanana2lite.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
+        }
+      ]
+    },
+    {
+      "id": "nafisa-hallway-candid",
+      "type": "scene",
+      "aspect_ratio": "3:4",
+      "section_selector": null,
+      "copy_context": "Nafisa walking through clinic hallway toward reception, candid confident stride, PUREMED plaque",
+      "parent_scene_id": null,
+      "assets": [
+        {
+          "model": "cinematic_studio_2_5",
+          "variant": "v1",
+          "job_id": "35b40c0c-4ca9-4b1e-9f1a-bd6b86c66147",
+          "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_33ylt5CvJwzQ3wD9Au6wHSPDMkv/hf_20260809_170610_35b40c0c-4ca9-4b1e-9f1a-bd6b86c66147.png",
+          "filename": "10-hallway-candid-cinematicstudio25.png",
+          "format": "png",
+          "local_path": "assets/generated/nafisa-likeness/10-hallway-candid-cinematicstudio25.png",
+          "compressed_path": null,
+          "preferred": true,
+          "notes": "Nafisa likeness via element_id 0bf4546e-92cd-4d17-bb0f-c70fdaadab54 (nafisa-hero-v2.webp reference); model shot, not empty-rooms rule; cross-model comparison batch 10 Aug"
         }
       ]
     }

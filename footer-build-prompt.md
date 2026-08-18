@@ -35,8 +35,8 @@ The site is live locally at `http://localhost:10008` (Host: `puremed.local`). Do
 - `wp_hash(data)` = `hash_hmac('md5', data, AUTH_KEY . AUTH_SALT)`
 
 **Source files**
-- Prototype: `/Users/osmanakhtar/workspace/other-projects/puremed/web/puremed-homepage-v6.html`
-- Homepage CSS source: `/Users/osmanakhtar/workspace/other-projects/puremed/web/puremed-homepage-bricks-ready.html`
+- Prototype: `/Users/osmanakhtar/workspace/main-stage-studio/02_clients/puremed/web/puremed-homepage-v6.html`
+- Homepage CSS source: `/Users/osmanakhtar/workspace/main-stage-studio/02_clients/puremed/web/puremed-homepage-bricks-ready.html`
 
 ---
 
@@ -232,4 +232,4 @@ Add a second `code` element at root level with this content:
 
 ## Decisions log
 
-`/Users/osmanakhtar/workspace/other-projects/puremed/decisions-log.md` — update DEC-001 to note that the same fix was applied to the footer CSS as part of this session. DEC-002 and DEC-003 remain open.
+`/Users/osmanakhtar/workspace/main-stage-studio/02_clients/puremed/decisions-log.md` — update DEC-001 to note that the same fix was applied to the footer CSS as part of this session. DEC-002 and DEC-003 remain open.

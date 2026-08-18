@@ -3,10 +3,10 @@
 *Run the asset library first. Page prompts draw from it.*
 
 Paths:
-- Prototypes: ~/workspace/other-projects/puremed/web/
-- Discovery: ~/workspace/other-projects/puremed/discovery/
-- Asset output: ~/workspace/other-projects/puremed/assets/web/
-- Client folder root: ~/workspace/other-projects/puremed/
+- Prototypes: ~/workspace/main-stage-studio/02_clients/puremed/web/
+- Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/
+- Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
+- Client folder root: ~/workspace/main-stage-studio/02_clients/puremed/
 
 ---
 
@@ -33,8 +33,8 @@ Run the Higgsfield asset generation skill for the PureMed Nafisa asset library.
 This is not a page session. It builds the central image bank for the site.
 
 Soul character name: Nafisa
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 This session generates at least 2 shots per free model across the scenarios
 below. Minimum 12 images total. Run each scenario through all 6 free models
@@ -113,9 +113,9 @@ Example: nafisa-library-a-flux2pro-v1.webp
 Run the Higgsfield asset generation skill for the PureMed homepage hero.
 
 Soul character name: Nafisa
-Prototype: ~/workspace/other-projects/puremed/web/puremed-homepage-v6.html
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Prototype: ~/workspace/main-stage-studio/02_clients/puremed/web/puremed-homepage-v6.html
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 This is the most important placement on the site. Generate across all 6 free
 models. This is a cross-section — all variants reviewed before one is chosen.
@@ -151,9 +151,9 @@ File naming: puremed-homepage-[placement]-[model-shortname]-v[n].webp
 Run the Higgsfield asset generation skill for the PureMed anti-wrinkle page.
 
 Soul character name: Nafisa
-Prototype: ~/workspace/other-projects/puremed/web/puremed-anti-wrinkle.html
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Prototype: ~/workspace/main-stage-studio/02_clients/puremed/web/puremed-anti-wrinkle.html
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 Free models (confirm free toggle ON): Flux.2 Pro, GPT Image, Seedream 4.5,
 Kling O1 Image, Nano Banana, Seedream 5.0 Lite.
@@ -196,9 +196,9 @@ File naming: puremed-anti-wrinkle-[placement]-[model-shortname]-v[n].webp
 Run the Higgsfield asset generation skill for the PureMed digital consultation page.
 
 Soul character name: Nafisa
-Prototype: ~/workspace/other-projects/puremed/web/puremed-digital-consultation.html
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Prototype: ~/workspace/main-stage-studio/02_clients/puremed/web/puremed-digital-consultation.html
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 Free models (confirm free toggle ON): Flux.2 Pro, GPT Image, Seedream 4.5,
 Kling O1 Image, Nano Banana, Seedream 5.0 Lite.
@@ -237,9 +237,9 @@ File naming: puremed-digital-consultation-[placement]-[model-shortname]-v[n].web
 Run the Higgsfield asset generation skill for the PureMed liquid facelift page.
 
 Soul character name: Nafisa
-Prototype: ~/workspace/other-projects/puremed/web/puremed-liquid-facelift.html
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Prototype: ~/workspace/main-stage-studio/02_clients/puremed/web/puremed-liquid-facelift.html
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 Free models (confirm free toggle ON): Flux.2 Pro, GPT Image, Seedream 4.5,
 Kling O1 Image, Nano Banana, Seedream 5.0 Lite.
@@ -285,9 +285,9 @@ File naming: puremed-liquid-facelift-[placement]-[model-shortname]-v[n].webp
 Run the Higgsfield asset generation skill for the PureMed polynucleotides page.
 
 Soul character name: Nafisa
-Prototype: ~/workspace/other-projects/puremed/web/puremed-polynucleotides.html
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Prototype: ~/workspace/main-stage-studio/02_clients/puremed/web/puremed-polynucleotides.html
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 Free models (confirm free toggle ON): Flux.2 Pro, GPT Image, Seedream 4.5,
 Kling O1 Image, Nano Banana, Seedream 5.0 Lite.
@@ -328,9 +328,9 @@ File naming: puremed-polynucleotides-[placement]-[model-shortname]-v[n].webp
 Run the Higgsfield asset generation skill for the PureMed RF microneedling page.
 
 Soul character name: Nafisa
-Prototype: ~/workspace/other-projects/puremed/web/puremed-rf-microneedling.html
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Prototype: ~/workspace/main-stage-studio/02_clients/puremed/web/puremed-rf-microneedling.html
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 Free models (confirm free toggle ON): Flux.2 Pro, GPT Image, Seedream 4.5,
 Kling O1 Image, Nano Banana, Seedream 5.0 Lite.
@@ -371,9 +371,9 @@ File naming: puremed-rf-microneedling-[placement]-[model-shortname]-v[n].webp
 Run the Higgsfield asset generation skill for the PureMed skin boosters page.
 
 Soul character name: Nafisa
-Prototype: ~/workspace/other-projects/puremed/web/puremed-skin-boosters.html
-Discovery: ~/workspace/other-projects/puremed/discovery/constraints.md
-Asset output: ~/workspace/other-projects/puremed/assets/web/
+Prototype: ~/workspace/main-stage-studio/02_clients/puremed/web/puremed-skin-boosters.html
+Discovery: ~/workspace/main-stage-studio/02_clients/puremed/discovery/constraints.md
+Asset output: ~/workspace/main-stage-studio/02_clients/puremed/assets/web/
 
 Free models (confirm free toggle ON): Flux.2 Pro, GPT Image, Seedream 4.5,
 Kling O1 Image, Nano Banana, Seedream 5.0 Lite.

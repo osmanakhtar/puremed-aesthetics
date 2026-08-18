@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Laser Facelift Winslow | PureMed Aesthetics</title>
+<meta name="description" content="Non-surgical laser facelift for loose or sagging skin at PureMed on Winslow High Street, serving Buckinghamshire. Message us on WhatsApp to ask if it is right for you." />
+<link rel="canonical" href="https://laserfaceliftwinslow.co.uk/" />
+<meta property="og:title" content="Laser Facelift Winslow | PureMed Aesthetics" />
+<meta property="og:description" content="Non-surgical laser facelift for loose or sagging skin at PureMed on Winslow High Street, serving Buckinghamshire. Message us on WhatsApp to ask if it is right for you." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://laserfaceliftwinslow.co.uk/" />
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap");
+  :root {
+    --brand: #343a67;
+    --brand-deep: #2a2e54;
+    --accent: #d0ac61;
+    --accent-on-dark: #e0c27a;
+    --bg: #f8f8f6;
+    --bg2: #eceae4;
+    --ink: #23262A;
+    --muted: #656986;
+    --line: #ddd7c9;
+    --white: #fff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  img { max-width: 100%; display: block; }
+  h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    color: var(--brand-deep);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  a { color: var(--brand); }
+  .wrap { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* ---- nav / brand strip ---- */
+  .brandbar {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 0.9rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brandbar img { height: 34px; width: auto; }
+
+  /* ---- generic section rhythm ---- */
+  section { padding: 2.75rem 0; }
+  section.alt { background: var(--bg2); }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--brand);
+    background: var(--bg2);
+    border: 1px solid var(--line);
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+  section.alt .eyebrow { background: var(--white); }
+
+  /* ---- hero (block 1) ---- */
+  .hero { text-align: left; padding-top: 2.5rem; }
+  .hero h1 {
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+    line-height: 1.15;
+  }
+  .hero .lede {
+    margin-top: 0.9rem;
+    color: var(--muted);
+    font-size: 1.06rem;
+    max-width: 34rem;
+  }
+  .hero-cta { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+  /* ---- block 2 / intro ---- */
+  .intro p { margin: 0 0 1rem; font-size: 1.02rem; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* ---- block 3 / help list ---- */
+  h2.section-title { font-size: 1.5rem; margin-bottom: 1.1rem; }
+  .help-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+  .help-list li {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.98rem;
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+  }
+  .help-list li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 0.5rem;
+  }
+  section.alt .help-list li { background: var(--white); }
+
+  /* ---- block 4 / treatments ---- */
+  .treat-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1.35rem 1.4rem;
+  }
+  .treat-card p { margin: 0 0 0.9rem; }
+  .treat-card p:last-of-type { margin-bottom: 0; }
+  .treat-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.1rem;
+  }
+
+  /* ---- block 5 / who you see ---- */
+  .who {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .who img {
+    width: 9.5rem;
+    height: 9.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 18px rgba(42,46,84,0.15);
+  }
+  .who p { margin: 0 0 0.6rem; }
+  .who p:last-child { margin-bottom: 0; }
+  @media (max-width: 480px) {
+    .who { grid-template-columns: 1fr; text-align: left; }
+    .who img { width: 6.5rem; height: 6.5rem; }
+  }
+
+  /* ---- block 6 / next steps ---- */
+  .steps {
+    list-style: none;
+    counter-reset: step;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+  }
+  .steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+  }
+  .steps li::before {
+    content: counter(step);
+    flex-shrink: 0;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: grid;
+    place-items: center;
+  }
+
+  /* ---- block 7 / primary CTA band ---- */
+  .cta-band {
+    background: var(--brand-deep);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1.25rem;
+  }
+  .cta-band h2 { color: #fff; font-size: 1.6rem; margin-bottom: 0.65rem; }
+  .cta-band p { color: rgba(255,255,255,0.78); max-width: 30rem; margin: 0 auto 1.5rem; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.9rem 1.6rem;
+    border-radius: 999px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); opacity: 0.92; }
+  .btn-primary { background: var(--accent); color: var(--brand-deep) !important; }
+  .btn-on-dark { background: var(--accent); color: var(--brand-deep) !important; }
+  .btn-secondary {
+    background: transparent;
+    color: var(--brand) !important;
+    border: 1.5px solid var(--brand);
+  }
+  .btn-secondary.on-white { color: var(--brand) !important; border-color: var(--brand); }
+
+  /* ---- block 8 / secondary links ---- */
+  .secondary-links { display: grid; gap: 0.9rem; }
+  .secondary-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .secondary-card span.arrow { color: var(--accent); font-size: 1.2rem; flex-shrink: 0; }
+  .secondary-card strong { display: block; color: var(--brand-deep); font-weight: 600; }
+  .secondary-card small { color: var(--muted); }
+
+  /* ---- block 9 / proof ---- */
+  .proof-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 14px 14px 0;
+    padding: 1.25rem 1.4rem;
+  }
+  .proof-card p { margin: 0 0 0.75rem; font-style: italic; }
+  .proof-card a { font-weight: 600; }
+
+  /* ---- block 10 / footer ---- */
+  footer.site-foot {
+    background: var(--brand-deep);
+    color: rgba(255,255,255,0.82);
+    padding: 2.25rem 1.25rem 6rem;
+    font-size: 0.92rem;
+  }
+  footer.site-foot .wrap { text-align: center; }
+  footer.site-foot strong { color: #fff; display: block; font-size: 1.05rem; margin-bottom: 0.4rem; }
+  footer.site-foot p { margin: 0.3rem 0; }
+  footer.site-foot a { color: var(--accent-on-dark); }
+  footer.site-foot .disclaimer {
+    margin-top: 1.25rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* ---- sticky whatsapp ---- */
+  .wa-sticky {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 50;
+    background: #25D366;
+    color: #fff !important;
+    text-decoration: none;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+  .wa-sticky svg { width: 1.7rem; height: 1.7rem; }
+</style>
+</head>
+<body>
+
+  <div class="brandbar">
+    <img src="puremed_logo_transparent.webp" alt="PureMed Aesthetics"  data-stage-img="img-puremed-logo-transparent"/>
+  </div>
+
+  <!-- BLOCK 1: Title / H1 -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow" data-stage-id="winslow-buckinghamshire">Winslow &amp; Buckinghamshire</span>
+      <h1 data-stage-id="laser-facelift-in-winslow-a">Laser Facelift in Winslow: a non-surgical lift for looser skin</h1>
+      <p class="lede" data-stage-id="a-medically-led-non-surgical-way-to">
+        A medically-led, non-surgical way to tighten and lift loose or crepey-feeling skin,
+        at PureMed on Winslow High Street. No surgery, no guesswork, just an honest
+        consultation first.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://wa.me/447850087025?text=Hi%20PureMed%2C%20I%20saw%20the%20Laser%20Facelift%20Winslow%20site%20%E2%80%94%20can%20we%20talk%20about%20whether%20it%20is%20right%20for%20me%3F" target="_blank" rel="noopener" data-stage-id="message-us-about-laser-facelift">
+          Message us about laser facelift
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 2: Short intro -->
+  <section class="intro alt">
+    <div class="wrap">
+      <p data-stage-id="if-your-skin-feels-less">
+        If your skin feels less firm than it used to, around the jawline, cheeks or neck,
+        a laser facelift is a non-surgical way to tighten and lift, without going under the knife.
+      </p>
+      <p data-stage-id="we-are-puremed-a-medically-led">
+        We are PureMed, a medically-led aesthetics clinic on the High Street in Winslow.
+        We see women from across Buckinghamshire who want a natural-looking result and
+        clear advice before they decide anything.
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOCK 3: What we can help with -->
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-stage-id="what-we-can-help-with">What we can help with</h2>
+      <ul class="help-list">
+        <li data-stage-id="loose-or-crepey-feeling-skin-on">Loose or crepey-feeling skin on the face or neck</li>
+        <li data-stage-id="a-jawline-that-has-lost">A jawline that has lost some definition</li>
+        <li data-stage-id="wanting-a-lifted-look-without">Wanting a "lifted" look without surgery or a long recovery</li>
+        <li data-stage-id="wanting-to-know-what-is">Wanting to know what is realistic for your skin before committing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BLOCK 4: Treatments we may use -->
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="section-title" data-stage-id="treatments-we-may-use">Treatments we may use</h2>
+      <div class="treat-card">
+        <p data-stage-id="we-use-laser-facelift-skin-tightening">
+          We use laser facelift / skin-tightening treatment to support firmer-looking skin
+          over a series of sessions. Results build gradually. Suitability depends on your
+          skin and goals, that is what the consultation is for.
+        </p>
+        <p data-stage-id="full-clinical-detail-lives-on">Full clinical detail lives on PureMed's main site:</p>
+        <a class="treat-link" href="https://www.puremed.uk/tighten-loose-skin-laser-lift.html" data-stage-id="read-the-full-laser-facelift">
+          Read the full laser facelift page on puremed.uk →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 5: Who you see -->
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-stage-id="who-you-see">Who you see</h2>
+      <div class="who">
+        <img src="nafisa-hero-v2.webp" alt="Nafisa, PureMed Aesthetics practitioner and clinic owner"  data-stage-img="img-nafisa-hero-v2"/>
+        <div>
+          <p data-stage-id="you-will-see-nafisa-puremed">
+            You will see Nafisa, PureMed's practitioner and clinic owner, at our High
+            Street clinic in Winslow.
+          </p>
+          <p data-stage-id="we-regularly-see-clients-from">
+            We regularly see clients from Winslow, Buckingham, Aylesbury and the wider
+            Bucks area.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 6: What happens next -->
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="section-title" data-stage-id="what-happens-next">What happens next</h2>
+      <ol class="steps">
+        <li data-stage-id="message-us-on-whatsapp">Message us on WhatsApp.</li>
+        <li data-stage-id="we-will-talk-through-whether">We will talk through whether a laser facelift suits your skin and answer your questions.</li>
+        <li data-stage-id="we-book-a-consultation-if">We book a consultation if it makes sense. No pressure and no hard sell. If it is not the right treatment, we will say so.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- BLOCK 7: Primary CTA -->
+  <section class="cta-band">
+    <h2 data-stage-id="ready-to-ask-if-this">Ready to ask if this is right for you?</h2>
+    <p data-stage-id="message-nafisa-s-clinic-directly">Message Nafisa's clinic directly on WhatsApp. No pressure, no hard sell.</p>
+    <a class="btn btn-on-dark" href="https://wa.me/447850087025?text=Hi%20PureMed%2C%20I%20saw%20the%20Laser%20Facelift%20Winslow%20site%20%E2%80%94%20can%20we%20talk%20about%20whether%20it%20is%20right%20for%20me%3F" target="_blank" rel="noopener" data-stage-id="message-us-about-laser-facelift-2">
+      Message us about laser facelift
+    </a>
+  </section>
+
+  <!-- BLOCK 8: Secondary CTA -->
+  <section>
+    <div class="wrap">
+      <h2 class="section-title" data-stage-id="want-to-read-more-first">Want to read more first?</h2>
+      <div class="secondary-links">
+        <a class="secondary-card" href="https://www.puremed.uk/tighten-loose-skin-laser-lift.html">
+          <span>
+            <strong data-stage-id="full-treatment-page">Full treatment page</strong>
+            <small data-stage-id="clinical-detail-on-puremed-uk">Clinical detail on puremed.uk</small>
+          </span>
+          <span class="arrow" data-stage-id="span">→</span>
+        </a>
+        <a class="secondary-card" href="https://www.puremed.uk/" target="_blank" rel="noopener">
+          <span>
+            <strong data-stage-id="visit-puremed-uk">Visit puremed.uk</strong>
+            <small data-stage-id="puremed-aesthetics-home">PureMed Aesthetics home</small>
+          </span>
+          <span class="arrow" data-stage-id="span-2">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 9: Proof -->
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="section-title" data-stage-id="what-clients-say">What clients say</h2>
+      <div class="proof-card">
+        <p data-stage-id="real-patient-reviews-will-appear">Real patient reviews will appear here once Nafisa has supplied a quote with permission.</p>
+        <a href="https://www.google.com/search?q=PureMed+Aesthetics+Winslow+reviews" target="_blank" rel="noopener" data-stage-id="see-our-google-reviews">See our Google reviews →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 10: Footer -->
+  <footer class="site-foot">
+    <div class="wrap">
+      <strong data-stage-id="puremed-aesthetics">PureMed Aesthetics</strong>
+      <p data-stage-id="34a-high-street-winslow-buckingham">34a High Street, Winslow, Buckingham MK18 3HB</p>
+      <p data-stage-id="mon-fri-9-00-18">Mon–Fri 9:00–18:00</p>
+      <p data-stage-id="whatsapp">WhatsApp: <a href="https://wa.me/447850087025" target="_blank" rel="noopener">07850 087025</a></p>
+      <p><a href="https://www.puremed.uk/" target="_blank" rel="noopener" data-stage-id="www-puremed-uk">www.puremed.uk</a></p>
+      <p class="disclaimer" data-stage-id="this-site-is-part-of">This site is part of PureMed Aesthetics, not a separate clinic.</p>
+    </div>
+  </footer>
+
+  <a class="wa-sticky" href="https://wa.me/447850087025?text=Hi%20PureMed%2C%20I%20saw%20the%20Laser%20Facelift%20Winslow%20site%20%E2%80%94%20can%20we%20talk%20about%20whether%20it%20is%20right%20for%20me%3F" target="_blank" rel="noopener" aria-label="Message PureMed on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.21.71-.83.9-1.11.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
+  </a>
+
+</body>
+</html>

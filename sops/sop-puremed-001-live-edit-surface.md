@@ -5,8 +5,8 @@
 | **Purpose** | Keep the surface Nafisa edits her own website on working, current, and safe to regenerate |
 | **Operator** | Osman (client side: Nafisa) |
 | **Verified** | 2026-07-21 (every step below run as written) |
-| **Systems touched** | Stage on the Pi (`pi@192.168.1.106`, pm2 app `stage`, nginx), Astro source at `other-projects/puremed/site`, Loop 1 / Loop 2 / `mss-review.js` |
-| **Canon doc** | `other-projects/puremed/stage-client-autonomy-plan.md` |
+| **Systems touched** | Stage on the Pi (`pi@192.168.1.106`, pm2 app `stage`, nginx), Astro source at `main-stage-studio/02_clients/puremed/site`, Loop 1 / Loop 2 / `mss-review.js` |
+| **Canon doc** | `main-stage-studio/02_clients/puremed/stage-client-autonomy-plan.md` |
 
 ## When this runs
 
@@ -48,7 +48,7 @@ only safe because ids are never renamed. Run in order:
    If it refuses, STOP and find out which ids moved. Do not force it.
 3. Build and deploy:
    ```
-   cd other-projects/puremed/site && npx astro build
+   cd main-stage-studio/02_clients/puremed/site && npx astro build
    PI=pi@192.168.1.106; E=/home/pi/stage/engagements/puremed-site
    ssh $PI "cd $E && cp manifest.json manifest.json.bak-$(date +%Y%m%d-%H%M%S) && cp output/client-edits.json output/client-edits.json.bak-$(date +%Y%m%d-%H%M%S)"
    scp dist/index.html $PI:$E/prototype/index.html
@@ -106,6 +106,7 @@ medical claims.
 | "+ Add" button missing on a region | region attribute lost in an edit, or the manifest was not rebuilt | check `data-stage-region` in the source, re-run section A |
 | A clone shows another item's wording | the template item (first child) was itself edited and the browser cached it | reload the page; clones always derive from the pristine template |
 | Client says content is missing that she can see elsewhere | she is looking at the retired `puremed` engagement | point her at `puremed-site`; port the missing content into the Astro source |
+| "Upload new" does nothing — no file dialog effect, no error, no "Uploading…" pill | **Fixed 15 Aug 2026.** The document-level capture-phase click listener that closes the image panel on an outside click didn't exclude the hidden `fileInput` element. `fileInput.click()` dispatches a real, bubbling click event on `fileInput` itself; since `fileInput` sits outside `imgPanel` and isn't `resizeHandle`, that listener fired `closeImgPanel()` synchronously, clearing `activeImg` *before* the OS file dialog even opened. By the time the user picked a file, `fileInput`'s `change` handler saw `!activeImg` and silently returned. Fixed in `public/live-edit.js`'s document click handler by adding `ev.target !== fileInput` to the guard. Shared file — affects every live-edit engagement, not just this one. Canonical source: `scripts/stage-patches/2026-08-10-review-workstreams/live-edit.js`, keep it in sync with the Pi on any future edit. Verified via console: `#stage-imgpanel` now stays `display:block` after triggering `#stage-img-replace`, instead of flipping to `none`. |
 
 Escalation: the plan doc §7 records the 18-21 Jul feedback round and the failure
 modes it exposed. Rollback for any Pi-side patch is the `.bak` file beside it plus
